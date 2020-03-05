@@ -62,22 +62,22 @@ We are a small org, which means that your contribution will have a large impact.
 
 We have -we think- statistically amazing continuity in the team: Most GSoC students from all the past years are still involved, even if they are no longer eligible as students. They still contribute code, and they mentor both in GSoC and the sister program GCI. As mentors, they also come to the Summer of Code summit which traditionally takes place in October. 
 
-We have *mentors all over the world* (North America, Europe, Asia and Australia), so time zones are never a problem. Our main channel of communication is a [Slack channel](https///ccextractor.org/public/general/support) to which everyone is welcome. We expect all accepted students to be available on Slack very often, even if you don't need to talk to your mentor. This will help you ask questions when necessary, and you might be able to help others out as well while working on your project.
+We have *mentors all over the world* (North America, Europe, Asia and Australia), so time zones are never a problem. Our main channel of communication is a [Slack channel](https://ccextractor.org/public/general/support) to which everyone is welcome. We expect all accepted students to be available on Slack very often, even if you don't need to talk to your mentor. This will help you ask questions when necessary, and you might be able to help others out as well while working on your project.
 
 **Exception**: If your country (such as**Russia**) has banned Slack please get in touch in we'll work out a solution with you. We absolutely want you to participate. 
 
-A [mailing list](https///groups.google.com/forum/#!forum/ccextractor-dev) is also available for those that prefer email over slack. It's a new mailing list (the old one hasn't been used in a long time) but it's read by everyone involved in GSoC.
+A [mailing list](https://groups.google.com/forum/#!forum/ccextractor-dev) is also available for those that prefer email over slack. It's a new mailing list (the old one hasn't been used in a long time) but it's read by everyone involved in GSoC.
 
 **All our top committers will be mentoring**. Many of them are former GSoC students or winners of GCI. 
 
 ### Perks
 
-__All accepted students get a programming book immediately after being accepted__, with the hope that they read them before the coding starts. We want to see if this increases the quality of the work. So far we have selected these three books (pick one), but we're open to suggestions: [Clean Code](https///www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882), [Elements of Programming Interviews in Python](https///www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949), [Cracking the code interview](https///www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850).
+__All accepted students get a programming book immediately after being accepted__, with the hope that they read them before the coding starts. We want to see if this increases the quality of the work. So far we have selected these three books (pick one), but we're open to suggestions: [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882), [Elements of Programming Interviews in Python](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949), [Cracking the code interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850).
 
 We will also provide to all accepted students:
 
-- 6 months of access (from the acceptance date) to all courses in [educative.io](https///www.educative.io/)
-- 12 months of access (from the acceptance date) to [backtobackswe](https///backtobackswe.com), which is a fantastic resource to learn algorithms, prepare for coding interviews, and in general learn fundamentals.
+- 6 months of access (from the acceptance date) to all courses in [educative.io](https://www.educative.io/)
+- 12 months of access (from the acceptance date) to [backtobackswe](https://backtobackswe.com), which is a fantastic resource to learn algorithms, prepare for coding interviews, and in general learn fundamentals.
 
 
 The student working on CEA-708 will also receive a copy of the latest CEA-708 specification document.
@@ -128,7 +128,7 @@ Qualification: Our selection system is based on several factors. Of course no st
 
 **Best core tool tasks**
 
-We're added a difficulty level to all our [open issues on GitHub](https///github.com/CCExtractor/ccextractor/issues). Best thing you can do is head there and see if you are able to fix some of the easy ones and work your way up. We don't expect you to be able to do the hard ones but we'd be impressed if you did :-) 
+We're added a difficulty level to all our [open issues on GitHub](https://github.com/CCExtractor/ccextractor/issues). Best thing you can do is head there and see if you are able to fix some of the easy ones and work your way up. We don't expect you to be able to do the hard ones but we'd be impressed if you did :-) 
 
 For some of the easy ones you don't even need to know C. Just being able to compile CCExtractor and dig around a bit will be enough.
 
@@ -175,4 +175,4 @@ Something else: Mentors often have their fingers in several pies. If you send th
 
 ### Useful resources
 
-[A great resource for GSoC](https///dev.to/realabbas/google-summer-of-code-5ao6).
+[A great resource for GSoC](https://dev.to/realabbas/google-summer-of-code-5ao6).
