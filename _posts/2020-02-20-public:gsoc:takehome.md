@@ -58,7 +58,6 @@ It's OK for your program to be a simple command-line tool that needs to be run f
 Our website currently uses an easy-to-use wiki solution called [DokuWiki](https://www.dokuwiki.org/dokuwiki), but the aesthetics could be better.
 
 There's a [new platform](https://fastpages.fast.ai/) that uses GitHub Pages for hosting and pull requests for content management. It seems to integrate well with things we care about, e.g. YouTube embeds.
-<!-- There's a <a href="https://fastpages.fast.ai">new platform</a> that uses GitHub Pages for hosting and pull requests for content management. It seems to integrate well with things we care about, e.g. YouTube embeds. -->
 
 Can you devise a good plan for migrating from DokuWiki to fastpages?
 

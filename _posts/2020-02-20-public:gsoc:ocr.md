@@ -1,3 +1,7 @@
+
+~~META:
+title = Google Summer of Code 2018 - Complete our OCR subsystem
+~~
 # Complete our OCR subsystem
 
 #### Useful skills/interests: Image processing, Text Localization and Binarization, Tesseract API 

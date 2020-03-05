@@ -38,7 +38,7 @@ baseurl: "/ccextractor-wiki-test" # the subpath of your site, e.g. "/blog".
 
 # Email and twitter are optional:
 email: 
-twitter_username: "fastdotai"
+twitter_username: "nothing"
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -84,10 +84,20 @@ titles_from_headings:
   collections: true
 
 highlighter: rouge
-markdown: kramdown
-kramdown:
-  math_engine: katex
-  input: GFM
-  auto_ids: true
-  hard_wrap: false
-  syntax_highlighter: rouge
+# markdown: kramdown
+# kramdown:
+#   math_engine: katex
+#   input: GFM
+#   auto_ids: true
+#   hard_wrap: false
+#   syntax_highlighter: rouge
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - tables
+    - strikethrough
+    - superscript
+    - with_to_data

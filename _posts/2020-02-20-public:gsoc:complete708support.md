@@ -1,3 +1,8 @@
+
+~~META:
+title = Google Summer of Code 2018 - Complete 708 support
+~~
+
 **Complete 708 support**
 
 708 is the standard for digital TV in the US and a few other countries. We have preliminary support, but the goal is a 100% accurate implementation. This means:
@@ -36,7 +41,7 @@ Carlos Fernandez Sanz (@carlos.fernandez on slack). Carlos wrote the original CE
 Evgeny Shulgin (@izaron on slack). Evgeny is a 2016 Code-In Winner with CCExtractor, and worked a lot on CEA-708.\\
 
 __**How to get started**__\\
-Best thing you can do is download a few samples ([check our TV samples page](public/general/tvsamples)) and try to solve some of the CEA-708 issues we have listed on GitHub.
+Best thing you can do is download a few samples (/ccextractor-wiki-test/2020/02/20/[check our TV samples page](public-general-tvsamples)) and try to solve some of the CEA-708 issues we have listed on GitHub.
 
 This is also the best way to get accepted into GSoC.
 

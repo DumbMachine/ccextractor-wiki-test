@@ -1,3 +1,8 @@
+
+~~META:
+title = Google Summer of Code 2018 - Add support for Live TV over the internet (such as YouTube TV)
+~~
+
 ### Add support for Live TV over the internet (such as YouTube TV) 
 
 A number of platforms are appearing these days to distribute local TV content over the internet. For example, YouTube now has a live TV. Hulu does, too.

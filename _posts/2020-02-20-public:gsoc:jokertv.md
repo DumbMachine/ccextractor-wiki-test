@@ -1,3 +1,8 @@
+
+~~META:
+title = Google Summer of Code 2018 - JokerTV integration
+~~
+
 ### JokerTV integration
 
 As you may know, our reference TV tuner has been for a long time the amazing HDHomeRun from Silicon Dust. They (all models) are rock-solid and they are really easy to integrate with. However, they don't support DTMB (the Chinese standard).

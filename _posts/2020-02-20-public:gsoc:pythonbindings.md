@@ -1,3 +1,8 @@
+
+~~META:
+title = Google Summer of Code 2018 - Write Python bindings for CCExtractor
+~~
+
 **Write Python bindings for CCExtractor**\\
 
 Extend Python to use CCExtractor's library to access subtitles. You should export as much of CCExtractor as possible. At a minimum, it should be able to

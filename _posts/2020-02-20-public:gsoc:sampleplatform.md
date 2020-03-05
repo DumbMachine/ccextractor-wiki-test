@@ -1,4 +1,5 @@
 
+~~META:
 title = Google Summer of Code 2020 - The sample platform / Continuous integration revisited
 ~~
 # The sample platform / Continuous integration

@@ -1,3 +1,8 @@
+
+~~META:
+title = Google Summer of Code 2018 - Add support for DTMB countries
+~~
+
 **Add support for DTMB countries**
 
 DTMB is the Chinese TV standard, adopted by other countries such as Cuba. We still don't know much about it. Due to this, your proposal must include:
