@@ -3,8 +3,11 @@
 
 Watch this video.
 
-{{youtube>7QhwgrOrnyE?medium}}
-
+<div class="video">
+    <figure>
+        <iframe width="640" height="480" src="//www.youtube.com/embed/7QhwgrOrnyE" frameborder="0" allowfullscreen></iframe>
+    </figure>
+</div>
 And then come with a plan :-) 
 
 **Qualification tasks**\\

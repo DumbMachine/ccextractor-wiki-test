@@ -5,10 +5,9 @@ search_exclude: true
 
 This site is built with [fastpages](https://github.com/fastai/fastpages), An easy to use blogging platform with extra features for Jupyter Notebooks.
 
-![](images/diagram.png "https://github.com/fastai/fastpages")
+This is currently just a test run.
+The current page represents the main page.
+Probably https://ccextractor.org.
 
-[fastpages](https://github.com/fastai/fastpages) automates the process of creating blog posts via GitHub Actions, so you don't have to fuss with conversion scripts.  A full list of features can be found on [GitHub](https://github.com/fastai/fastpages).  
-
-You can edit the `index.md` file to change this content.
-
-# Posts
+Apologies for the empty page, have this in return:
+![](https://preview.redd.it/hlkfu31e9rk41.jpg?width=640&crop=smart&auto=webp&s=a18c5e75c204e82ccfd2f6c28722209f74c6af3e)
