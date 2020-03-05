@@ -23,4 +23,4 @@ rclone forum: https://forum.rclone.org/\\
 webui discussion thread: https://forum.rclone.org/t/beta-testing-webgui-for-rclone/11156\\
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).

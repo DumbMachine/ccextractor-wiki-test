@@ -1,9 +1,9 @@
 
 # SwagLyrics-For-Spotify
 
-You can find the project at [GitHub](https///github.com/SwagLyrics/SwagLyrics-For-Spotify).
+You can find the project at [GitHub](https://github.com/SwagLyrics/SwagLyrics-For-Spotify).
 
-You can find a list of important issues [here](https///github.com/SwagLyrics/SwagLyrics/issues).
+You can find a list of important issues [here](https://github.com/SwagLyrics/SwagLyrics/issues).
 
 ## Getting started / Requirements
 

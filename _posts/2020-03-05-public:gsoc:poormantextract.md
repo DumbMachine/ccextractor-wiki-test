@@ -24,10 +24,10 @@ We strongly recommend you play a bit with Amazon's Textract (for online tests it
 
 To get you started a bit you may take a look at what the GCI students did during last Christmas break (which only works for one specific use case, but it's a reasonable proof of concept):
 
-[Musab Kılıç's exam analyzer](https///github.com/musabkilic/ExamAnalyzer)\\
-[RobOHt's exam analyzer](https///https///github.com/RobOHt/AutomataQP-Decomposer)\\
-[knightron0's exam analyzer](https///github.com/knightron0/exam-analyzer)
+[Musab Kılıç's exam analyzer](https://github.com/musabkilic/ExamAnalyzer)\\
+[RobOHt's exam analyzer](https://https://github.com/RobOHt/AutomataQP-Decomposer)\\
+[knightron0's exam analyzer](https://github.com/knightron0/exam-analyzer)
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 

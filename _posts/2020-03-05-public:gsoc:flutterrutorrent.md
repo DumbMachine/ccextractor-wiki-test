@@ -25,7 +25,7 @@ In order to understand what to do you need to actually install rtorrent and ruto
 
 You don't need to have previous experience (really, not important for this - it's all about Flutter), but you won't be able to come up with a good proposal if you don't know how things work.
 
-Also, if you are unable to run rtorrent and rutorrent on your system, please use [this docker](https///hub.docker.com/r/crazymax/rtorrent-rutorrent) image.
+Also, if you are unable to run rtorrent and rutorrent on your system, please use [this docker](https://hub.docker.com/r/crazymax/rtorrent-rutorrent) image.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).

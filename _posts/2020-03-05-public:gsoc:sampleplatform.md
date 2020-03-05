@@ -1,10 +1,9 @@
 
-~~META:
 title = Google Summer of Code 2020 - The sample platform / Continuous integration revisited
 ~~
 # The sample platform / Continuous integration
 
-The [sample platform](https///sampleplatform.ccextractor.org/) was developed during GSoC '15 and overhauled during GSoC '16. In GSoC '17 another student added support for the Windows part, as well as some bugfixes. The student continued his work during GSoC '18, and will mentor this year. Last year a new student did some improvements and bugfixes.\\
+The [sample platform](https://sampleplatform.ccextractor.org/) was developed during GSoC '15 and overhauled during GSoC '16. In GSoC '17 another student added support for the Windows part, as well as some bugfixes. The student continued his work during GSoC '18, and will mentor this year. Last year a new student did some improvements and bugfixes.\\
 
 This GCi edition we came to the conclusion that for new contributors, there are a bunch of drawbacks in the current system that make it no longer viable to continue to run the platform in it's current form. \\
 
@@ -20,7 +19,7 @@ Features that will need to be implemented for certain are:\\
 - A coordinating platform that receives the call for actions, triggers the machines, displays results, ...\\
 - Scalable Linux/Mac/Windows machines that can execute the regression tests (currently 180GB of samples!)\\
 - Deep integration with the GitHub Actions that should be run first (creating Linux, Windows, Mac builds), so that no time is wasted if there are compiler errors or no code changes.\\
-- Watch [this video](https///www.youtube.com/watch?v=407nwX6__70). Disregard that it's about the Rust community - it's the CD/CI part on it that is important to us. That's what we want.
+- Watch [this video](https://www.youtube.com/watch?v=407nwX6__70). Disregard that it's about the Rust community - it's the CD/CI part on it that is important to us. That's what we want.
 
 
 
@@ -33,7 +32,7 @@ The Sample Platform is written in Python, so we expect good knowledge of Python.
 If you are interested in taking up this project during GSoC, you will need to satisfy these requirements (in order of importance, not all are a necessity): \\
 - A well researched, well written project proposal. This should include a monthly cost prediction based on expected runtime's, disk storage used, ... A comparison between multiple providers (e.g. Azure, GCP, AWS, Packet) must be included.\\
 - Have chatted with the mentor(s) at least once.\\ 
-- Fixed a bug, improved installation documentation, ... (contributed something to the project). There are some issues in the tracker labeled issues labeled [GSoC-proposal-task](https///github.com/CCExtractor/sample-platform/issues?q=is%3Aissue+is%3Aopen+label%3AGSoC-proposal-task) for this purpose.\\
+- Fixed a bug, improved installation documentation, ... (contributed something to the project). There are some issues in the tracker labeled issues labeled [GSoC-proposal-task](https://github.com/CCExtractor/sample-platform/issues?q=is%3Aissue+is%3Aopen+label%3AGSoC-proposal-task) for this purpose.\\
 - Proof you've set up the Sample Platform locally.\\
 
 ##  Additional information not necessarily well organized :-)

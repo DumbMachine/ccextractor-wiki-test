@@ -19,6 +19,6 @@ You also need to support "activation", which is the process in which the user li
 Your job is the Roku channel itself, but you must provide a backend skeleton at the very least to support all the channel features.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 
 

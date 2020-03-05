@@ -1,15 +1,10 @@
-
-~~META:
-title = Google Summer of Code 2018 - JokerTV integration
-~~
-
 ### JokerTV integration
 
 As you may know, our reference TV tuner has been for a long time the amazing HDHomeRun from Silicon Dust. They (all models) are rock-solid and they are really easy to integrate with. However, they don't support DTMB (the Chinese standard).
 
-[This](https///tv.jokersys.com/) small thing is JokerTV (stand-alone version).
+[This](https://tv.jokersys.com/) small thing is JokerTV (stand-alone version).
 
-You can see in the [tech specs](https///tv.jokersys.com/tech-specs/) that everything we care about is supported, and that the list of chipsets is published, and that [source code](https///tv.jokersys.com/downloads/) for everything, including firmware, is available.
+You can see in the [tech specs](https://tv.jokersys.com/tech-specs/) that everything we care about is supported, and that the list of chipsets is published, and that [source code](https://tv.jokersys.com/downloads/) for everything, including firmware, is available.
 
 We are quite excited about the openness and potential of JokerTV and want to be the first to integrate with it. What should be the result of this integration?
 
@@ -21,12 +16,12 @@ We are quite excited about the openness and potential of JokerTV and want to be 
 About getting a JokerTV - we will buy one for the student that takes on this task. We will also have a few more distributed in different regions around the world so remote testing is possible.
 
 __**Related GitHub Issues**__\\
-[Extract subtitles in a Chinese newscast](https///github.com/CCExtractor/ccextractor/issues/918)
+[Extract subtitles in a Chinese newscast](https://github.com/CCExtractor/ccextractor/issues/918)
 
 __**Mentor**__\\
 Abylay Ospan, the genius behind JokerTV himself.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 
 

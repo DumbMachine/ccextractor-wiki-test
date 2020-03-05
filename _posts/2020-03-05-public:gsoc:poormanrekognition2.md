@@ -1,7 +1,7 @@
 
 ## Poor Man's Rekognition (II)
 
-[Amazon Rekognition](https///aws.amazon.com/rekognition/) is a (paid) service that is able to identify objects, people, text, scenes, and activities in a picture. We want to produce a free alternative. 
+[Amazon Rekognition](https://aws.amazon.com/rekognition/) is a (paid) service that is able to identify objects, people, text, scenes, and activities in a picture. We want to produce a free alternative. 
 
 Last year we had a number of students working on this in parallel, which in itself was an experiment - we wanted to see if having several students in parallel try to do their own implementation would be better than just choosing the one we thought would best.
 
@@ -25,4 +25,4 @@ https://medium.com/@amkr/final-work-submission-gsoc19-ccextractor-development-40
 **Qualification tasks**\\
 
 - An important aspect of your proposal should be the report on which of the last year's project is best or what part of each of them are best and should be reused in your projects.\\
-- Take a look at [this page](https///ccextractor.org/public/gsoc/takehome) for more tasks.
+- Take a look at [this page](https://ccextractor.org/public/gsoc/takehome) for more tasks.

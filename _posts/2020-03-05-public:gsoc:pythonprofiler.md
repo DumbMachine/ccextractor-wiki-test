@@ -3,7 +3,7 @@
 
 ### Introduction
 
-Read [this](https///medium.com/@carlosfernandezsanz/generating-videos-of-algorithms-implementations-with-python-3422c4dd04f0) and then come back here :-)
+Read [this](https://medium.com/@carlosfernandezsanz/generating-videos-of-algorithms-implementations-with-python-3422c4dd04f0) and then come back here :-)
 
 ### The Task
 
@@ -14,7 +14,7 @@ You can take their existing work (it's open-source after all) and build upon it,
 ### Ideas
 
 
-*  Explore use-cases other than algorithms ([comment on Hacker News](https///news.ycombinator.com/item?id=22179697))
+*  Explore use-cases other than algorithms ([comment on Hacker News](https://news.ycombinator.com/item?id=22179697))
 
 *  Decorators to inform the debugger about the properties of user-defined data structures and classes
 
@@ -24,7 +24,7 @@ You can take their existing work (it's open-source after all) and build upon it,
 
 *  Interactive web version (or just an output format)
 
-*  Flow control visualization, less of a focus on variables specifically ([comment on Hacker News](https///news.ycombinator.com/item?id=22178451))
+*  Flow control visualization, less of a focus on variables specifically ([comment on Hacker News](https://news.ycombinator.com/item?id=22178451))
 
 *  Support for large target programs (multi-file projects)
 
@@ -43,4 +43,4 @@ This is another potential source of inspiration: https://github.com/hediet/vscod
 
 In order to qualify for our projects, you must complete a qualification task or accrue sufficient qualification points from GitHub issues.
 
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome) for tasks oriented for people who are working on new projects like this one. Alternatively, you can go the traditional route of fixing GitHub issues on the main CCExtractor project, which is written in C. You can find more information about this [here](https///ccextractor.org/public/gsoc/ideas_page_for_summer_of_code_2020#about_the_projects_and_getting_accepted).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome) for tasks oriented for people who are working on new projects like this one. Alternatively, you can go the traditional route of fixing GitHub issues on the main CCExtractor project, which is written in C. You can find more information about this [here](https://ccextractor.org/public/gsoc/ideas_page_for_summer_of_code_2020#about_the_projects_and_getting_accepted).

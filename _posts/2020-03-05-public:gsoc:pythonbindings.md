@@ -1,8 +1,3 @@
-
-~~META:
-title = Google Summer of Code 2018 - Write Python bindings for CCExtractor
-~~
-
 **Write Python bindings for CCExtractor**\\
 
 Extend Python to use CCExtractor's library to access subtitles. You should export as much of CCExtractor as possible. At a minimum, it should be able to
@@ -16,14 +11,14 @@ While CCExtractor itself uses its own library (lib_ccx), we are not aware of any
 We will also be prefer to have Cython code written instead of simple Python wrappers during the program as they offer better speed and compatibility with our existing codebase.
 
 __**Related GitHub Issues**__\\
-[Make the Python Scripts to run Python3](https///github.com/CCExtractor/ccextractor/issues/912)\\
-[Python Bindings don't compile with build_library](https///github.com/CCExtractor/ccextractor/issues/879)
+[Make the Python Scripts to run Python3](https://github.com/CCExtractor/ccextractor/issues/912)\\
+[Python Bindings don't compile with build_library](https://github.com/CCExtractor/ccextractor/issues/879)
 
 __**Related Github Commits**__\\
-[Make Python3 Compatible Code](https///github.com/CCExtractor/ccextractor/commit/6e2ce11b26b28decb8967a43eeb0305e334048a8)\\
+[Make Python3 Compatible Code](https://github.com/CCExtractor/ccextractor/commit/6e2ce11b26b28decb8967a43eeb0305e334048a8)\\
 
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 
 

@@ -10,6 +10,6 @@ Watch this video.
 </div>
 And then come with a plan :-) 
 
-**Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+**Qualification tasks**
+Take a look at [this page](/ccextractor-wiki-test/2020/03/05/public-gsoc-takehome).
 

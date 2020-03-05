@@ -31,5 +31,5 @@ Agents that trust each other can vouch for other agents.
 The chain of trust must always be preserved so agents can prune trees if the trust is broken.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 

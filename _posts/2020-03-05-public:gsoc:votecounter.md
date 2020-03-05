@@ -25,12 +25,12 @@ Your system will have a mobile frontend that must be written in Flutter (which g
 
 It will also have a backend that can be written in anything, but it must be scalable. For example, a PHP backend is a non-starter. Think of using a massively scalable cloud service as the core of your backend. Remember that your application will have an extremely high usage during a short period of time and then it's over. 
 
-[Interesting read](https///www.theatlantic.com/technology/archive/2020/02/bad-app-not-russians-plunged-iowa-into-chaos/606052/).
+[Interesting read](https://www.theatlantic.com/technology/archive/2020/02/bad-app-not-russians-plunged-iowa-into-chaos/606052/).
 
 Finally, this system is not supposed to replace paper. We need the paper trail. It's essential.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 
-Your proposal should also include reports regarding scalability and fault tolerance of your chosen tech stack. A list of stacks and their performance comparison for the same application can be made from [RealWorld.io](https///github.com/gothinkster/realworld)
+Your proposal should also include reports regarding scalability and fault tolerance of your chosen tech stack. A list of stacks and their performance comparison for the same application can be made from [RealWorld.io](https://github.com/gothinkster/realworld)
 

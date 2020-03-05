@@ -31,6 +31,6 @@ Of course, you are expected to dig into how FFmpeg does it and build from there.
 We prefer Rust but C would also be OK. However, if you already know C or C++ learning Rust is not too hard and it's totally worth it.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 
 

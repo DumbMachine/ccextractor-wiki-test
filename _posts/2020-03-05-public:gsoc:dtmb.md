@@ -1,8 +1,3 @@
-
-~~META:
-title = Google Summer of Code 2018 - Add support for DTMB countries
-~~
-
 **Add support for DTMB countries**
 
 DTMB is the Chinese TV standard, adopted by other countries such as Cuba. We still don't know much about it. Due to this, your proposal must include:
@@ -37,8 +32,8 @@ DVB subtitles (ETSI EN 300 743) – The DUT must support DVB subtitles (ETSI EN 
 Important: Since Chinese is by far the most extended language among DTMB countries, its support is essential. We have some preliminary support for it, but whatever is missing you will need to add. This applies in particular to the .srt writer. Since .srt is text based, you need to OCR the bitmaps. This is already done but almost untested for Chinese. Don't assume it's going to work. Probably not. Give yourself time in your proposal for this.
 
 __**Related GitHub Issues**__\\
-[Extract subtitles in a Chinese newscast](https///github.com/CCExtractor/ccextractor/issues/918)
+[Extract subtitles in a Chinese newscast](https://github.com/CCExtractor/ccextractor/issues/918)
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 

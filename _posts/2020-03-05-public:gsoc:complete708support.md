@@ -1,8 +1,3 @@
-
-~~META:
-title = Google Summer of Code 2018 - Complete 708 support
-~~
-
 **Complete 708 support**
 
 708 is the standard for digital TV in the US and a few other countries. We have preliminary support, but the goal is a 100% accurate implementation. This means:
@@ -27,14 +22,14 @@ Which is about implementing .mcc support, which as the GitHub ticket says comple
 
 Getting started: 
 
-[The wikipedia page on 708](https///en.wikipedia.org/wiki/CEA-708) This is quite good actually. It's not a complete description of the standard, but it's quite useful to understand what 708 is about.\\
+[The wikipedia page on 708](https://en.wikipedia.org/wiki/CEA-708) This is quite good actually. It's not a complete description of the standard, but it's quite useful to understand what 708 is about.\\
 
 __**Related GitHub Issues**__\\
-[Ver 0.85 CEA-708: 16 bit charset (Korean) Not support](https///github.com/CCExtractor/ccextractor/issues/690)\\
-[(problem extract Korean subtitles](https///github.com/CCExtractor/ccextractor/issues/677)\\
-[[CEA-708] Missing the last subtitle](https///github.com/CCExtractor/ccextractor/issues/646)\\
-[[CEA-708] [Timing] Catchable bug with timing](https///github.com/CCExtractor/ccextractor/issues/641)\\
-[Finish CEA-708 support](https///github.com/CCExtractor/ccextractor/issues/3)
+[Ver 0.85 CEA-708: 16 bit charset (Korean) Not support](https://github.com/CCExtractor/ccextractor/issues/690)\\
+[(problem extract Korean subtitles](https://github.com/CCExtractor/ccextractor/issues/677)\\
+[[CEA-708] Missing the last subtitle](https://github.com/CCExtractor/ccextractor/issues/646)\\
+[[CEA-708] [Timing] Catchable bug with timing](https://github.com/CCExtractor/ccextractor/issues/641)\\
+[Finish CEA-708 support](https://github.com/CCExtractor/ccextractor/issues/3)
 
 __**Mentors**__\\
 Carlos Fernandez Sanz (@carlos.fernandez on slack). Carlos wrote the original CEA-708 code.\\
@@ -46,6 +41,6 @@ Best thing you can do is download a few samples ([check our TV samples page](pub
 This is also the best way to get accepted into GSoC.
 
 **Qualification tasks**\\
-Take a look at [this page](https///ccextractor.org/public/gsoc/takehome).
+Take a look at [this page](https://ccextractor.org/public/gsoc/takehome).
 
 
