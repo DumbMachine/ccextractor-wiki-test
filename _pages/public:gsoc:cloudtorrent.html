@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Search | fastpages</title>
+<title>The next peer-to-peer protocol | fastpages</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="The next peer-to-peer protocol" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:cloudtorrent.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:cloudtorrent.html" />
 <meta property="og:site_name" content="fastpages" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/search/","headline":"Search","@context":"https://schema.org"}</script>
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:cloudtorrent.html","headline":"The next peer-to-peer protocol","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,17 +69,52 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/search.js"></script>
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/vendor/lunr.min.js"></script>
+        <article class="post">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search fastpages" aria-label="Search fastpages" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title">The next peer-to-peer protocol</h1>
+  </header>
+
+  <div class="post-content">
+    <p><strong>Introduction</strong>\<br />
+BitTorrent is, of course, the world’s most used peer to peer protocol. It’s great, but it was designed before the cloud was ubiquitous and it doesn’t make use of the places where you have the most storage or the most bandwidth. Can we design something for the next decade?</p>
+
+<p>BitTorrent is based on the concept of peers, which are BitTorrent clients, usually running on computers at home, that share data is a super-efficient manner. It works well, of course, but</p>
+
+<ul>
+  <li>It requires users to have their computers on for a long time\</li>
+  <li>It requires users to expose their IP address\</li>
+  <li>It requires users to use their home internet connection, making it hard to do other things at the same time such as streaming\</li>
+</ul>
+
+<p>There are of course alternatives (you can rent servers in data centers for example), but they are not cheap, they’re not easy to set up, and they come with their own sets of problems, in general.</p>
+
+<p>These days most people have lots of their data in the cloud: Dropbox, Google Drive and so on.</p>
+
+<p><strong>Your job</strong><br />
+The goal here is to come up (and implement the first version) with a system that let those personal storage systems exchange data</p>
+
+<ul>
+  <li>Securely\</li>
+  <li>As cheap as possible\</li>
+  <li>As fast as possible\</li>
+  <li>As easily as possible\</li>
+</ul>
+
+<p>A possible idea (one of many possibilities) would be to introduce the concept for “agent”. An agent would be a process that runs in the cloud on behalf of the user and that has access to his personal storage accounts. The agents can run anywhere, but their ideal place is the cloud, for example, AWS or Google Cloud. They can be managed by the final user or by a 3rd party that provides the service.</p>
+
+<p>Agents find each other, and learn to trust each other, with the help of repositories, the equivalent of today’s trackers.</p>
+
+<p>Agents that trust each other can vouch for other agents.</p>
+
+<p>The chain of trust must always be preserved so agents can prune trees if the trust is broken.</p>
+
+<p><strong>Qualification tasks</strong><br />
+Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a>.</p>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Search | fastpages</title>
+<title>fastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="fastpages" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:livetvooverinternet.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:livetvooverinternet.html" />
 <meta property="og:site_name" content="fastpages" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/search/","headline":"Search","@context":"https://schema.org"}</script>
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:livetvooverinternet.html","headline":"fastpages","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,17 +69,50 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/search.js"></script>
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/vendor/lunr.min.js"></script>
+        <article class="post">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search fastpages" aria-label="Search fastpages" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>~~META:
+title = Google Summer of Code 2018 - Add support for Live TV over the internet (such as YouTube TV)
+~~</p>
+
+<h3 id="add-support-for-live-tv-over-the-internet-such-as-youtube-tv">Add support for Live TV over the internet (such as YouTube TV)</h3>
+
+<p>A number of platforms are appearing these days to distribute local TV content over the internet. For example, YouTube now has a live TV. Hulu does, too.</p>
+
+<p>It’s still early days for these platforms - they’re trying to grab the business from the cable-cutters, while (possibly, for now) providing the same functionality, which is a live TV with DVR. It’s possible of course that they will offer lots of new features and they manage to replace over the air broadcasts, cable…</p>
+
+<p>Anyway, we don’t know how they are implementing subtitles, and the task this summer is to</p>
+
+<p>a) Do the research<br />
+b) Write code that is able to create transcripts in the usual formats such as .srt</p>
+
+<p>This code might be integrated with the current CCExtractor core or it could be a new tool. What’s best depends mostly on how the subtitles are distributed. If they are embedded in transport streams then integrating with CCExtractor would be the natural option. It’s part of the job to figure this out.</p>
+
+<p>We’re going to target the two major platforms that have a live TV over the internet: YouTube and Hulu.</p>
+
+<p><strong>We will pay for the subscriptions for both services during the coding period, and if you are currently outside the geographical areas in which these services are available, we’ll provide a VPN as well</strong>.</p>
+
+<p>Features that we expect:</p>
+
+<ul>
+  <li>The system must be completely scriptable. For example, a solution that requires human intervention to start a capture session, or a browser open on a desktop is not going to work. Suppose we want the system running 24x7 on a Linux server, which might not even have a monitor.\</li>
+  <li>Youtube TV supports a maximum of 6 simultaneous streams per subscription. We don’t know about Hulu, but the point is that your solution must be able to maximize what we get from the subscription - if the service allows 6 streams, your solution must too.\</li>
+  <li>Allow several subscriptions to be used as well, for example, if we want 12 streams, then 6x2 should work.\</li>
+  <li>It goes without saying, login information should be configurable and you must be careful not to push any real information to GitHub.\</li>
+  <li>Documentation must be good - we want other projects to build on this one instead of having to figure out everything from scratch.\</li>
+</ul>
+
+<p><strong>Qualification tasks</strong><br />
+Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a>.</p>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

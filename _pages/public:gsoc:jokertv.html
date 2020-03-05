@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Search | fastpages</title>
+<title>fastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="fastpages" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:jokertv.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:jokertv.html" />
 <meta property="og:site_name" content="fastpages" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/search/","headline":"Search","@context":"https://schema.org"}</script>
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:jokertv.html","headline":"fastpages","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,17 +69,48 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/search.js"></script>
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/vendor/lunr.min.js"></script>
+        <article class="post">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search fastpages" aria-label="Search fastpages" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>~~META:
+title = Google Summer of Code 2018 - JokerTV integration
+~~</p>
+
+<h3 id="jokertv-integration">JokerTV integration</h3>
+
+<p>As you may know, our reference TV tuner has been for a long time the amazing HDHomeRun from Silicon Dust. They (all models) are rock-solid and they are really easy to integrate with. However, they don’t support DTMB (the Chinese standard).</p>
+
+<p><a href="https///tv.jokersys.com/">This</a> small thing is JokerTV (stand-alone version).</p>
+
+<p>You can see in the <a href="https///tv.jokersys.com/tech-specs/">tech specs</a> that everything we care about is supported, and that the list of chipsets is published, and that <a href="https///tv.jokersys.com/downloads/">source code</a> for everything, including firmware, is available.</p>
+
+<p>We are quite excited about the openness and potential of JokerTV and want to be the first to integrate with it. What should be the result of this integration?</p>
+
+<ul>
+  <li>CCExtractor would be able to communicate directly with JokerTV - getting the streams directly from it, as we do with the HDHomeRun.\</li>
+  <li>You don’t need to decode DTMB (that’s a different GSoC project, possibly a summer worth of work) but your integration needs to be as region agnostic as possible. If JokerTV works everywhere, then so must JokerTV+CCExtractor.\</li>
+  <li>It’s likely that JokerTV included support tools are not up to par with HDHomeRun’s yet. If this is the case (your proposal should show that you’ve done your homework and can tell us) reserve some time to work on this.\</li>
+  <li>Another two major programs that could use JokerTV integration are FFmpeg and Kodi (for their live TV and DVR functionality). We love cross project ideas, including of course sending patches to their maintainers. If you think you would have time for this, give it some consideration.\</li>
+</ul>
+
+<p>About getting a JokerTV - we will buy one for the student that takes on this task. We will also have a few more distributed in different regions around the world so remote testing is possible.</p>
+
+<p><strong>**Related GitHub Issues**</strong><br />
+<a href="https///github.com/CCExtractor/ccextractor/issues/918">Extract subtitles in a Chinese newscast</a></p>
+
+<p><strong>**Mentor**</strong><br />
+Abylay Ospan, the genius behind JokerTV himself.</p>
+
+<p><strong>Qualification tasks</strong><br />
+Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a>.</p>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

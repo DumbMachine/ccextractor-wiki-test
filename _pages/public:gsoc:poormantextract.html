@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Search | fastpages</title>
+<title>Poor Man’s Textract | fastpages</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="Poor Man’s Textract" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:poormantextract.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:poormantextract.html" />
 <meta property="og:site_name" content="fastpages" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/search/","headline":"Search","@context":"https://schema.org"}</script>
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:poormantextract.html","headline":"Poor Man’s Textract","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,17 +69,48 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/search.js"></script>
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/vendor/lunr.min.js"></script>
+        <article class="post">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search fastpages" aria-label="Search fastpages" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title">Poor Man’s Textract</h1>
+  </header>
+
+  <div class="post-content">
+    <p><strong>Introduction</strong>
+Amazon Textract a (paid) service that “automatically extracts text and data from scanned documents. Amazon Textract goes beyond simple optical character recognition (OCR) to also identify the contents of fields in forms and information stored in tables.”. We want to build a free alternative that provides an output of similar quality.</p>
+
+<p><strong>Your job</strong>
+First, you’ll need to find lots of documents to process around the internet. We will provide you some, but you need to build your own corpus. A few ideas:</p>
+
+<ul>
+  <li>Tax documents.\</li>
+  <li>Multiple-choice exams.\</li>
+  <li>Immigration forms.\</li>
+  <li>Resumes.\</li>
+  <li>Contracts.\</li>
+  <li>Blueprints.\</li>
+  <li>Order forms.\</li>
+  <li>Invoices.\</li>
+</ul>
+
+<p>… and many more.</p>
+
+<p>Then create a system that is able to identify the parts of all those models, write some output (for example, a JSON file) that contains the coordinates of each of the parts, writes each part to a separate file, and OCRs whatever information can be OCR’ed and writes it to a database (which can be as simple as document storage or a full-fledged SQL instance of your preferred flavor).</p>
+
+<p>We strongly recommend you play a bit with Amazon’s Textract (for online tests it’s free) to get an idea of what to expect.</p>
+
+<p>To get you started a bit you may take a look at what the GCI students did during last Christmas break (which only works for one specific use case, but it’s a reasonable proof of concept):</p>
+
+<p><a href="https///github.com/musabkilic/ExamAnalyzer">Musab Kılıç’s exam analyzer</a><br />
+<a href="https///https///github.com/RobOHt/AutomataQP-Decomposer">RobOHt’s exam analyzer</a><br />
+<a href="https///github.com/knightron0/exam-analyzer">knightron0’s exam analyzer</a></p>
+
+<p><strong>Qualification tasks</strong><br />
+Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a>.</p>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

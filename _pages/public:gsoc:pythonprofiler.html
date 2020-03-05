@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Search | fastpages</title>
+<title>Program Flow Visualizer | fastpages</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="Program Flow Visualizer" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/search/" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:pythonprofiler.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:pythonprofiler.html" />
 <meta property="og:site_name" content="fastpages" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/search/","headline":"Search","@context":"https://schema.org"}</script>
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebPage","url":"https://dumbmachine.github.io/ccextractor-wiki-test/_pages/public:gsoc:pythonprofiler.html","headline":"Program Flow Visualizer","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,17 +69,72 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/search.js"></script>
-<script type="text/javascript" src="/ccextractor-wiki-test/assets/js/vendor/lunr.min.js"></script>
+        <article class="post">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search fastpages" aria-label="Search fastpages" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title">Program Flow Visualizer</h1>
+  </header>
+
+  <div class="post-content">
+    <h3 id="introduction">Introduction</h3>
+
+<p>Read <a href="https///medium.com/@carlosfernandezsanz/generating-videos-of-algorithms-implementations-with-python-3422c4dd04f0">this</a> and then come back here :-)</p>
+
+<h3 id="the-task">The Task</h3>
+
+<p>We want to build a complete profiler tool. During Google Code-in we created several proofs of concept, so we know it’s possible, and we also know that it’s a really good idea that got popular really fast. For reference, as you can see in the article linked above, five high school students created each their own implementation (by themselves) in around one month with really impressive results.</p>
+
+<p>You can take their existing work (it’s open-source after all) and build upon it, or you can do your own thing. But of course, your product must demonstrate GSoC quality - you’ll be working full-time for 3 months :-)</p>
+
+<h3 id="ideas">Ideas</h3>
+
+<ul>
+  <li>
+    <p>Explore use-cases other than algorithms (<a href="https///news.ycombinator.com/item?id=22179697">comment on Hacker News</a>)</p>
+  </li>
+  <li>
+    <p>Decorators to inform the debugger about the properties of user-defined data structures and classes</p>
+  </li>
+  <li>
+    <p>Visualizations for more data structures: trees, linked lists, etc.</p>
+  </li>
+  <li>
+    <p>Support for pausing, delays, and interactive messages, described via comments in the code</p>
+  </li>
+  <li>
+    <p>Interactive web version (or just an output format)</p>
+  </li>
+  <li>
+    <p>Flow control visualization, less of a focus on variables specifically (<a href="https///news.ycombinator.com/item?id=22178451">comment on Hacker News</a>)</p>
+  </li>
+  <li>
+    <p>Support for large target programs (multi-file projects)</p>
+  </li>
+  <li>
+    <p>Integration with gdb and in general, support for other languages [if possible]</p>
+  </li>
+  <li>
+    <p>Manual control keys (Play, pause, speed)</p>
+  </li>
+  <li>
+    <p>Control flow chart (as an overview)</p>
+  </li>
+  <li>
+    <p>Support for <em>all</em> types of objects in saved sessions, even those that cannot be serialized directly</p>
+  </li>
+</ul>
+
+<p>This is another potential source of inspiration: https://github.com/hediet/vscode-debug-visualizer/tree/master/extension</p>
+
+<h3 id="qualification-tasks">Qualification tasks</h3>
+
+<p>In order to qualify for our projects, you must complete a qualification task or accrue sufficient qualification points from GitHub issues.</p>
+
+<p>Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a> for tasks oriented for people who are working on new projects like this one. Alternatively, you can go the traditional route of fixing GitHub issues on the main CCExtractor project, which is written in C. You can find more information about this <a href="https///ccextractor.org/public/gsoc/ideas_page_for_summer_of_code_2020#about_the_projects_and_getting_accepted">here</a>.</p>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
