@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>fastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>Extend rclone’s webui | fastpages</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="fastpages" />
+<meta property="og:title" content="Extend rclone’s webui" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/" />
+<meta name="description" content="rclone webui currently supports basic plugins like a video player and a music player. This functionality could be extended to incorporate new plugins which could be added by a user on the go, and developers could develop these plugins for rclone." />
+<meta property="og:description" content="rclone webui currently supports basic plugins like a video player and a music player. This functionality could be extended to incorporate new plugins which could be added by a user on the go, and developers could develop these plugins for rclone." />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html" />
 <meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-05T00:00:00-06:00" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebSite","headline":"fastpages","url":"https://dumbmachine.github.io/ccextractor-wiki-test/","name":"fastpages","@context":"https://schema.org"}</script>
+{"description":"rclone webui currently supports basic plugins like a video player and a music player. This functionality could be extended to incorporate new plugins which could be added by a user on the go, and developers could develop these plugins for rclone.","@type":"BlogPosting","headline":"Extend rclone’s webui","dateModified":"2020-03-05T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html","datePublished":"2020-03-05T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,126 +71,52 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Extend rclone’s webui</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-05T00:00:00-06:00" itemprop="datePublished">
+        Mar 5, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+    
 
-<p>You can edit the <code class="language-plaintext highlighter-rouge">index.md</code> file to change this content.</p>
+    </header>
 
-<h1 id="posts">Posts</h1>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>rclone webui currently supports basic plugins like a video player and a music player. This functionality could be extended to incorporate new plugins which could be added by a user on the go, and developers could develop these plugins for rclone.</p>
 
+<p>The functionality will be something similar to Google Drive. Ex. If you want to edit a doc file, rclone webui will have a plugin for it, once you enable the plugin, you would be able to edit documents using rclone.</p>
 
+<p><strong>Deliverables:</strong>\</p>
+<ol>
+  <li>A plugin dashboard, where you can install, remove and update plugins. \</li>
+  <li>A plugins repository from where the plugins could be fetched into the local rclone instance. \</li>
+  <li>The plugins should work in an isolated environment so that they cannot interfere with the system data. \</li>
+  <li>Develop at least 3 demo plugins for demonstration. This could be a word processor, a photo editor, etc. \</li>
+  <li>We could allow the developer to communicate with their own server and fetch data from there. \</li>
+</ol>
 
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-votecounter.html">
-    Vote counter and reporter
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-swaglyrics.html">
-    SwagLyrics-For-Spotify
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-sampleplatform.html">
-    Public:gsoc:sampleplatform
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-rokuchannel.html">
-    Roku reference channel
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html">
-    Extend rclone’s webui
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-pythonprofiler.html">
-    Program Flow Visualizer
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-pythonbindings.html">
-    Public:gsoc:pythonbindings
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-poormantextract.html">
-    Poor Man’s Textract
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-poormanrekognition2.html">
-    Poor Man’s Rekognition (II)
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-ocr.html">
-    Public:gsoc:ocr
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-mouseless.html">
-    Mouseless for Linux
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-livetvooverinternet.html">
-    Public:gsoc:livetvooverinternet
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-linuxtuning.html">
-    Public:gsoc:linuxtuning
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-jokertv.html">
-    Public:gsoc:jokertv
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-japanese.html">
-    Add Japanese support
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-flutterrutorrent.html">
-    rutorrent mobile interface
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html">
-    FFmpeg + Rust: Code builder
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-dtmb.html">
-    Public:gsoc:dtmb
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-complete708support.html">
-    Public:gsoc:complete708support
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-cloudtorrent.html">
-    The next peer-to-peer protocol
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li></ul>
+<p><strong>Current Stack:</strong><br />
+rclone backend: GoLang<br />
+rclone webui: Reactjs \</p>
 
-    </div>
+<p><strong>URLs:</strong><br />
+rclone GitHub: https://github.com/rclone/rclone<br />
+react frontend: https://github.com/rclone/rclone-webui-react<br />
+rclone forum: https://forum.rclone.org/<br />
+webui discussion thread: https://forum.rclone.org/t/beta-testing-webgui-for-rclone/11156\</p>
+
+<p><strong>Qualification tasks</strong><br />
+Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a>.</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/ccextractor-wiki-test/"></data>

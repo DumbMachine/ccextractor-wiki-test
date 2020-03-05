@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>fastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>FFmpeg + Rust: Code builder | fastpages</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="fastpages" />
+<meta property="og:title" content="FFmpeg + Rust: Code builder" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/" />
-<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/" />
+<meta name="description" content="Why is this a CCExtractor project and not an FFmpeg project?\ Because the FFmpeg team doesn’t need it :-) We do." />
+<meta property="og:description" content="Why is this a CCExtractor project and not an FFmpeg project?\ Because the FFmpeg team doesn’t need it :-) We do." />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html" />
 <meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-05T00:00:00-06:00" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@type":"WebSite","headline":"fastpages","url":"https://dumbmachine.github.io/ccextractor-wiki-test/","name":"fastpages","@context":"https://schema.org"}</script>
+{"description":"Why is this a CCExtractor project and not an FFmpeg project?\\ Because the FFmpeg team doesn’t need it :-) We do.","@type":"BlogPosting","headline":"FFmpeg + Rust: Code builder","dateModified":"2020-03-05T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html","datePublished":"2020-03-05T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -69,126 +71,57 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">FFmpeg + Rust: Code builder</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-05T00:00:00-06:00" itemprop="datePublished">
+        Mar 5, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+    
 
-<p>You can edit the <code class="language-plaintext highlighter-rouge">index.md</code> file to change this content.</p>
+    </header>
 
-<h1 id="posts">Posts</h1>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>Why is this a CCExtractor project and not an FFmpeg project?</strong>\ 
+Because the FFmpeg team doesn’t need it :-) We do.</p>
 
+<p><strong>Introduction</strong><br />
+FFmpeg is, of course, everybody’s go-to tool when it comes to video manipulation: Resize, apply filters, convert to a different encoding or container, etc, it does it all. They even participate in GSoC every year!</p>
 
+<p>If you read their documentation, you will see that FFmpeg, the command-line tool, is mostly a “shell” that actually builds a graph that then runs in their libraries.</p>
 
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-votecounter.html">
-    Vote counter and reporter
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-swaglyrics.html">
-    SwagLyrics-For-Spotify
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-sampleplatform.html">
-    Public:gsoc:sampleplatform
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-rokuchannel.html">
-    Roku reference channel
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-rcloneweb2.html">
-    Extend rclone’s webui
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-pythonprofiler.html">
-    Program Flow Visualizer
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-pythonbindings.html">
-    Public:gsoc:pythonbindings
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-poormantextract.html">
-    Poor Man’s Textract
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-poormanrekognition2.html">
-    Poor Man’s Rekognition (II)
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-ocr.html">
-    Public:gsoc:ocr
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-mouseless.html">
-    Mouseless for Linux
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-livetvooverinternet.html">
-    Public:gsoc:livetvooverinternet
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-linuxtuning.html">
-    Public:gsoc:linuxtuning
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-jokertv.html">
-    Public:gsoc:jokertv
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-japanese.html">
-    Add Japanese support
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-flutterrutorrent.html">
-    rutorrent mobile interface
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html">
-    FFmpeg + Rust: Code builder
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-dtmb.html">
-    Public:gsoc:dtmb
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-complete708support.html">
-    Public:gsoc:complete708support
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-cloudtorrent.html">
-    The next peer-to-peer protocol
-    </a>
-</h3><p class="post-meta">Mar 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ccextractor-wiki-test/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li></ul>
+<p>For developers that need to use FFmpeg to do “something” specific with video, the usual way to do it it just by executing FFmpeg with the right parameters (using spawn, exec, or whatever it’s called in their language of choice), wait for it to finish, and then do something with the result.</p>
 
-    </div>
+<p>Often that’s good enough, but many times it’s not: You can’t easily get progress, you absolutely can’t do anything in the middle of the process and so on.</p>
+
+<p><strong>Your job</strong><br />
+Your job here is to build a “source code generator” that given a FFmpeg command line is able to write the source code of a program, preferably in Rust, that executes the graph using FFmpeg’s libraries - but this is not about spawning FFmpeg! For example, given a command line like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i input.mkv -vf scale=320:240 output.mp4
+</code></pre></div></div>
+
+<p>You can see that it’s going to read the file “input.mkv”, resize it to 320x240, and write it as output.mp4, so there’s a resize filter there and also a container conversion.</p>
+
+<p>What we want to get is a program that does that for exactly those files and those tasks, and it needs to use FFmpeg’s low level libraries so it’s possible to add code into the program that does whatever the developer needs to do: For example, they might want to modify each frame to add something that is not supported by an FFmpeg filter - may be something that needs to be fetched for an external source.</p>
+
+<p>Your output program needs to be compilable (of course) and do exactly the same thing as FFmpeg would do if called with the specified parameters.</p>
+
+<p>Of course, you are expected to dig into how FFmpeg does it and build from there.</p>
+
+<p>We prefer Rust but C would also be OK. However, if you already know C or C++ learning Rust is not too hard and it’s totally worth it.</p>
+
+<p><strong>Qualification tasks</strong><br />
+Take a look at <a href="https///ccextractor.org/public/gsoc/takehome">this page</a>.</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/ccextractor-wiki-test/"></data>
