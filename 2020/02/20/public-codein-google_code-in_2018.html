@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Welcome to Google Code-In 2018 and CCExtractor! | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Welcome to Google Code-In 2018 and CCExtractor!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="**Questions? You can email us at code-in@ccextractor.org or join our Slack group! But please make sure you read the whole page first. **" />
+<meta property="og:description" content="**Questions? You can email us at code-in@ccextractor.org or join our Slack group! But please make sure you read the whole page first. **" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"**Questions? You can email us at code-in@ccextractor.org or join our Slack group! But please make sure you read the whole page first. **","@type":"BlogPosting","headline":"Welcome to Google Code-In 2018 and CCExtractor!","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Welcome to Google Code-In 2018 and CCExtractor!</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>**Questions? You can email us at code-in@ccextractor.org or join our <a href="/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018#slack">Slack</a> group! But please make sure you read the whole page first.
+**</p>
+
+<p>\</p>
+
+<p>\</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+This is going to be another absolutely amazing GCI year! We have a long and proud history of taking part in the Google Summer of Code with university students, and are excited to participate in GCI again for 3rd year with pre-university students! We have tasks that are: fun, useful, educational… and for all levels and interests - coding, design, documentation, UI, research and much more!
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p>\</p>
+
+<p>\</p>
+
+<hr />
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+While it is completely optional, it is highly recommended that you join our Slack group. All the mentors, org admins, contributors and fellow GCI participants hang out in that group. That’s the best place to get quick answers to any query or problem you might have. Go to the end of this page to invite yourself to the group.
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+Can’t join the Slack group? It’s no problem! We try to be super fast to respond to all comments and submissions in the GCI website. If you prefer email, you can email us at code-in@ccextractor.org. There’s also a mailing list/Google group for CCExtractor : https://groups.google.com/forum/#!forum/ccextractor-dev if that’s how you sail!
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<h2 id="things-to-know-">Things to know! ✅</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>For tasks that require some resources in general we will provide them for you, including access to videos, system accounts, etc.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code> 
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>This year we are going to have some system administration tasks. <strong>We will provide you with root access</strong> (Yes! We’re that cool) to a small server for interested students to play with. Check out our sysadmin tasks.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>We can’t stress this enough: Winners are those that do the hard tasks. Amount of tasks is not so important.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>Collaboration is much better than competition.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>Mentors love it when a student comes up with a better idea than their own, really. Do not just do as told. If something doesn’t feel right either argue against it (politely of course) or work on a different area.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>If you want to do something that is 90% or so implemented in any other open source project just take it, complete it, send the maintainers of that project whatever changes you did so they can use them if they want, and integrate with our code. Always remember to leave all license and credits intact (you can add your own name).<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>Mentors are there to help but they’re people too, not bots. So they sleep from time to time, may also have other things going on, can get sick, etc. They will reciprocate when they think of students.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that the future you will be proud of.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>
+\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>Be mindful of your own privacy. Yes, we’re a friendly bunch and you’ll get to know us and we’ll get to know you in our community. That’s different from posting your real name publicly everywhere. <code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+  </li>
+</ul>
+
+<p>\</p>
+
+<h4 id="perks">Perks</h4>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+Remember that the absolute best way to get invited by an organization to participate in Google Summer of Code is by being part of the community before GSoC is even announced. If we, as an organization, are invited to GSoC 2019 the applications from successful Code-in students will go to the top of pile.
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+We also give back to our students in any way we can, including writing recommendation letters that can help to apply to universities, visas, jobs and so on. 
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+In short - don’t think that the reward for participating this year may be limited to a t-shirt :-)
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<h2 id="code-in-for-designers-">Code-in for Designers 👩‍🎨</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+If you’re passionate about becoming a great designer and willing to do some serious work, look for the tasks labelled <strong>[Harddesign]</strong>. Hard means that they are going to take time and talent to produce the quality results we want and to bring up design tasks at par with coding. At least one of the students that does a great job on those will be a finalist, and maybe a winner.
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+We are doing this to prevent the design tasks being treated just as an easy way to complete beginner tasks. For example, you can create a T-Shirt design in 10 minutes, but that’s very unlikely to be good and usable to well, actually make T-Shirts with it. 
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+We did this last year as well and got some amazing results. One of our winners from last year did some major design tasks including the organization logo. 
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+Remember though that hard means hard. Don’t expect us to approve the first design you come up with. We will give you feedback and work with you until you produce something that you can be proud of for years and that we can use. 
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<h2 id="get-familiar-with-tags-">Get familiar with Tags 🏷</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+We’ll do our best to keep consistent tasks that help you find out good things to do. If you think we could use better tags please get in touch, with examples, and we’ll improve. For some some tags you might want to look out for:
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code><strong>winnerstrack</strong>: The hardest and/or more valuable tasks go here. If you are really serious about winning, work on those. To be realistic we don’t think they will be solved, but it wouldn’t be the first time a GCI student productivity is better than the mentors :-) So we’re putting a few of these out there (not at the same time).<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code><strong>hardtask</strong>: Difficult tasks but doable, with effort, patience, and mentor support. That’s what we’re here for!<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code><strong>githubissue</strong>: The task has a related GitHub issue, so by doing this task you will be actually fixing a bug or adding a requested feature.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code><strong>anylanguage</strong>: Tasks that you can do in any programming language you want, usually because they are about writing a new (small) program so you would start from scratch.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code><strong>googleassistant</strong>: Tasks related to Google Assistant. We’ll have a few of them every week, and they don’t have to be related to our organization primary focus at all - they can be anything, because we want you (and us) to explore this new technology.<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>\</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code><strong>bonus</strong>: Tasks that come with a special prize, such as a software license (that we will buy for the student) or a book. We will publish one of these tasks every week or so, so make sure to look for them often!<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code>\</p>
+  </li>
+</ul>
+
+<h2 id="faq-why-is-ccextractor-written-in-c-are-you-from-the-past-">FAQ: Why is CCExtractor written in C? Are you from the past? ⏱</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+Yes, we get this from time to time :-) We know there’s lots of cool languages out there, many really easy to start with, and well, C is not one of them. But the thing is, the most performance critical tools are written in C, such as the Linux kernel, or FFmpeg, or… you get the idea. A tool that needs to process lots of data (such as video) just needs to be as efficient as possible.
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+We do have auxiliary tools written in different languages, for example the Windows GUI is written in C#, and we have lots of Python as well. But the core CCExtractor tool is in C. Should you learn C then? Well, depends on how serious you are with IT in general. By learning it you will learn a lot of how things really work - without using all the magic that higher level languages provide.
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<h2 id="video-from-previous-winners">Video from previous winners</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+We think that the best way to let you know how cool Code-In is is to show you a video of previous winners. This was at Google’s office in San Francisco in 2016, where Evgeny and Alexandru (which are of course now core developers at CCExtractor) presented what they did during GCI 2016!
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p>\</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text size="18px" align="justify"&gt;</code>
+And Aadi and Shiyuan (also core team members now as well as GCI mentors) in 2017:
+<code class="language-plaintext highlighter-rouge">&lt;/text&gt;</code></p>
+
+<p>\</p>
+
+<p>Matej and Ivan, 2018:</p>
+
+<p>\</p>
+
+<h3 id="slack">Slack</h3>
+
+<p>Slack is a great communication tool. Most CCExtractor developers hang out in a slack team. You’re welcome to request an invitation here:</p>
+
+<p>{slackinvite}</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

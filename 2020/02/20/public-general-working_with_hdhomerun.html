@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Working with HDHomeRun | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Working with HDHomeRun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Starting in version 0.65, CCExtractor can process a stream being delivered via UDP, so there’s no need to capture video to a file in order to get the subtitles." />
+<meta property="og:description" content="Starting in version 0.65, CCExtractor can process a stream being delivered via UDP, so there’s no need to capture video to a file in order to get the subtitles." />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-working_with_hdhomerun.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-working_with_hdhomerun.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Starting in version 0.65, CCExtractor can process a stream being delivered via UDP, so there’s no need to capture video to a file in order to get the subtitles.","@type":"BlogPosting","headline":"Working with HDHomeRun","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-working_with_hdhomerun.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-working_with_hdhomerun.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Working with HDHomeRun</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Starting in version 0.65, CCExtractor can process a stream being delivered via UDP, so there’s no need to capture video to a file in order to get the subtitles.</p>
+
+<p><strong>What devices are supported?</strong>
+While it should work with any device that is able to send the stream via UDP, at this time it’s only been tested with HDHomeRun (both European and American models).</p>
+
+<p><strong>Will other devices be supported?</strong></p>
+
+<p>HDHomeRun works so well that it’s unlikely I’ll bother with any other device unless it finds its way to me for free and development is sponsored.</p>
+
+<p><strong>How do I use it?</strong></p>
+
+<p>Make sure you have HDHomeRun’s software installed. You will need the command line tool “hdhomerun_config” (it’s available for Linux and Windows, possibly OSX too). GUI frontends are available, too, but the following instructions use just the command line tool.</p>
+
+<p>Because you can have more than one HDHomeRun in the network, the first thing is to look for the IDs of each of them:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ./hdhomerun_config discover
+hdhomerun device 12206E95 found at 192.168.20.117
+</code></pre></div></div>
+
+<p>I only have one, and its ID is 12206E95. When I want to do anything with that tuner, I need to pass the ID to hdhomerun_config (note: since I only have one I could just pass FFFFFFFF which is accepted in this scenario).</p>
+
+<p><strong>Then, have HDHomeRun scan for channels:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hdhomerun_config 12206E95 scan /tuner0
+</code></pre></div></div>
+
+<p>The first parameter is of course the ID of my HDHomeRun. I also need to pass /tuner0 because the device is dual-tuner, so I specify which one I want to use. The output is rather large - only a part of it is shown:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SCANNING: 778000000 (eu-bcast:59)
+LOCK: t8qam64 (ss=90 snq=66 seq=100)
+TSID: 0x000F
+PROGRAM 184: 0 Boing
+PROGRAM 185: 0 Telecinco HD
+PROGRAM 304: 0 MTV
+PROGRAM 305: 0 Paramount Chann
+SCANNING: 770000000 (eu-bcast:58)
+LOCK: t8qam64 (ss=97 snq=28 seq=100)
+TSID: 0x03F4
+PROGRAM 530: 0 La 1
+PROGRAM 531: 0 La 2
+PROGRAM 532: 0 24h
+PROGRAM 533: 0 Clan
+PROGRAM 535: 0 Radio Nacional
+PROGRAM 536: 0 Radio 5 Todo No
+</code></pre></div></div>
+
+<p>In this output, the number after eu-bcast is the channel. A channel is a bundle of several programs (a program being a station) that are broadcast together. For example you can see that channel 58 contains 6 programs.</p>
+
+<p>Suppose we want the subtitles from “La 1”. First, tune to the channel that carries it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#./hdhomerun_config 12206E95 set /tuner0/channel 58
+</code></pre></div></div>
+
+<p>Then, select the specific program. Note that we could get away without selecting a program and then the HDHomeRun would deliver all of them to CCExtractor. However because CCExtractor only processses only program at a time it’s best to filter directly in the tuner than have CCExtractor discard everything it doesn’t need.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hdhomerun_config 12206E95 set /tuner0/program 530
+</code></pre></div></div>
+
+<p>Finally, tell HDHomeRun where to send the stream to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hdhomerun_config FFFFFFFF set /tuner0/target 192.168.20.15:1235
+</code></pre></div></div>
+
+<p>The parameter there is the IP address of the computer where CCExtractor is running (or will be running) and the port it’s listening to. CCExtractor can be running already when you do this, or you can start it at a later point. Of course the stream before it’s started is lost - it will start processing data as it arrives from the tuner.</p>
+
+<p>Finally, start CCExtractor if you hadn’t done it already:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ccextractor -srt -udp 1235 -stdout
+CCExtractor 0.65, Carlos Fernandez Sanz, Volker Quetschke.
+Teletext portions taken from Petr Kutalek's telxcc
+
+Input: Network, UDP/1235
+[Raw Mode: Broadcast] [Extract: 1] [Stream mode: Autodetect]
+[Program : Auto ] [Hauppage mode: No] [Use MythTV code: Auto]
+[Timing mode: Auto] [Debug: No] [Buffer input: Yes]
+[Use pic_order_cnt_lsb for H.264: No] [Print CC decoder traces: No]
+[Target format: .srt] [Encoding: Latin-1] [Delay: 0] [Trim lines: No]
+[Add font color data: Yes] [Add font typesetting: Yes]
+[Convert case: No] [Video-edit join: No]
+[Extraction start time: not set (from start)]
+[Extraction end time: not set (to end)]
+[Live stream: No] [Clock frequency: 90000]
+Teletext page: Autodetect]
+Start credits text: [None]
+Sending captions to stdout.
+
+Reading from UDP socket 1235
+File seems to be a transport stream, enabling TS mode
+Analyzing data in general mode
+[...] Program Master Table for program 530, PMT PID: 100
+101 | MPEG-2 video
+922 | MPEG-2 video
+102 | MPEG-2 private data
+2675 | Unknown
+115 | Unknown
+2051 | MPEG-4 video
+1546 | Unknown
+256 | Unknown
+4102 | Unknown
+353 | Unknown
+2544 | Unknown
+4976 | MPEG-2 audio
+111 | MPEG-2 private data
+2163 | Unknown
+1 | MPEG-4 video
+3301 | Unknown
+768 | Unknown
+VBI/teletext stream ID 102 (0x66) for SID 530 (0x212)
+
+Skip forward to the next TS header mark.
+
+    Programme Identification Data = La 1
+    Universal Time Co-ordinated = Mon Mar 11 21:36:23 2013
+
+1
+00:00:00,240 --&gt; 00:00:02,560
+Su voz suena en los altavoces.
+
+[...]
+</code></pre></div></div>
+
+<p>As expected, in this example CCExtractor would run forever. You can control this with the time related parameters, in case you want CCExtractor to exit after a given number of seconds.</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-general-working_with_hdhomerun.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

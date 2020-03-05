@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Poor Man’s Rekognition | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Poor Man’s Rekognition" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mentor: Johannes Lochter" />
+<meta property="og:description" content="Mentor: Johannes Lochter" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-faizkhan.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-faizkhan.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Mentor: Johannes Lochter","@type":"BlogPosting","headline":"Poor Man’s Rekognition","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-faizkhan.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-faizkhan.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Poor Man’s Rekognition</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h5 id="mentor-johannes-lochter">Mentor: Johannes Lochter</h5>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Building a free version of Amazon rekognition with maximum possible feature during a 3 months’ time span.</p>
+
+<h2 id="links">Links</h2>
+
+<p><a href="https://docs.google.com/document/d/1NJ2kYp0x2z6yhXMzONDDjQqNDO8lVcgqHTNkCtvhqHY/edit?usp=sharing">Proposal</a></p>
+
+<p><a href="https://github.com/backSpace001/PMR_WEB_APP1.0/tree/master">GitHub(final submission)</a></p>
+
+<p>Medium blog: https://medium.com/@b216029 (refer this for detailed information about each use-case)</p>
+
+<p>independent github code: https://github.com/backSpace001/poor_man_rekognition</p>
+
+<h2 id="use-cases">Use-cases</h2>
+
+<p>1.Face and Eye Detection using OpenCV - - completed 👍</p>
+
+<p>2.Facial recognition of a video using deep metric learning - - completed 👍</p>
+
+<p>3.Celebrity Recognition - - completed 👍</p>
+
+<p>4.Object Detection - - completed 👍</p>
+
+<p>5.Read text in images - - completed</p>
+
+<p>6.Facial Analysis - - completed 👍</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sad
+Happy
+Angry
+Disgust
+Fear
+Surprise
+Neutral
+</code></pre></div></div>
+
+<p>7.Scene Detection - - completed 👍</p>
+
+<h2 id="libraries-required">Libraries required</h2>
+
+<p>Note: (requirement.txt is already available in the repository)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenCV: For using cascade files
+Numpy: For array operations
+Matplotlib.pyplot : For plotting
+Pickle : For serializing and de-serializing Python object structures
+Keras : For importing neural network models 
+Tensorflow : For CNN’s architecture and training
+Cython :  To generate CPython extension modules
+Pillow : To load images from files
+Lxml : To use the ElementTree API
+Flask==1.1
+gunicorn==19.3
+werkzeug==0.15
+opencv
+tesseract=3.02
+numpy==1.11
+scipy==0.18
+scikit-learn&gt;=0.18
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<p>5 simple steps to download this repo, run in your local server and work on it accordingly.</p>
+
+<p>Step 1. Download or clone this repo.</p>
+
+<p>Step 2. Create a bin Folder inside the repo and download this weights from the link and paste it inside this bin folder https://drive.google.com/drive/folders/1hUY_n_H7jhdL9Z8yKKHZFB0wILGW_prH?usp=sharing (note-it is very big so couldn’t upload it in the github)</p>
+
+<p>Step 3. Get the requirments by typing in the command. ‘'’pip install -r requirements.txt’’’</p>
+
+<p>Step 4. You are good to go. RUN ‘'’python app.py’’’</p>
+
+<p>Step 5. Open ‘'’http://127.0.0.1:5000/’’’ in your browser</p>
+
+<h2 id="use-cases-1">Use Cases</h2>
+
+<p>1.Face and eyes detection using OpenCV:</p>
+
+<p>OpenCV comes with a trainer as well as a detector. Here I have used OpenCV for detection and later in the project, I will use it to create an XML file of faces for Face recognition. OpenCV already contains many pre-trained classifiers for face, eyes, smiles, etc. Those XML files are stored in the Library/etc/haarcascades. In this part, I have used face cascade and eye cascade to detect face and eyes in an image. OpenCV uses a machine learning algorithm and it contains pre-trained cascade XML files which can detect a face, eyes, etc. This basically breaks the image into pixels and form blocks, it does a very rough and quick test. If that passes, it does a slightly more detailed test, and so on. The algorithm may have 30 to 50 of these stages or cascades, and it will only detect a face if all stages pass. This technique works on the Viola-Jones Algorithm, which is a part of deep learning. This statement was said on the context of:- deep learning is a class of machine learning algorithm that learns in supervised (e.g., classification) and/or unsupervised (e.g., pattern analysis) manners. This part of face detection is also used in facial recognition section and there I will use this the file as an unrecognized file to be saved in the database and to be used as another face with no name registered.
+Example rectangle features shown relative to the enclosing detection window. The sum of the pixels which lie within the white rectangles is subtracted from the sum of pixels in the grey rectangles. Two-rectangle features are shown in (A) and (B). Figure © shows a three-rectangle feature, and (D) a four-rectangle feature.</p>
+
+<p>2.Facial Recognition</p>
+
+<p>I have used Deep Learning face recognition embedding. Here I am using deep learning and this technique is called deep metric learning.In deep learning typically a network is trained to:
+Accept a single input image
+And output a classification/label for that image However, deep metric learning is different. Instead, of trying to output a single label (or even the coordinates/bounding box of objects in an image), instead of outputting a real-valued feature vector. For the dlib facial recognition network, the output feature vector is 128-d (i.e., a list of 128 real-valued numbers) that is used to quantify the face. Training the network is done using triplets: Facial Recognition via Deep metric learning involves “triplet training step”
+I have first created a database for the training set and encoded (128-d) each face image into a numpy array and turn it into an XML file. Second I have imported that trained XML file into the main script to detect and recognize a face.</p>
+
+<p>3.Celebrity Recognition</p>
+
+<p>This part is same as the above one the only reason I made it a different sector is because this feature is listed in Amazon’s rekognition project and as this is a similar project I have to add this additional name tag and create a whole new dataset consisting of many known actors. Here I have also used deep metric learning techniques.</p>
+
+<p>4.Object detection</p>
+
+<p>Object Detection is the process of finding real-world object instances like car, bike, TV, flowers, and humans in still images or Videos. It allows for the recognition, localization, and detection of multiple objects within an image which provides us with a much better understanding of an image as a whole. It is commonly used in applications such as image retrieval, security, surveillance, and advanced driver assistance systems (ADAS). I have performed this using YOLOv2 on an image and a video file. You only look once (YOLO) is a state-of-the-art, real-time object detection system. On a Titan X, it processes images at 40–90 FPS and has an mAP on VOC 2007 of 78.6% and an mAP of 48.1% on COCO test-dev. One can find all the details about YOLOv2 here: https://arxiv.org/pdf/1612.08242.pdf https://www.youtube.com/watch?v=NM6lrxy0bxs</p>
+
+<p>5.Read text in images</p>
+
+<p>Extraction of text from an image is a subpart of image processing and is called OPTICAL CHARACTER RECOGNITION (OCR). I have used Tesseract which is an OCR engine developed by Google. It supports Unicode and has the ability to recognize more than 100 languages.</p>
+
+<p>6.Facial expression recognition</p>
+
+<p>https://medium.com/@b216029/report-3-494b2fdbb179 (refer this for this part)</p>
+
+<p>7.Scene detection</p>
+
+<p>Citation - www.algorithmia.com I have coded to implement my part so as to perform the task, all the data will be provided by algorithmia and can be seen in the algorithmia website itself. My code will mere be a bridge.
+[note-this part is not included in the web app because of some complexity] Scene detection is used for detecting transitions between shots in a video to split it into basic temporal segments. It helps video editors to automate the process of quickly splitting videos in bulk rather than editing it frame by frame by hand. To run scene Detection Follow this steps:</p>
+
+<p>1.Create an account on Algorithmia (includes 5,000 free credits each month).</p>
+
+<p>2.Go to your profile page, click the Credentials tab, and find your API key.</p>
+
+<p>3.Find a test video. You can use a public URL (/ccextractor-wiki-test/2020/02/20/prefer Vimeo over youtube), or upload one to their hosted data storage.</p>
+
+<p>4.Install the Python Algorithmia client using the command “pip install algorithmia“.</p>
+
+<p>5.Copy the sample code below, replace YOUR_API_KEY with your own key, and run it to extract the scenes from your video!</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-faizkhan.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

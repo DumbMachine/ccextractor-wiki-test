@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Public:gsoc:ideas_page_for_summer_of_code_2018 | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Public:gsoc:ideas_page_for_summer_of_code_2018" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="~~META: title = Google Summer of Code (GSoC) 2018 ideas page ~~" />
+<meta property="og:description" content="~~META: title = Google Summer of Code (GSoC) 2018 ideas page ~~" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ideas_page_for_summer_of_code_2018.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ideas_page_for_summer_of_code_2018.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"~~META: title = Google Summer of Code (GSoC) 2018 ideas page ~~","@type":"BlogPosting","headline":"Public:gsoc:ideas_page_for_summer_of_code_2018","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ideas_page_for_summer_of_code_2018.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ideas_page_for_summer_of_code_2018.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Public:gsoc:ideas_page_for_summer_of_code_2018</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      17 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>~~META:
+title = Google Summer of Code (GSoC) 2018 ideas page
+~~</p>
+
+<h1 id="google-summer-of-code-2018">Google Summer of Code 2018</h1>
+
+<p>Welcome to our ideas page. This is going to be an amazing year - lots of new things to work on, including JokerTV, a totally open TV receiver, plus several experimental/for fun projects. Projects in C, Node, Python… you name it, we have it. Plus resources for students - we’ll give access to a high speed server, all our samples (we’ll even ship a portable drive with them anywhere in the world, so don’t worry about slow connections).</p>
+
+<p>You are welcome to check out our ideas page (this is it - actual ideas at the bottom of the page) and start early in the community bonding process as well as learning a bit about our code. And of course, we’d love you to stay around even if we are not invited to GSoC or if we cannot invite you as a student.</p>
+
+<p><strong>** About us **</strong></p>
+
+<p>We are a small org, which means that your contribution will have a large impact. It’s not going to mean a 0.5% improvement on a big project - it’s going to be more than 10% on a medium size one. If you like challenges and want a chance to shine this is your place.</p>
+
+<p>We have -we think- statistically amazing continuity in the team: Most GSoC students from all the past years are still involved, even if they are no longer eligible as students. They still contribute code, and they mentor both in GSoC and the sister program GCi. As mentors, they also come to the Summer of Code summit which traditionally takes place in October.</p>
+
+<p>We have <em>mentors all over the world</em> (/ccextractor-wiki-test/2020/02/20/North America, Europe, Asia and Australia), so time zones are never a problem. Our main channel of communication is a <a href="https://ccextractor.org/public/general/support">Slack channel</a> to which everyone is welcome. We expect all accepted students to be available on Slack very often, even if you don’t need to talk to your mentor. This will help you ask questions when necessary, and you might be able to help others out as well while working on your project.</p>
+
+<p>A <a href="https://groups.google.com/forum/#!forum/ccextractor-dev">mailing list</a> is also available for those that prefer email over slack. It’s a new mailing list (the old one hasn’t been used in a long time) but it’s read by everyone involved in GSoC.</p>
+
+<p><strong>All our top committers will be mentoring</strong>. Many of them are former GSoC students.</p>
+
+<p><strong>** About what we use **</strong></p>
+
+<p>The core tool that names the organization (CCExtractor) is a command-line program written in <strong>C</strong> (not C++).<br />
+The current Windows GUI is written in <strong>C#</strong>, and we have another GUI for Linux that’s written with Qt, and a small GUI that’s integrated into the main program (C).<br />
+The testing tool we use to run regression tests is mainly written in <strong>Python</strong>, but it also used Javascript, CSS and some shell scripting. The Test suite is written in C#.<br />
+The prototype real time subtitle website is written in <strong>NodeJS</strong>.<br />
+We also have a number of support tools that do a number of different things, from downloading subtitles from streaming services to translating them with Google Translate or DeepL. Most of them are written in <strong>Python</strong>, but since they are small tools that do their job you don’t need to worry much about them.<br />
+For totally new things you can use whatever tool you feel is best for the job.\</p>
+
+<p><strong>** About sample media and other resources **</strong></p>
+
+<p>We work with huge files. Not all of them are huge, but many are. We know that many students don’t have access to high speed internet. To those students we will ship (as soon as they are selected) a portable hard drive with all our samples. So if your internet connection is not good, don’t worry - as long as you can plug a USB drive to your development computer you can participate with us.</p>
+
+<p>We also have a shared Linux development server with lots of storage and a Gigabit uplink. Students get an account on it and they are welcome to use it. There’s nothing there except our own work, so it’s a trusted environment (for a server that is connected to internet of course).</p>
+
+<p>The sample platform also hosts a bunch of samples, both which are small or decently sized.\</p>
+
+<p><strong>** About the projects and getting accepted **</strong></p>
+
+<p>Qualification: On top of -of course- the quality of the proposal, we will be ranking students with a points system (we introduced this last year, and it worked pretty well).\</p>
+
+<p>We don’t have a minimum number of required points, but you definitely will need some (with equally good proposals we will rank based on acquired points). This means, the more points you get the more likely you are to be invited to join us during the summer, assuming that your proposal is good.\</p>
+
+<p>You can get points by doing one (or more) of the next options:\</p>
+
+<p>1) By solving issues in our <a href="https://github.com/CCExtractor/ccextractor/issues">GitHub issue tracker (CCExtractor)</a>, <a href="https://github.com/canihavesomecoffee/sample-platform/issues">Sample platform issues</a> (default 1 points per issue unless specified somewhere in the issue page). Most issues have an explicit number of points that you can find in a comment.<br />
+2) By joining the community in Slack. You can invite yourself <a href="/ccextractor-wiki-test/2020/02/20/public-general-support">here</a>. (/ccextractor-wiki-test/2020/02/20/1 point)<br />
+3) If you are a former <a href="https://developers.google.com/open-source/gci/">Code-in finalist</a> you start with 1 point. If you were a winner, you start with 2 points. Note that there are just a few developers that meet this, so don’t be discouraged if you aren’t one of them. Almost no one is, but we’d love to hear from those that are.<br />
+4) By sending us a TV sample that has something we don’t support. It doesn’t have to be from your own country (since hopefully, we already support it), but if it is, so much the better. This is probably hard to get, since we already got all the low hanging fruit. But if your local TV has subtitles you can turn on and off, we’d love a recording.\</p>
+
+<p><strong>** Best qualification tasks **</strong></p>
+
+<p>If you don’t don’t know which issues in GitHub to do, here’s a list of the ones that are approachable (you don’t need to dig too deep or learn many parts of the code) and useful:</p>
+
+<p><a href="https://github.com/CCExtractor/ccextractor/issues/929">Terrible OCR results with Channel 5 (UK)</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/807">Can’t extract multi-track subtitles from .mp4</a> [SOLVED]<br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/805">CCExtractor won’t extract subtitles from TS with no PAT/PMT</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/690">Automatically switch to correct encoding for 708 subtitles based on PMT data</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/735">French captions lack accents</a> [SOLVED]<br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/730">CCExtractor is unable to recover position in file after finding a bad NAL due to input corruption</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/665">Request: Allow to extract several teletext pages in one pass</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/684">‘live’ raw data problem</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/922">DVB Teletext subtitle incomplete</a> [SOLVED]<br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/933">Feature request: Write processed bytes to file</a><br />
+<a href="https://github.com/CCExtractor/ccextractor/issues/961">Extract telemetry data (which is stored in a subtitle track) from a Drone recording</a></p>
+
+<p>The sample platform’s issues are tagged with “gsoc-proposal-task”, so you can easily see what you can work on.\</p>
+
+<p><strong>** Community etiquette **</strong></p>
+
+<p>It goes without saying that everyone in the community has to be polite and respectful, and consider everyone else a member of a team and not a competitor.</p>
+
+<p>All developers are part of the team, by the way. Our Slack channel has mentors, code-in participants, other students, or developers and users that are none of the above but they all play some kind of role in CCExtractor’s community.</p>
+
+<p>Part of being respectful is giving consideration to everyone else’s time. Most of us have day jobs, and as such are limited in the time we can use to guide you. We’d like to spend it on quality discussions, and not on things that are for example written on this website, things that you can easily retrieve by reading documentation on used libraries or on the software’s help screen. Asking this kind of questions in the Slack channel shows little respect for our time. This doesn’t mean you can’t ask questions, but remember that being a clueless user and a lazy developer are two very different things. If you ask those questions you will probably get an answer as if you were a clueless user (polite no matter what), but if you apply to GSoC you will be considered a lazy developer. Google is your friend ;)</p>
+
+<p>Tell things as you see them. Politely -you’re not Linus-, but don’t sugar-coat it. We know some parts of our code is poorly written, poorly documented, etc. It stands out, so you will know when you dig in. No one is going to be offended by having that code rewritten or refactored. Peer review applies to everybody’s work and is done by everybody.</p>
+
+<p><strong>** Cross project proposals **</strong></p>
+
+<p>Because we use a number of libraries and in fact “are a library” ourselves (meaning other programs can link CCExtractor as a library, or invoke the binary) we interact with other communities and their software. From time to time there’s a chance to do something interesting that affects CCExtractor and something else (FFmpeg comes to mind, but also Kodi, VLC, libGPAC, Red Hen, to mention just a few of our friends that typically participate in Summer of Code). So how does this work?
+As long as the work benefits CCExtractor and it’s part of your summer project, we’re OK with you spending some time on the other project. For example if you are improving our MP4 support, for which we use libGPAC, and need to fix or improve something on libGPAC you are welcome to do so. If you do, make sure you submit your changes to their maintainers and follow through with their merge process.</p>
+
+<p><strong>** Your proposal **</strong></p>
+
+<p>You can propose to do any of the following ideas, or you can bring your own. In any case, make sure you run them by us before you actually submit your proposal.\</p>
+
+<p>At the very least your proposal needs to\</p>
+
+<ul>
+  <li>Explain what you do want to do, why it is important to you (don’t make up a story here - the reason can be that you need it, that you just think it’s cool, that you have an itch to work on it, etc), and why it could be important or useful to us.\</li>
+  <li>Explain how you intend to accomplish the goal, in enough detail that makes it clear that you have done your homework. For example, “I will modify the CCExtractor binary so that it’s able to convert audio to text with perfect accuracy” is the same thing as sending your proposal to the trash. You need to have a plan.\</li>
+  <li>Detail the timeline explaining what the expected progress is for each week or every two weeks (pay special attention to the milestones within the GSoC timeline itself, of course) and how we should validate the results.\</li>
+  <li>Detail what kind of support you will need from us. For example, if you are going to need test streams, hardware, access to a server, etc, let us know, so we can prepare everything for you as soon as possible.\</li>
+  <li>Detail your expected working hours in UTC. We’re used to weird working schedules, so don’t worry about working in the middle of the night, or weekends instead of other days, etc. Knowing your hours may help us to match you better with a mentor. \</li>
+  <li>Mention your planned absences. We don’t need you to detail what you will be doing when you are not working of course, but if you are going away for any reason we need to know so we don’t think you’ve abandoned.\</li>
+  <li>Link to your GitHub (or any other repository) profile, if you have one, so we can take a look at your previous work.\</li>
+  <li>GSoC is a coding program: This means that ideas that are about testing (unless it involves coding something to test our programs ;) ), website design, etc, are out.\</li>
+  <li>However, we want to have good documentation: Make sure you have time to write a good technical article explaining your work.\</li>
+  <li>Be realistic and honest with the timeline. Consider each week you should work around 30 hours. If your timeline reserves a lot of time for minor things we’ll think that you are not going to be working full-time in GSoC. On the other hand if you promise to do things in a lot less than that it seems realistic to us it will seem that you don’t really know how much work things take.\</li>
+  <li>If you are going to be using 3rd party libraries (that’s OK), make sure to validate that their license is compatible with GPLv2 (which is ours). List the libraries in your proposal. Check that they are cross-platform. If you will need to extend those libraries in any way please explain. In this case, your proposal should include time to get that extension submitted to the maintainers (we love to contribute to other projects).</li>
+</ul>
+
+<p>Something else: Mentors often have their fingers in several pies. If you send the same proposal to several orgs everyone will know. So do yourself a favor and don’t do that. You can apply to several organizations and that’s totally fine, but each organization will want to see that you have put the time to write a great proposal that is focused on them.</p>
+
+<p><strong>__The ideas we currently have__</strong></p>
+
+<p>Important: If you have something else in mind that relates to subtitles and accessibility please get in touch. We prefer that you do something that you are passionate about even if it’s something we hadn’t considered.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Tech you need to know</th>
+      <th>Tech you will learn</th>
+      <th>Difficulty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-complete708support">Complete 708 support</a></td>
+      <td>This is one of the big ones. Why? Because it’s been on our wish list for some time and until now no one has decided to really go for it; after the initial work it’s always been incremental improvements, but no one has raised their hand and said “I’m going to complete this”. It’s possible the code base it’s not really friendly. Who knows. If this is the case we’re OK with a total rewrite if that’s what it takes to get this done. The details page has some more information if this picked your interest.</td>
+      <td>C</td>
+      <td>Video standards \ Subtitle standards \ CCExtractor internals \ Internationalization</td>
+      <td>Hard</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-jokertv"> Work on JokerTV integration</a></td>
+      <td>JokerTV is an excellent open hardware and software platform (/ccextractor-wiki-test/2020/02/20/think Arduino, but for TV). It’s still early days, and we really want to be among the first supporting this amazing new platform. JokerTV can receive signals from all TV standards around the world (/ccextractor-wiki-test/2020/02/20/finally!, no more European or American models, etc). We will buy one device for the student (/ccextractor-wiki-test/2020/02/20/or students, if their ideas are different) that works on this. \ Abylay Ospan, the genius behind JokerTV has agreed to mentor.</td>
+      <td>C</td>
+      <td>Hardware \ Video standards \ Joker (/ccextractor-wiki-test/2020/02/20/the platform)</td>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-pythonbindings">Write Python bindings for CCExtractor</a></td>
+      <td>This was partially done during GSoC 2017, but it’s not complete. You may choose to continue the work already done, or you can come up with a more robust / fast / etc approach. \ What we currently have “sort of works” but we’ve seen leaks, crashes… so it’s definitely not production ready.</td>
+      <td>C \ Python</td>
+      <td>Obscure C+Python topics \ CCExtractor internals</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-highspeedsync">Write high speed subtitle synchronization tools</a></td>
+      <td>This one must be hard - it’s the one project that unfortunately failed during 2017, even though it’s a really interesting one that touches many areas (/ccextractor-wiki-test/2020/02/20/math, sound analysis…). We can provide you all the work done last year (/ccextractor-wiki-test/2020/02/20/including the winner’s proposal and current code) or you can start over.</td>
+      <td>Your choice</td>
+      <td>Audio \ Video formats \ Optimization \ Algorithms</td>
+      <td>Hard</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-DTMB">Add support for DTMB countries</a></td>
+      <td>DTMB is the standard for Chinese TV, also implemented by countries such as Cuba. What kind of student is ideal for this task? One with lots of analytic skills and patience. If you are one of those, don’t disregard this task just because you don’t speak (/ccextractor-wiki-test/2020/02/20/or maybe, even care) about Chinese. The experience on dealing with this will be extremely valuable in the future. \ We will use part of the organization funds to buy standard documents you might need, a capture device, and in general, anything required to make your life easier.\</td>
+      <td>C</td>
+      <td>DTMB \ Video standards \ Hardware \ Research</td>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-interestingbits">Detect Automatically the most interesting bits of sample videos</a></td>
+      <td>Write software that is able to detect, for some kind of videos, the most interesting bits (/ccextractor-wiki-test/2020/02/20/highlights).</td>
+      <td>Your choice</td>
+      <td>Algorithms</td>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-projectnephos">Project Nephos </a></td>
+      <td>Cloud based storage for a massive collection of TV recordings</td>
+      <td>Your choice</td>
+      <td>Cloud services \ Scalability</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-ocr">Improve our OCR subsystem </a></td>
+      <td>We use tesseract to OCR bitmap based subtitles. In theory this is straight forward, but when you take into consideration all variants (/ccextractor-wiki-test/2020/02/20/color, languages, subtitles burned-in image, even moving text such as tickers) the complexity grows fast. Still, the work done by PhD students in the past is great, and we’re confident this year we can complete the work on this area if someone of the same caliber decides to join the effort.</td>
+      <td>C</td>
+      <td>Tesseract \ Imaging \ OCR</td>
+      <td>Suspected hard</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-realtimesubtitles">The Real time subtitles project</a></td>
+      <td>We have a great <a href="/ccextractor-wiki-test/2020/02/20/http:--realtimedemo.ccextractor.org:8080-">proof of concept</a> on real time subtitles. It’s rock solid (/ccextractor-wiki-test/2020/02/20/except when we’re working on it), and we’re really proud of it. The part of sending the subtitles to the website is completed as you can see, but of course we need more functionality added to it. Which functionality? We’d like to hear proposals. Obvious things such as adding everything to a searchable database come to mind, but that’s not really a summer worth of work. So come up with 3 months worth of improvements you can think of.</td>
+      <td>NodeJS \ Web</td>
+      <td>Depends on your idea</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-sampleplatform">The sample platform (/ccextractor-wiki-test/2020/02/20/- continuous integration) project</a></td>
+      <td>The sample platform is a good way to help new contributors to check if their code doesn’t introduce any regressions. It’s pretty stable, but has some downsides that have been known for a while and that should finally be solved. Most of the items that are on the issue list (see the <a href="https://github.com/CCExtractor/sample-platform/issues">issues page</a>) should all be solvable in less than a summer… So if you plan on working on the platform, you’ll have to come up with some small extra things to make sure you’re busy the entire summer ;)</td>
+      <td>Python (/ccextractor-wiki-test/2020/02/20/majority) \ HTML, CSS \ JS \ Bash</td>
+      <td>Continuous Integration (/ccextractor-wiki-test/2020/02/20/CI) \ Automated deployments \ GitHub integration</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-livetvooverinternet"> Add support for Live TV over the internet (/ccextractor-wiki-test/2020/02/20/such as YouTube TV) </a></td>
+      <td>A number of platforms are appearing these days to distribute local TV content over the internet. For example, YouTube now has <a href="https://tv.youtube.com/welcome/">live TV</a>. The goal is to add support for these new content distribution platforms. We will take care of the subscription cost.</td>
+      <td>Network analysis</td>
+      <td>Live streaming techniques</td>
+      <td>Unknown</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-ideas_page_for_summer_of_code_2018.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

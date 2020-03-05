@@ -1,266 +1,1135 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dumbmachine.github.io/ccextractor-wiki-test/" rel="alternate" type="text/html" /><updated>2020-03-05T13:46:17-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml</id><title type="html">CCExtractor</title><subtitle>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</subtitle><entry><title type="html">Vote counter and reporter</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-votecounter.html" rel="alternate" type="text/html" title="Vote counter and reporter" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:votecounter</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-votecounter.html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;br /&gt;
-Yes, we’ve just seen it again in Iowa, but it’s not really a new thing or a new need: Use of electronic voting, counting and reporting is becoming the norm, and so are the problems and lack of trust in the process.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dumbmachine.github.io/ccextractor-wiki-test/" rel="alternate" type="text/html" /><updated>2020-03-05T16:23:08-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml</id><title type="html">CCExtractor</title><subtitle>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</subtitle><entry><title type="html">Blog Posts from our Students</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-blog_posts_our_students.html" rel="alternate" type="text/html" title="Blog Posts from our Students" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:blog_posts_our_students</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-blog_posts_our_students.html">&lt;p&gt;Our Google Summer of Code Students are hard at work, but they are also creative writers who document their journey and adventure while developing their projects. Here you can find many blog posts linking to their blog posts where they describe the process on how it is to work for CCExtractor and Google Summer Of Code&lt;/p&gt;
 
-&lt;p&gt;We need to do something.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Your job&lt;/strong&gt;&lt;br /&gt;
-Your job is to design and implement an universal tool that can be trusted by everybody to help with voting, counting and reporting in any election.&lt;/p&gt;
-
-&lt;p&gt;Universal means that it be made to work (with configuration of course) for any kind of voting or election, be it for a party candidate for a major election to a simple class delegate at your university.&lt;/p&gt;
-
-&lt;p&gt;Trust will come from its open source nature which makes the code auditable.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Voting&lt;/strong&gt; means that your system can be used by the voters to well, vote. This is probably the hardest part to get right as you need to somehow verify the voters identity.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Counting&lt;/strong&gt; means that for those elections (which are probably all the political ones) in which the votes are counted after everybody has votes it must be possible for the people that are doing the counting to update their counts in real time and most importantly compare their counts in real time: The way it works, at least in some countries, is that after the electoral place closes, the ballot box is opened and the counting starts. That counting is done by several people (possibly selected randomly from the registered voters) but there are interested parties (such as party representatives) verifying that everything is done correctly. Those representatives of course are also keeping their own tallies, and at the end of the counting they must match the official count.&lt;/p&gt;
-
-&lt;p&gt;It goes in the interest of the process that everybody involved can see the official tally and everybody’s else.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reporting&lt;/strong&gt; means that after the counting is over the results can be reported to different places: Depending on who is doing the counting (meaning the user of you application) that reporting will go to their party, to the press, to an “upstream” counting place, or several or those at the same time.&lt;/p&gt;
-
-&lt;p&gt;Your system will have a mobile frontend that must be written in Flutter (which generates Android and iOS native aps).&lt;/p&gt;
-
-&lt;p&gt;It will also have a backend that can be written in anything, but it must be scalable. For example, a PHP backend is a non-starter. Think of using a massively scalable cloud service as the core of your backend. Remember that your application will have an extremely high usage during a short period of time and then it’s over.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.theatlantic.com/technology/archive/2020/02/bad-app-not-russians-plunged-iowa-into-chaos/606052/&quot;&gt;Interesting read&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Finally, this system is not supposed to replace paper. We need the paper trail. It’s essential.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Your proposal should also include reports regarding scalability and fault tolerance of your chosen tech stack. A list of stacks and their performance comparison for the same application can be made from &lt;a href=&quot;https://github.com/gothinkster/realworld&quot;&gt;RealWorld.io&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction Yes, we’ve just seen it again in Iowa, but it’s not really a new thing or a new need: Use of electronic voting, counting and reporting is becoming the norm, and so are the problems and lack of trust in the process.</summary></entry><entry><title type="html">The next peer-to-peer protocol</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-cloudtorrent.html" rel="alternate" type="text/html" title="The next peer-to-peer protocol" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:cloudtorrent</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-cloudtorrent.html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;\&lt;br /&gt;
-BitTorrent is, of course, the world’s most used peer to peer protocol. It’s great, but it was designed before the cloud was ubiquitous and it doesn’t make use of the places where you have the most storage or the most bandwidth. Can we design something for the next decade?&lt;/p&gt;
-
-&lt;p&gt;BitTorrent is based on the concept of peers, which are BitTorrent clients, usually running on computers at home, that share data is a super-efficient manner. It works well, of course, but&lt;/p&gt;
+&lt;h4 id=&quot;google-summer-of-code-2019&quot;&gt;Google Summer of Code 2019&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;It requires users to have their computers on for a long time\&lt;/li&gt;
-  &lt;li&gt;It requires users to expose their IP address\&lt;/li&gt;
-  &lt;li&gt;It requires users to use their home internet connection, making it hard to do other things at the same time such as streaming\&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Artem Fedoskin(@thelastpolaris)&lt;/strong&gt; with his project ‘‘Poor Mans Rekognition’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-starts-58c497769420&quot;&gt;GSoC 2019 Starts!&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-community-bonding-period-b709f6c0d4e0&quot;&gt; GSoC 2019 — Community Bonding Period &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-choosing-the-right-structure-7644b319c7c9&quot;&gt; GSoC 2019 — Choosing the Right Structure&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-choosing-the-right-license-and-building-the-dl-rig-223d85acbfaf&quot;&gt;GSoC 2019 — Choosing the Right License and building the DL Rig&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-working-on-face-detection-586702ce7159&quot;&gt;GSoC 2019 — Working on Face Detection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-facial-recognition-and-first-evaluations-189ce03baef8&quot;&gt;GSoC 2019 — Facial Recognition and First Evaluations&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-polishing-face-detection-and-working-on-web-app-a44d0b4659c1&quot;&gt;GSoC 2019 — Polishing Face Detection and working on Web App&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-web-app-and-second-evaluations-artem-fedoskins-blog-134c25fcfafd&quot;&gt;GSoC 2019 — Web App and Second Evaluations&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-continuing-working-on-web-app-c459738eed3b&quot;&gt;GSoC 2019 — Continuing Working on Web App&lt;/a&gt;
+ *&lt;a href=&quot;https://medium.com/@fedoskin/gsoc-2019-poor-mans-rekognition-ec59808813d7&quot;&gt;GSoC 2019 — Poor Man’s Rekognition&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Amit Kumar(@pymit)&lt;/strong&gt; working also on ‘‘Poor Mans Rekognition’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/gsoc19-with-ccextractor-development-8a69a8ae78fc&quot;&gt;GSoC’19 with CCExtractor Development&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/week-1-gsoc19-ccextractor-development-eab8c4c1fda8&quot;&gt; week 1 &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/week-2-gsoc19-ccextractor-development-e4ffb6d54376&quot;&gt; week 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/week-3-gsoc19-ccextractor-development-e6be1d1e1fb4&quot;&gt; week 3 &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/week-4-gsoc19-ccextractor-development-df890ffa2b46&quot;&gt; week 4 &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/week-5-gsoc19-ccextractor-development-ff895a985d9c&quot;&gt; week 5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/week-6-7-gsoc19-ccextractor-development-8173ce62a0bf&quot;&gt; week 6&amp;amp;7 &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/final-phase-gsoc19-ccextractor-development-4d9f5d5aefb0&quot;&gt;Final Phase &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@amkr/final-work-submission-gsoc19-ccextractor-development-40a2b6c6a946&quot;&gt;Final Work Submission &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Faiz Khan&lt;/strong&gt; and ‘‘Poor Mans Rekognition’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/google-summer-of-code-2019-my-story-and-opinion-e683058c6c83&quot;&gt;Google Summer of Code.! 2019 (my story and opinion)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/technical-details-of-my-project-google-summer-of-code-25b041df990&quot;&gt;Technical details of my project (Google summer of code)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/poor-man-rekognition-756497c7e4cf&quot;&gt;Week-1, Poor man Rekognition&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/report-1-4th-week-60140619eb4f&quot;&gt;REPORT 1: 4th Week.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/2nd-report-1007c6ea018b&quot;&gt;Report 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/face-and-eye-detection-using-opencv-a52937fd7af2&quot;&gt;Upgrade Face and eye detection using OpenCV.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/report-3-494b2fdbb179&quot;&gt;Report 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@b216029/report-3-final-8ef2de33a0d7&quot;&gt;Report 4: FINAL&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sarfaraz Iraqui(@sziraqui)&lt;/strong&gt; also with his project ‘‘Poor Mans Rekognition’’:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@sziraqui/not-the-normal-gsoc-journey-d51a6167a3a6&quot;&gt;Not The Normal GSoC Journey&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Shivam Jha(@thealphadollar)&lt;/strong&gt; is working on the ‘‘Sample Platform’’
+    &lt;ul&gt;
+      &lt;li&gt;[[https://thealphadollar.github.io/experience/2019/05/17/gsoc19-0.html|
+GSoC’19 [0]: Congratulations And Let’s Begin]]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Chris Wang&lt;/strong&gt; has the goal of improving ‘‘Swag Lyrics’’ with ‘‘autosynch’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@chriswang030/gsoc-2019-phase-1-vocal-isolation-465cfd8f32ad&quot;&gt;GSoC 2019 Phase 1: Vocal Isolation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@chriswang030/gsoc-2019-phase-2-hyphenation-alignment-8d222a7b42ca&quot;&gt;GSoC 2019 Phase 2: Hyphenation &amp;amp; Alignment&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@chriswang030/gsoc-2019-overview-4287e369bec3&quot;&gt;GSoC 2019 Phase 3: Optimization&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Suyash Bajpai&lt;/strong&gt; is developing ‘‘co-oCCur’’ a High speed subtitle synchronization tool:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://sypai.github.io/GSoC-Final-work-submissions/&quot;&gt;GSoC : Final Work Submission! &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Chaitanya Bankanhal&lt;/strong&gt; goal is to make a ‘‘Web UI for Rclone’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://good2be.me/blog/gsoc-phase-i.html&quot;&gt;Google summer of Code ‘19 RClone WebUI PHASE I&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://good2be.me/blog/file-structure.html&quot;&gt;File Structure Overview for RClone WebUI React&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://good2be.me/blog/new-widget.html&quot;&gt;Creating a new widget&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mohsin Mustafa(@buoyantbird)&lt;/strong&gt; project is ‘‘Poor Man Rekognition’’:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://drcpmkeyi.gitlab.io/poor-man-rekognition/GSoC/eval_one.html&quot;&gt;First Evaluation Report&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://drcpmkeyi.gitlab.io/poor-man-rekognition/GSoC/eval_two.html&quot;&gt;Second Evaluation Report&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://drcpmkeyi.gitlab.io/poor-man-rekognition/GSoC/eval_three.html&quot;&gt;Final Evaluation Report&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;There are of course alternatives (you can rent servers in data centers for example), but they are not cheap, they’re not easy to set up, and they come with their own sets of problems, in general.&lt;/p&gt;
-
-&lt;p&gt;These days most people have lots of their data in the cloud: Dropbox, Google Drive and so on.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Your job&lt;/strong&gt;&lt;br /&gt;
-The goal here is to come up (and implement the first version) with a system that let those personal storage systems exchange data&lt;/p&gt;
+&lt;h4 id=&quot;google-summer-of-code-2018&quot;&gt;Google Summer of Code 2018&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Securely\&lt;/li&gt;
-  &lt;li&gt;As cheap as possible\&lt;/li&gt;
-  &lt;li&gt;As fast as possible\&lt;/li&gt;
-  &lt;li&gt;As easily as possible\&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;&lt;strong&gt;Archit Matur(@achie27)&lt;/strong&gt; did work on ‘‘FabBits’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@achie27/building-fabbits-gsoc-with-ccextractor-1-93c4a282966f&quot;&gt;Building FabBits : GSoC with CCExtractor #1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@achie27/building-fabbits-gsoc-with-ccextractor-2-a2443e38a8b4&quot;&gt;Building FabBits : GSoC with CCExtractor #2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@achie27/building-fabbits-gsoc-with-ccextractor-3-df897b35bb99&quot;&gt;Building FabBits : GSoC with CCExtractor #3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@achie27/building-fabbits-gsoc-with-ccextractor-4-7048f5c90960&quot;&gt;Building FabBits : GSoC with CCExtractor #4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;[[https://medium.com/@achie27/building-fabbits-gsoc-with-ccextractor-final-e4b5d3160bf6|
+Building FabBits : GSoC with CCExtractor — Final]]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Shivam Jha(@thealphadollar)&lt;/strong&gt; and ‘‘Nephos’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Aaditya Nair&lt;/strong&gt; and his work with ‘‘Nephos’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aadityanair.ml/2018/05/14/gsoc-begin/&quot;&gt;GSoC The Beginning&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aadityanair.ml/2018/05/28/gsoc-update1/&quot;&gt;GSOC Update Week 1 and Week 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aadityanair.ml/2018/06/10/gsoc-update2/&quot;&gt;GSOC Update Week 3 and Week 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aadityanair.ml/2018/06/24/gsoc-update3/&quot;&gt;GSOC Update Week 5 and Week 6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aadityanair.ml/2018/07/08/gsoc-update4/&quot;&gt;GSOC Update Week 7 and Week 8&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aadityanair.ml/2018/07/28/gsoc-update5/&quot;&gt;GSOC Update Weeks 9, 10 and 11&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Saurbah Shah&lt;/strong&gt; with the aim to ‘‘improve the OCR Subsystem’’
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://saurabhshah0410.github.io/Selection-in-GSoC-2k18/&quot;&gt;Selection in GSoC 2k18&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Our Google Summer of Code Students are hard at work, but they are also creative writers who document their journey and adventure while developing their projects. Here you can find many blog posts linking to their blog posts where they describe the process on how it is to work for CCExtractor and Google Summer Of Code</summary></entry><entry><title type="html">Activity Extractor Technical Documentation</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-activity_extractor_technical_docs.html" rel="alternate" type="text/html" title="Activity Extractor Technical Documentation" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:activity_extractor_technical_docs</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-activity_extractor_technical_docs.html">&lt;p&gt;This page contains how the service modules were coded and also how to add support for a new service.&lt;/p&gt;
 
-&lt;p&gt;A possible idea (one of many possibilities) would be to introduce the concept for “agent”. An agent would be a process that runs in the cloud on behalf of the user and that has access to his personal storage accounts. The agents can run anywhere, but their ideal place is the cloud, for example, AWS or Google Cloud. They can be managed by the final user or by a 3rd party that provides the service.&lt;/p&gt;
+&lt;h2 id=&quot;module-information&quot;&gt;Module Information&lt;/h2&gt;
 
-&lt;p&gt;Agents find each other, and learn to trust each other, with the help of repositories, the equivalent of today’s trackers.&lt;/p&gt;
+&lt;h3 id=&quot;activityextractorpy&quot;&gt;ActivityExtractor.py&lt;/h3&gt;
+&lt;p&gt;This module is responsible for processing the parameters passed through the command line and calling the appropriate streaming service.&lt;/p&gt;
 
-&lt;p&gt;Agents that trust each other can vouch for other agents.&lt;/p&gt;
+&lt;p&gt;It passes the streaming service a dictionary containing credentials required to complete the process&lt;br /&gt;
+The dictionary is formatted like this:&lt;/p&gt;
 
-&lt;p&gt;The chain of trust must always be preserved so agents can prune trees if the trust is broken.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction\ BitTorrent is, of course, the world’s most used peer to peer protocol. It’s great, but it was designed before the cloud was ubiquitous and it doesn’t make use of the places where you have the most storage or the most bandwidth. Can we design something for the next decade?</summary></entry><entry><title type="html">Public:gsoc:complete708support</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-complete708support.html" rel="alternate" type="text/html" title="Public:gsoc:complete708support" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:complete708support</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-complete708support.html">&lt;p&gt;&lt;strong&gt;Complete 708 support&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;708 is the standard for digital TV in the US and a few other countries. We have preliminary support, but the goal is a 100% accurate implementation. This means:&lt;/p&gt;
-
-&lt;p&gt;a) Perfect timing.&lt;br /&gt;
-b) Perfect rendering, limited only by the output format.&lt;br /&gt;
-c) Full support to all languages for which samples are available.\&lt;/p&gt;
-
-&lt;p&gt;We will provide hundreds of samples (for which you must complete support, no exceptions) and access to a high speed linux server for you to work with if needed. These samples are usually very large (hundreds of megabytes each) so working locally may not be feasible for you if you don’t have a great internet connection.&lt;/p&gt;
-
-&lt;p&gt;For developers in India we have someone there with an external 2 TB drive with a copy of all our samples. That drive goes from developer to developer, so if needed we can get it shipped to you.&lt;/p&gt;
-
-&lt;p&gt;If you are not in India or in a country in which just downloading the samples is the easy way, get in touch. We’ll figure something out so access to media is not a problem.&lt;/p&gt;
-
-&lt;p&gt;This is a high value task and we’d love to have it done, but in order to qualify you need to fix some of the existing bugs.&lt;/p&gt;
-
-&lt;p&gt;Also part of this idea:\&lt;/p&gt;
-
-&lt;p&gt;https://github.com/CCExtractor/ccextractor/issues/733&lt;/p&gt;
-
-&lt;p&gt;Which is about implementing .mcc support, which as the GitHub ticket says complements 708 very well.&lt;/p&gt;
-
-&lt;p&gt;Getting started:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/CEA-708&quot;&gt;The wikipedia page on 708&lt;/a&gt; This is quite good actually. It’s not a complete description of the standard, but it’s quite useful to understand what 708 is about.\&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;**Related GitHub Issues**&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/690&quot;&gt;Ver 0.85 CEA-708: 16 bit charset (Korean) Not support&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/677&quot;&gt;(problem extract Korean subtitles&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/646&quot;&gt;[CEA-708] Missing the last subtitle&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/641&quot;&gt;[CEA-708] [Timing] Catchable bug with timing&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/3&quot;&gt;Finish CEA-708 support&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;**Mentors**&lt;/strong&gt;&lt;br /&gt;
-Carlos Fernandez Sanz (@carlos.fernandez on slack). Carlos wrote the original CEA-708 code.&lt;br /&gt;
-Evgeny Shulgin (@izaron on slack). Evgeny is a 2016 Code-In Winner with CCExtractor, and worked a lot on CEA-708.\&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;**How to get started**&lt;/strong&gt;&lt;br /&gt;
-Best thing you can do is download a few samples (&lt;a href=&quot;public/general/tvsamples&quot;&gt;check our TV samples page&lt;/a&gt;) and try to solve some of the CEA-708 issues we have listed on GitHub.&lt;/p&gt;
-
-&lt;p&gt;This is also the best way to get accepted into GSoC.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Complete 708 support</summary></entry><entry><title type="html">Public:gsoc:dtmb</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-dtmb.html" rel="alternate" type="text/html" title="Public:gsoc:dtmb" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:dtmb</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-dtmb.html">&lt;p&gt;&lt;strong&gt;Add support for DTMB countries&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;DTMB is the Chinese TV standard, adopted by other countries such as Cuba. We still don’t know much about it. Due to this, your proposal must include:&lt;/p&gt;
-
-&lt;p&gt;a) A link to the relevant standard documents. We don’t know if they exist in English. If they don’t but you speak the language they are in, that’s fine. If you locate the documents but they require payment (as is often the case for technical specifications) send us a link to buy and we’ll allocate organization funds to purchase them.&lt;br /&gt;
-b) Some TV samples. Or, if you cannot get them directly, an explanation of how you will get them, for example by purchasing a capture card that is known to be compatible (send us an exact link), plugging it to an antenna or dish, etc, that you have access to (detail), etc.\&lt;/p&gt;
-
-&lt;p&gt;In short, this is an “adventure” task. We’ll go all the way with the student that tries it, but we want to make sure the chances of success are reasonable.&lt;/p&gt;
-
-&lt;p&gt;This is what we (think we) know so far:&lt;br /&gt;
-DTMB regulates the physical transmission standard (signals, frequencies, etc). It seems to be available (for purchase) &lt;a href=&quot;http://www.chinesestandard.net/default.aspx?PDF-English-ID=GB%2020600-2006&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cuba follows it:&lt;br /&gt;
-http://www.globaltimes.cn/content/955479.shtml&lt;br /&gt;
-http://advanced-television.com/2013/03/22/cuba-adopts-chinese-tv-standard/\&lt;/p&gt;
-
-&lt;p&gt;The reason Cuba is interesting is that their subtitles will have Latin characters, which will make life a lot easier for most team members. Also, the Cuban government has a &lt;a href=&quot;http://www.lacetel.cu/television-digital/normas-de-television-digital.html&quot;&gt;good website&lt;/a&gt; about their TV regulations.&lt;/p&gt;
-
-&lt;p&gt;Apparently the subtitles themselves follow the European DVB standard. We can see that &lt;a href=&quot;http://www.ofca.gov.hk/filemanager/ofca/common/Industry/broadcasting/standards/lists/hkca1108.pdf&quot;&gt;in this document&lt;/a&gt; from the Hong Kong regulatory body which says:&lt;/p&gt;
-
-&lt;p&gt;Subtitles: Receivers shall include provisions to decode and display subtitles conforming to ETSI EN 300 743.&lt;/p&gt;
-
-&lt;p&gt;The Cuban government &lt;a href=&quot;http://www.lacetel.cu/20160414_Verification_Test_Procedure_Res47.pdf&quot;&gt;says the same thing&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;That document (in English) says:
-The Brand and Model TV Set is intended for the reception of DTMB Digital Terrestrial Television in 6MHz bandwidth, according to the specifications GB 20600-2006.\&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;and&lt;/em&gt;&lt;br /&gt;
-DVB subtitles (ETSI EN 300 743) – The DUT must support DVB subtitles (ETSI EN 300 743).\&lt;/p&gt;
-
-&lt;p&gt;Important: Since Chinese is by far the most extended language among DTMB countries, its support is essential. We have some preliminary support for it, but whatever is missing you will need to add. This applies in particular to the .srt writer. Since .srt is text based, you need to OCR the bitmaps. This is already done but almost untested for Chinese. Don’t assume it’s going to work. Probably not. Give yourself time in your proposal for this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;**Related GitHub Issues**&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/918&quot;&gt;Extract subtitles in a Chinese newscast&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Add support for DTMB countries</summary></entry><entry><title type="html">FFmpeg + Rust: Code builder</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html" rel="alternate" type="text/html" title="FFmpeg + Rust: Code builder" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:ffmpeg-rust</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-ffmpeg-rust.html">&lt;p&gt;&lt;strong&gt;Why is this a CCExtractor project and not an FFmpeg project?&lt;/strong&gt;\ 
-Because the FFmpeg team doesn’t need it :-) We do.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;br /&gt;
-FFmpeg is, of course, everybody’s go-to tool when it comes to video manipulation: Resize, apply filters, convert to a different encoding or container, etc, it does it all. They even participate in GSoC every year!&lt;/p&gt;
-
-&lt;p&gt;If you read their documentation, you will see that FFmpeg, the command-line tool, is mostly a “shell” that actually builds a graph that then runs in their libraries.&lt;/p&gt;
-
-&lt;p&gt;For developers that need to use FFmpeg to do “something” specific with video, the usual way to do it it just by executing FFmpeg with the right parameters (using spawn, exec, or whatever it’s called in their language of choice), wait for it to finish, and then do something with the result.&lt;/p&gt;
-
-&lt;p&gt;Often that’s good enough, but many times it’s not: You can’t easily get progress, you absolutely can’t do anything in the middle of the process and so on.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Your job&lt;/strong&gt;&lt;br /&gt;
-Your job here is to build a “source code generator” that given a FFmpeg command line is able to write the source code of a program, preferably in Rust, that executes the graph using FFmpeg’s libraries - but this is not about spawning FFmpeg! For example, given a command line like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg -i input.mkv -vf scale=320:240 output.mp4
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;parameters = {
+'url': self.url,
+'email': self.email,
+'password': self.password,
+'user': self.user
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You can see that it’s going to read the file “input.mkv”, resize it to 320x240, and write it as output.mp4, so there’s a resize filter there and also a container conversion.&lt;/p&gt;
+&lt;p&gt;url: The url the driver initially navigates to.&lt;br /&gt;
+email: The email required to log into the service.&lt;br /&gt;
+password: The password associated with the email.&lt;br /&gt;
+user: &lt;em&gt;(Only required for Netflix)&lt;/em&gt; The profile name the user wishes to retrieve viewing activity from.\&lt;/p&gt;
 
-&lt;p&gt;What we want to get is a program that does that for exactly those files and those tasks, and it needs to use FFmpeg’s low level libraries so it’s possible to add code into the program that does whatever the developer needs to do: For example, they might want to modify each frame to add something that is not supported by an FFmpeg filter - may be something that needs to be fetched for an external source.&lt;/p&gt;
+&lt;h3 id=&quot;commonpy&quot;&gt;common.py&lt;/h3&gt;
 
-&lt;p&gt;Your output program needs to be compilable (of course) and do exactly the same thing as FFmpeg would do if called with the specified parameters.&lt;/p&gt;
+&lt;p&gt;Contains modules common to all services.&lt;/p&gt;
+&lt;h5 id=&quot;-output_activityservice-activity_list&quot;&gt;&amp;gt; output_activity(SERVICE, activity_list)&lt;/h5&gt;
 
-&lt;p&gt;Of course, you are expected to dig into how FFmpeg does it and build from there.&lt;/p&gt;
+&lt;p&gt;Module to output activity into a .txt file.&lt;br /&gt;
+&lt;br /&gt;
+Accepts 2 parameters ‘SERVICE’ and ‘activity_list’:&lt;br /&gt;
+SERVICE: Name of the service calling the function.&lt;br /&gt;
+activity_list: List of viewing activity extracted from the streaming service.\&lt;/p&gt;
 
-&lt;p&gt;We prefer Rust but C would also be OK. However, if you already know C or C++ learning Rust is not too hard and it’s totally worth it.&lt;/p&gt;
+&lt;h3 id=&quot;hulupy&quot;&gt;hulu.py&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Why is this a CCExtractor project and not an FFmpeg project?\ Because the FFmpeg team doesn’t need it :-) We do.</summary></entry><entry><title type="html">rutorrent mobile interface</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-flutterrutorrent.html" rel="alternate" type="text/html" title="rutorrent mobile interface" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:flutterrutorrent</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-flutterrutorrent.html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;br /&gt;
-rutorrent is the most popular web interface for rtorrent, which is possibly the most used BitTorrent client in linux. It is mostly a web application, but it has its own backend that connects to rtorrent. You could connect to rtorrent directly as well, but by doing that you would be missing lots of features that come with rutorrent, for example RSS support.&lt;/p&gt;
+&lt;p&gt;Gets viewing activity from Hulu.&lt;/p&gt;
+&lt;h5 id=&quot;-get_activity&quot;&gt;&amp;gt; get_activity()&lt;/h5&gt;
 
-&lt;p&gt;Yes, there are two things with almost the same name. To summarize:&lt;/p&gt;
+&lt;p&gt;Called from the Main Module. It’s main purpose is to initialize the process and call login_hulu()&lt;/p&gt;
+&lt;h5 id=&quot;-login_hulu&quot;&gt;&amp;gt; login_hulu()&lt;/h5&gt;
 
-&lt;p&gt;rtorrent =&amp;gt; The BitTorrent client, a console-based tool that also has an API to interact with it.&lt;br /&gt;
-rutorrent =&amp;gt; A web interface for rtorrent that uses that API. It also does other things, for example, it can download torrents from an RSS feed. You configure RSS feeds in rutorrent’s web interface, but there’s also a backend service (written in PHP) that is part of rutorrent to do the actual download.&lt;/p&gt;
+&lt;p&gt;First this function creates an instance of Chrome and passes potential arguments to the driver.&lt;br /&gt;
+It then navigates to www.hulu.com and logs in with the user credentials. Then calls navigate_site()&lt;/p&gt;
+&lt;h5 id=&quot;-navigate_site&quot;&gt;&amp;gt; navigate_site()&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Your job&lt;/strong&gt;&lt;br /&gt;
-The job is to write a Flutter based web interface that uses rutorrent’s backend service to provide a native interface.&lt;/p&gt;
+&lt;p&gt;The main purpose of this function is to navigate to the ‘History’ page on Hulu.&lt;/p&gt;
+&lt;h5 id=&quot;-navigate_pages&quot;&gt;&amp;gt; navigate_pages()&lt;/h5&gt;
 
-&lt;p&gt;The basic things (for example, torrent listing) are easy to do, but rutorrent is extensible (it has good plugin support) and your tool needs to support that, too.&lt;/p&gt;
+&lt;p&gt;Depending on the length of the user’s viewing history there may be multiple pages of viewing history.&lt;br /&gt;
+This function calls get_page_activity() for every page of viewing history. Then calls common.output_activity().\&lt;/p&gt;
+&lt;h5 id=&quot;-get_page_activity&quot;&gt;&amp;gt; get_page_activity()&lt;/h5&gt;
 
-&lt;p&gt;The job is to write a native application that feels written for mobile. It’s not about cloning rutorrent’s interface. So yes there needs to be a torrent list but the columns may be different (definitely less), colors, sorting, how you interact with the tool and so on.&lt;/p&gt;
+&lt;p&gt;Gets all the viewing activity on the current viewing history page. Also displays a progress bar to the user.\&lt;/p&gt;
 
-&lt;p&gt;rtorrent, by the way, runs in a server, and rutorrent is the web interface that lets you interact with rtorrent. We don’t want to add BitTorrent capability to mobile or anything like that. This is a 100% frontend job, using pre-existing work in rutorrent to control rtorrent from the phone.&lt;/p&gt;
+&lt;h3 id=&quot;amazonpy&quot;&gt;amazon.py&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;&lt;br /&gt;
-In order to understand what to do you need to actually install rtorrent and rutorrent and play with them.\&lt;/p&gt;
+&lt;p&gt;Gets viewing activity from Amazon.&lt;/p&gt;
+&lt;h5 id=&quot;-get_activity-1&quot;&gt;&amp;gt; get_activity()&lt;/h5&gt;
 
-&lt;p&gt;You don’t need to have previous experience (really, not important for this - it’s all about Flutter), but you won’t be able to come up with a good proposal if you don’t know how things work.&lt;/p&gt;
+&lt;p&gt;Called from the Main Module. It’s main purpose is to initialize the process and call login_amazon()&lt;/p&gt;
+&lt;h5 id=&quot;-login_amazon&quot;&gt;&amp;gt; login_amazon()&lt;/h5&gt;
 
-&lt;p&gt;Also, if you are unable to run rtorrent and rutorrent on your system, please use &lt;a href=&quot;https://hub.docker.com/r/crazymax/rtorrent-rutorrent&quot;&gt;this docker&lt;/a&gt; image.&lt;/p&gt;
+&lt;p&gt;First this function creates an instance of Chrome and passes potential arguments to the driver.&lt;br /&gt;
+It then navigates to https://www.amazon.com/gp/sign-in.html and logs in with the user credentials. It then navigates to the viewing history page by passing a url to the driver. Calls navigate_pages()&lt;/p&gt;
+&lt;h5 id=&quot;-navigate_pages-1&quot;&gt;&amp;gt; navigate_pages()&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction rutorrent is the most popular web interface for rtorrent, which is possibly the most used BitTorrent client in linux. It is mostly a web application, but it has its own backend that connects to rtorrent. You could connect to rtorrent directly as well, but by doing that you would be missing lots of features that come with rutorrent, for example RSS support.</summary></entry><entry><title type="html">Add Japanese support</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-japanese.html" rel="alternate" type="text/html" title="Add Japanese support" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:japanese</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-japanese.html">&lt;p&gt;Watch this video.&lt;/p&gt;
+&lt;p&gt;Depending on the length of the user’s viewing history there may be multiple pages of viewing history.&lt;br /&gt;
+This function calls get_page_activity() for every page of viewing history. Then calls common.output_activity().\&lt;/p&gt;
+&lt;h5 id=&quot;-get_page_activity-1&quot;&gt;&amp;gt; get_page_activity()&lt;/h5&gt;
 
-&lt;div class=&quot;video&quot;&gt;
-    &lt;figure&gt;
-        &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/7QhwgrOrnyE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;/figure&gt;
-&lt;/div&gt;
-&lt;p&gt;And then come with a plan :-)&lt;/p&gt;
+&lt;p&gt;Gets all the viewing activity on the current viewing history page.\&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;
-Take a look at &lt;a href=&quot;/ccextractor-wiki-test/2020/03/05/public-gsoc-takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Watch this video.</summary></entry><entry><title type="html">JokerTV integration</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-jokertv.html" rel="alternate" type="text/html" title="JokerTV integration" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:jokertv</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-jokertv.html">&lt;p&gt;As you may know, our reference TV tuner has been for a long time the amazing HDHomeRun from Silicon Dust. They (all models) are rock-solid and they are really easy to integrate with. However, they don’t support DTMB (the Chinese standard).&lt;/p&gt;
+&lt;h3 id=&quot;netflixpy&quot;&gt;netflix.py&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://tv.jokersys.com/&quot;&gt;This&lt;/a&gt; small thing is JokerTV (stand-alone version).&lt;/p&gt;
+&lt;p&gt;Gets viewing activity from Netflix.&lt;/p&gt;
+&lt;h5 id=&quot;-get_activity-2&quot;&gt;&amp;gt; get_activity()&lt;/h5&gt;
 
-&lt;p&gt;You can see in the &lt;a href=&quot;https://tv.jokersys.com/tech-specs/&quot;&gt;tech specs&lt;/a&gt; that everything we care about is supported, and that the list of chipsets is published, and that &lt;a href=&quot;https://tv.jokersys.com/downloads/&quot;&gt;source code&lt;/a&gt; for everything, including firmware, is available.&lt;/p&gt;
+&lt;p&gt;Called from the Main Module. It’s main purpose is to initialize the process and call login_netflix()&lt;/p&gt;
+&lt;h5 id=&quot;-login_amazon-1&quot;&gt;&amp;gt; login_amazon()&lt;/h5&gt;
 
-&lt;p&gt;We are quite excited about the openness and potential of JokerTV and want to be the first to integrate with it. What should be the result of this integration?&lt;/p&gt;
+&lt;p&gt;First this function creates an instance of Chrome and passes potential arguments to the driver.&lt;br /&gt;
+It then navigates to https://www.netflix.com/Login and logs in with the user credentials. It then calls get_active_profile()&lt;/p&gt;
+&lt;h5 id=&quot;-get_active_profile&quot;&gt;&amp;gt; get_active_profile()&lt;/h5&gt;
 
+&lt;p&gt;Selects user profile based on profile name present in parameters[‘user’]. Calls navigate_site()&lt;/p&gt;
+&lt;h5 id=&quot;-navigate_site-1&quot;&gt;&amp;gt; navigate_site()&lt;/h5&gt;
+
+&lt;p&gt;Calls hover_click() then clicks the ‘Viewing Activity’ link once hover_click() has navigated to the user’s account page. Then calls scroll_to_bottom()&lt;/p&gt;
+&lt;h5 id=&quot;-hover_click&quot;&gt;&amp;gt; hover_click()&lt;/h5&gt;
+
+&lt;p&gt;Hovers on the profile icon in the top right corner of the Netflix homepage. Then clicks on ‘Your Account’ on the dropdown menu that appears. Returns True or False depending on whether the process was successful.&lt;/p&gt;
+&lt;h5 id=&quot;-scroll_to_bottom&quot;&gt;&amp;gt; scroll_to_bottom()&lt;/h5&gt;
+
+&lt;p&gt;Depending on the length of the user’s viewing activity Netflix displays only a portion of it. In order to have Netflix display the full list this function is called.&lt;br /&gt;
+Scrolls to the bottom of the page and waits for Netflix to load the next dynamic page of activity. This may be repeated multiple time until all of the activity is displayed. Calls get_page_activity()&lt;/p&gt;
+&lt;h5 id=&quot;-get_page_activity-2&quot;&gt;&amp;gt; get_page_activity()&lt;/h5&gt;
+
+&lt;p&gt;Gets all viewing activity from the page. Displays a progress bar to the user. Calls common.output_activity()\&lt;/p&gt;
+
+&lt;h2 id=&quot;new-service-instructions&quot;&gt;New Service Instructions&lt;/h2&gt;
+
+&lt;p&gt;In order to add a new service to the platform, follow these steps.&lt;/p&gt;
+&lt;h3 id=&quot;instructions&quot;&gt;Instructions&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Add your service and it’s parameters to the file ‘userconfig.ini’&lt;/strong&gt;&lt;br /&gt;
+Follow this format when adding your service:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[SERVICE_NAME]
+url      = service_login_page_url
+email    = test@email.com
+password = test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Create a .py file for your service.&lt;/strong&gt;&lt;br /&gt;
+Take a look at hulu.py, amazon.py or netflix.py as a reference.&lt;br /&gt;
+&lt;br /&gt;
+Your file must have a class containing all of the functions required to login and get viewing activity. The class should be named like ‘SERVICE_NAMEActivityExtractor’.&lt;br /&gt;
+Example: NetflixActivityExtractor&lt;br /&gt;
+&lt;br /&gt;
+Your class’s init() function needs to accept an argument that will contain the parameters which ActivityExtractor.py will pass.&lt;br /&gt;
+Here is the general format:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def __init__(self, parameters):
+self.parameters = parameters
+self.driver = None
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The main things your function should accomplish:\&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;CCExtractor would be able to communicate directly with JokerTV - getting the streams directly from it, as we do with the HDHomeRun.\&lt;/li&gt;
-  &lt;li&gt;You don’t need to decode DTMB (that’s a different GSoC project, possibly a summer worth of work) but your integration needs to be as region agnostic as possible. If JokerTV works everywhere, then so must JokerTV+CCExtractor.\&lt;/li&gt;
-  &lt;li&gt;It’s likely that JokerTV included support tools are not up to par with HDHomeRun’s yet. If this is the case (your proposal should show that you’ve done your homework and can tell us) reserve some time to work on this.\&lt;/li&gt;
-  &lt;li&gt;Another two major programs that could use JokerTV integration are FFmpeg and Kodi (for their live TV and DVR functionality). We love cross project ideas, including of course sending patches to their maintainers. If you think you would have time for this, give it some consideration.\&lt;/li&gt;
+  &lt;li&gt;Log into streaming service\&lt;/li&gt;
+  &lt;li&gt;Navigate to viewing activity page\&lt;/li&gt;
+  &lt;li&gt;Retrieve viewing activity\&lt;/li&gt;
+  &lt;li&gt;Display progress bar (if possible)\&lt;/li&gt;
+  &lt;li&gt;Call common.output_activity() to output viewing activity into a .txt file&lt;br /&gt;
+&lt;br /&gt;
+common.output_activity() accepts 2 parameters. The first is the name of the viewing service, the second is a list containing all of the viewing activity. Make user to ‘import common’ to use the function.&lt;br /&gt;
+\&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;About getting a JokerTV - we will buy one for the student that takes on this task. We will also have a few more distributed in different regions around the world so remote testing is possible.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Add you service into ActivityExtractor.py.&lt;/strong&gt;&lt;br /&gt;
+In ‘ActivityExtractor.py’, create an import statement to import your service class from your service file.&lt;br /&gt;
+It should be something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;**Related GitHub Issues**&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/CCExtractor/ccextractor/issues/918&quot;&gt;Extract subtitles in a Chinese newscast&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from SERVICE_NAME import SERVICE_NAMEActivityExtractor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;**Mentor**&lt;/strong&gt;&lt;br /&gt;
-Abylay Ospan, the genius behind JokerTV himself.&lt;/p&gt;
+&lt;p&gt;Next you have to add your service into supported_services.&lt;br /&gt;
+In the ActivityExtractor, the init() function has a dictionary named ‘self.supported_services’. Add your service into the dictionary following the format of the other services.&lt;br /&gt;
+It should look something like this:\&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">As you may know, our reference TV tuner has been for a long time the amazing HDHomeRun from Silicon Dust. They (all models) are rock-solid and they are really easy to integrate with. However, they don’t support DTMB (the Chinese standard).</summary></entry><entry><title type="html">Public:gsoc:linuxtuning</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-linuxtuning.html" rel="alternate" type="text/html" title="Public:gsoc:linuxtuning" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:linuxtuning</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-linuxtuning.html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;br /&gt;
-The linux kernel has hundreds of tunable settings. Some can be modified on the fly with sysctl; others require reboots, loading modules and so on.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.supported_services = {
+'amazon': AmazonActivityExtractor,
+'hulu': HuluActivityExtractor,
+'netflix': NetflixActivityExtractor,
+'SERVICE_NAME': SERVICENAMEActivityExtractor
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Your job&lt;/strong&gt;&lt;br /&gt;
-Your job is to come up with a self-tuning system that does all the analysis it needs and finds the optimum settings to maximize throughput and/or latency for well defined workloads. One of the must be BitTorrent, since that one uses a lot of traffic and it can just be tested with real data instead of synthetic tests.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Test the program with your service and report any errors.&lt;/strong&gt;&lt;br /&gt;
+If your service worked successfully create a pull request to the repository and it’ll be added. If any errors are thrown that you can’t solve yourself, create an issue in the repository and we’ll try helping you out.&lt;br /&gt;
+\&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction The linux kernel has hundreds of tunable settings. Some can be modified on the fly with sysctl; others require reboots, loading modules and so on.</summary></entry><entry><title type="html">Add support for Live TV over the internet (such as YouTube TV)</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-livetvooverinternet.html" rel="alternate" type="text/html" title="Add support for Live TV over the internet (such as YouTube TV)" /><published>2020-03-05T00:00:00-06:00</published><updated>2020-03-05T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public:gsoc:livetvooverinternet</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/03/05/public-gsoc-livetvooverinternet.html">&lt;p&gt;A number of platforms are appearing these days to distribute local TV content over the internet. For example, YouTube now has a live TV. Hulu does, too.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Add your service to this documentation page.&lt;/strong&gt;&lt;br /&gt;
+Contact Carlos to get login credentials for this page and add your service following the format of the other streaming services.&lt;br /&gt;
+&lt;br /&gt;
+\&lt;/p&gt;
 
-&lt;p&gt;It’s still early days for these platforms - they’re trying to grab the business from the cable-cutters, while (possibly, for now) providing the same functionality, which is a live TV with DVR. It’s possible of course that they will offer lots of new features and they manage to replace over the air broadcasts, cable…&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For bug fixes create an issue on the repository&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;For any other inquiries contact me at m13basra@gmail.com&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This page contains how the service modules were coded and also how to add support for a new service.</summary></entry><entry><title type="html">User Documentation for Activity Extractor</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-activity_extractor_user_docs.html" rel="alternate" type="text/html" title="User Documentation for Activity Extractor" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:activity_extractor_user_docs</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-activity_extractor_user_docs.html">&lt;p&gt;Activity Extractor aims to extract and download viewing activity from popular video streaming services including: Netflix, Hulu and Amazon. This process is automated and needs very little user interaction. It can be called from the command line with the streaming service as a parameter, and it outputs the viewing activity into a simple .txt file.&lt;/p&gt;
 
-&lt;p&gt;Anyway, we don’t know how they are implementing subtitles, and the task this summer is to&lt;/p&gt;
+&lt;p&gt;The program requires the user to have a valid login and password for the streaming service they wish to retrieve viewing activity from.&lt;/p&gt;
 
-&lt;p&gt;a) Do the research&lt;br /&gt;
-b) Write code that is able to create transcripts in the usual formats such as .srt&lt;/p&gt;
+&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation Instructions&lt;/h2&gt;
 
-&lt;p&gt;This code might be integrated with the current CCExtractor core or it could be a new tool. What’s best depends mostly on how the subtitles are distributed. If they are embedded in transport streams then integrating with CCExtractor would be the natural option. It’s part of the job to figure this out.&lt;/p&gt;
+&lt;p&gt;Clone the repository from GitHub:&lt;/p&gt;
 
-&lt;p&gt;We’re going to target the two major platforms that have a live TV over the internet: YouTube and Hulu.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/ManveerBasra/ActivityExtractor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;We will pay for the subscriptions for both services during the coding period, and if you are currently outside the geographical areas in which these services are available, we’ll provide a VPN as well&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;install-pip&quot;&gt;Install pip&lt;/h4&gt;
 
-&lt;p&gt;Features that we expect:&lt;/p&gt;
+&lt;p&gt;If pip3 is not installed run this in a command window:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install python3-setuptools
+sudo easy_install3 pip
+sudo mv /usr/local/bin/pip /usr/local/bin/pip-3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-selenium&quot;&gt;Install Selenium&lt;/h4&gt;
+
+&lt;p&gt;Run this in a command window:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pip3 install -U selenium
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-phantomjs&quot;&gt;Install PhantomJS&lt;/h4&gt;
+
+&lt;p&gt;Make sure you have NodeJS installed (https://nodejs.org/)&lt;br /&gt;
+Using Node’s package manager run this in a command window:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm -g install phantomjs-prebuilt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Disclaimer: Use it at your own risk.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;usage-instructions&quot;&gt;Usage Instructions&lt;/h2&gt;
+
+&lt;h4 id=&quot;if-credentials-are-already-in-userconfigini&quot;&gt;If credentials are already in userconfig.ini&lt;/h4&gt;
+
+&lt;p&gt;Open a command window in directory containing ActivityExtractor.py&lt;br /&gt;
+Run this command:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python activityextractor.py [service]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;if-credentials-are-not-already-in-userconfigini&quot;&gt;If credentials are NOT already in userconfig.ini&lt;/h4&gt;
+
+&lt;p&gt;Open a command window in directory containing ActivityExtractor.py&lt;br /&gt;
+Run this command:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python activityextractor.py [service] --email=[email] --password=[password]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;Put your streaming service here&quot;&gt;service&lt;/a&gt; : Put your streaming service here&lt;br /&gt;
+[email] : Put your email address for the streaming service here&lt;br /&gt;
+[password]: Put your password here\&lt;/p&gt;
+
+&lt;p&gt;If you’re getting activity from Netflix, you must include an additional parameter:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;... --user=[user]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;[user] : Put your Netflix username here&lt;/p&gt;
+
+&lt;h4 id=&quot;please-report-any-errors-on-github-along-with-the-error-message-for-support&quot;&gt;Please report any errors on GitHub along with the error message for support.&lt;/h4&gt;</content><author><name></name></author><summary type="html">Activity Extractor aims to extract and download viewing activity from popular video streaming services including: Netflix, Hulu and Amazon. This process is automated and needs very little user interaction. It can be called from the command line with the streaming service as a parameter, and it outputs the viewing activity into a simple .txt file.</summary></entry><entry><title type="html">Public:codein:google_code In_2016_task_list</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2016_task_list.html" rel="alternate" type="text/html" title="Public:codein:google_code In_2016_task_list" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2016_task_list</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2016_task_list.html">&lt;p&gt;**Google Code-In 2016
+**&lt;/p&gt;
+
+&lt;p&gt;Code-In 2016 finished already. We’re really sad, but it’s been an amazing experience so we will be back!&lt;/p&gt;
+
+&lt;p&gt;**Questions? You can email us at code-in@ccextractor.org. But please make sure you read the whole page first.
+**
+For tasks that require some resources in general we will provide them for you, including access to videos, system accounts, etc.&lt;/p&gt;
+
+&lt;p&gt;Remember that the absolute best way to get invited by an organization to participate in Summer of Code is by being part of the community before GSoC is even announced. If we, as an organization, are invited to GSoC 2017 the applications from successful Code-In students will go to the top of pile.&lt;/p&gt;
+
+&lt;p&gt;We also give back to our students in any way we can, including writing recommendation letters that can help to apply to universities, visas, jobs and so on.&lt;/p&gt;
+
+&lt;p&gt;In short - don’t think that the reward for participating this year may be limited to a T-Shirt :-)&lt;/p&gt;
+
+&lt;p&gt;General things to keep in mind while working:&lt;/p&gt;
+
+&lt;p&gt;1) Collaboration is much better than competition.&lt;br /&gt;
+2) Mentors love it when a student comes up with a better idea than their own, really. Do not just do as told. If something doesn’t feel right either argue against it or work on a different area.&lt;br /&gt;
+3) If you want to do something that is 90% or so implemented in any other open source project just take it, complete it, send the maintainers of that project whatever changes you did so they can use them if they want, and integrate with our code. Always remember to leave all license and credits intact (you can add your own name).&lt;br /&gt;
+4) Mentors are there to help but they’re people too, not bots. So they sleep from time to time, may also have other things going on, can get sick, etc. They will reciprocate when they think of students.&lt;br /&gt;
+5) Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that your future you will be proud of.\&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slack&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Slack is a great communication tool. Most CCExtractor developers hang out in a slack team. You’re welcome to request an invitation here:&lt;/p&gt;
+
+&lt;p&gt;{slackinvite}&lt;/p&gt;</content><author><name></name></author><summary type="html">**Google Code-In 2016 **</summary></entry><entry><title type="html">Public:codein:google_code In_2017_code In_for_designers</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2017_code-in_for_designers.html" rel="alternate" type="text/html" title="Public:codein:google_code In_2017_code In_for_designers" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2017_code-in_for_designers</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2017_code-in_for_designers.html">&lt;p&gt;&lt;strong&gt;Code-In 2017 for designers&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This year we are going to have some hard design tasks to bring design up to par with coding. Hard means that they are going to take time and talent to produce the quality results we want.&lt;/p&gt;
+
+&lt;p&gt;At least one of our finalists will be a designer even if he or she has not contributed code. We are doing this to prevent the design tasks being treated just as an easy way to complete beginner tasks. For example, you can create a T-Shirt design in 10 minutes, but that’s very unlikely to be good and usable to well, actually make T-Shirts with it.&lt;/p&gt;
+
+&lt;p&gt;If you are serious about becoming a great designer and are willing to do serious work, look for tasks with the “HardDesign” tasks. At least one of the students that does a great job on those will be a finalist, and maybe a winner.&lt;/p&gt;
+
+&lt;p&gt;Remember though that hard means hard. Don’t expect us to approve the first design you come up with. We will give you feedback and work with you until you produce something that you can be proud of for years and that we can use.&lt;/p&gt;
+
+&lt;p&gt;Also, as a bonus, if the design is for something physical (T-Shirt, sticker, etc) we will ship you one totally free to any part of the world.&lt;/p&gt;</content><author><name></name></author><summary type="html">Code-In 2017 for designers</summary></entry><entry><title type="html">Welcome to Google Code-In 2018 and CCExtractor!</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html" rel="alternate" type="text/html" title="Welcome to Google Code-In 2018 and CCExtractor!" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2018</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html">&lt;p&gt;**Questions? You can email us at code-in@ccextractor.org or join our &lt;a href=&quot;/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018#slack&quot;&gt;Slack&lt;/a&gt; group! But please make sure you read the whole page first.
+**&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+This is going to be another absolutely amazing GCI year! We have a long and proud history of taking part in the Google Summer of Code with university students, and are excited to participate in GCI again for 3rd year with pre-university students! We have tasks that are: fun, useful, educational… and for all levels and interests - coding, design, documentation, UI, research and much more!
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+While it is completely optional, it is highly recommended that you join our Slack group. All the mentors, org admins, contributors and fellow GCI participants hang out in that group. That’s the best place to get quick answers to any query or problem you might have. Go to the end of this page to invite yourself to the group.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+Can’t join the Slack group? It’s no problem! We try to be super fast to respond to all comments and submissions in the GCI website. If you prefer email, you can email us at code-in@ccextractor.org. There’s also a mailing list/Google group for CCExtractor : https://groups.google.com/forum/#!forum/ccextractor-dev if that’s how you sail!
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;things-to-know-&quot;&gt;Things to know! ✅&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The system must be completely scriptable. For example, a solution that requires human intervention to start a capture session, or a browser open on a desktop is not going to work. Suppose we want the system running 24x7 on a Linux server, which might not even have a monitor.\&lt;/li&gt;
-  &lt;li&gt;Youtube TV supports a maximum of 6 simultaneous streams per subscription. We don’t know about Hulu, but the point is that your solution must be able to maximize what we get from the subscription - if the service allows 6 streams, your solution must too.\&lt;/li&gt;
-  &lt;li&gt;Allow several subscriptions to be used as well, for example, if we want 12 streams, then 6x2 should work.\&lt;/li&gt;
-  &lt;li&gt;It goes without saying, login information should be configurable and you must be careful not to push any real information to GitHub.\&lt;/li&gt;
-  &lt;li&gt;Documentation must be good - we want other projects to build on this one instead of having to figure out everything from scratch.\&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;For tasks that require some resources in general we will provide them for you, including access to videos, system accounts, etc.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt; 
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;This year we are going to have some system administration tasks. &lt;strong&gt;We will provide you with root access&lt;/strong&gt; (Yes! We’re that cool) to a small server for interested students to play with. Check out our sysadmin tasks.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;We can’t stress this enough: Winners are those that do the hard tasks. Amount of tasks is not so important.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Collaboration is much better than competition.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Mentors love it when a student comes up with a better idea than their own, really. Do not just do as told. If something doesn’t feel right either argue against it (politely of course) or work on a different area.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;If you want to do something that is 90% or so implemented in any other open source project just take it, complete it, send the maintainers of that project whatever changes you did so they can use them if they want, and integrate with our code. Always remember to leave all license and credits intact (you can add your own name).&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Mentors are there to help but they’re people too, not bots. So they sleep from time to time, may also have other things going on, can get sick, etc. They will reciprocate when they think of students.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that the future you will be proud of.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Be mindful of your own privacy. Yes, we’re a friendly bunch and you’ll get to know us and we’ll get to know you in our community. That’s different from posting your real name publicly everywhere. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Qualification tasks&lt;/strong&gt;&lt;br /&gt;
-Take a look at &lt;a href=&quot;https://ccextractor.org/public/gsoc/takehome&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">A number of platforms are appearing these days to distribute local TV content over the internet. For example, YouTube now has a live TV. Hulu does, too.</summary></entry></feed>
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;h4 id=&quot;perks&quot;&gt;Perks&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+Remember that the absolute best way to get invited by an organization to participate in Google Summer of Code is by being part of the community before GSoC is even announced. If we, as an organization, are invited to GSoC 2019 the applications from successful Code-in students will go to the top of pile.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+We also give back to our students in any way we can, including writing recommendation letters that can help to apply to universities, visas, jobs and so on. 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+In short - don’t think that the reward for participating this year may be limited to a t-shirt :-)
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-for-designers-&quot;&gt;Code-in for Designers 👩‍🎨&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+If you’re passionate about becoming a great designer and willing to do some serious work, look for the tasks labelled &lt;strong&gt;[Harddesign]&lt;/strong&gt;. Hard means that they are going to take time and talent to produce the quality results we want and to bring up design tasks at par with coding. At least one of the students that does a great job on those will be a finalist, and maybe a winner.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+We are doing this to prevent the design tasks being treated just as an easy way to complete beginner tasks. For example, you can create a T-Shirt design in 10 minutes, but that’s very unlikely to be good and usable to well, actually make T-Shirts with it. 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+We did this last year as well and got some amazing results. One of our winners from last year did some major design tasks including the organization logo. 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+Remember though that hard means hard. Don’t expect us to approve the first design you come up with. We will give you feedback and work with you until you produce something that you can be proud of for years and that we can use. 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;get-familiar-with-tags-&quot;&gt;Get familiar with Tags 🏷&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+We’ll do our best to keep consistent tasks that help you find out good things to do. If you think we could use better tags please get in touch, with examples, and we’ll improve. For some some tags you might want to look out for:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;winnerstrack&lt;/strong&gt;: The hardest and/or more valuable tasks go here. If you are really serious about winning, work on those. To be realistic we don’t think they will be solved, but it wouldn’t be the first time a GCI student productivity is better than the mentors :-) So we’re putting a few of these out there (not at the same time).&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;hardtask&lt;/strong&gt;: Difficult tasks but doable, with effort, patience, and mentor support. That’s what we’re here for!&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;githubissue&lt;/strong&gt;: The task has a related GitHub issue, so by doing this task you will be actually fixing a bug or adding a requested feature.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;anylanguage&lt;/strong&gt;: Tasks that you can do in any programming language you want, usually because they are about writing a new (small) program so you would start from scratch.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;googleassistant&lt;/strong&gt;: Tasks related to Google Assistant. We’ll have a few of them every week, and they don’t have to be related to our organization primary focus at all - they can be anything, because we want you (and us) to explore this new technology.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;\&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;bonus&lt;/strong&gt;: Tasks that come with a special prize, such as a software license (that we will buy for the student) or a book. We will publish one of these tasks every week or so, so make sure to look for them often!&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;\&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;faq-why-is-ccextractor-written-in-c-are-you-from-the-past-&quot;&gt;FAQ: Why is CCExtractor written in C? Are you from the past? ⏱&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+Yes, we get this from time to time :-) We know there’s lots of cool languages out there, many really easy to start with, and well, C is not one of them. But the thing is, the most performance critical tools are written in C, such as the Linux kernel, or FFmpeg, or… you get the idea. A tool that needs to process lots of data (such as video) just needs to be as efficient as possible.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+We do have auxiliary tools written in different languages, for example the Windows GUI is written in C#, and we have lots of Python as well. But the core CCExtractor tool is in C. Should you learn C then? Well, depends on how serious you are with IT in general. By learning it you will learn a lot of how things really work - without using all the magic that higher level languages provide.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;video-from-previous-winners&quot;&gt;Video from previous winners&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+We think that the best way to let you know how cool Code-In is is to show you a video of previous winners. This was at Google’s office in San Francisco in 2016, where Evgeny and Alexandru (which are of course now core developers at CCExtractor) presented what they did during GCI 2016!
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+And Aadi and Shiyuan (also core team members now as well as GCI mentors) in 2017:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;p&gt;Matej and Ivan, 2018:&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+
+&lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
+
+&lt;p&gt;Slack is a great communication tool. Most CCExtractor developers hang out in a slack team. You’re welcome to request an invitation here:&lt;/p&gt;
+
+&lt;p&gt;{slackinvite}&lt;/p&gt;</content><author><name></name></author><summary type="html">**Questions? You can email us at code-in@ccextractor.org or join our Slack group! But please make sure you read the whole page first. **</summary></entry><entry><title type="html">Google Code-in 2019: Flutter</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-flutter.html" rel="alternate" type="text/html" title="Google Code-in 2019: Flutter" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2019:flutter</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-flutter.html">&lt;p&gt;While the tasks themselves can’t be made public until the GCI starts officially, we think it’s OK to explain the kind of things we want to do for those of you that want to somehow get started - not with the tasks themselves, which is not possible, but getting prepared to start working immediately.&lt;/p&gt;
+
+&lt;p&gt;If you have already done some basic digging about Flutter, you already know what it is: A new platform that lets you write apps that will work both on Android, iOS and web. Most apps have menus, have logins, maybe access a database or some kind of internet resource, and depending on the specific app, maybe accesses the device capabilities such as the camera or location.&lt;/p&gt;
+
+&lt;p&gt;The programming language that Flutter uses is Dart, so that’s something that you want to look at.&lt;/p&gt;
+
+&lt;p&gt;Also, getting Flutter to work may take a bit of time: You can start by installing it and making sure “Flutter Doctor” says everything is great.&lt;/p&gt;
+
+&lt;p&gt;We’re going to be building a few apps. The goal is that build 3 applications that are actually going to be useful and we hope, popular. To get there each of them will consist on a large number of small tasks that anyone can do. Each task will have several instances (so several students can work on the same thing) and for each we’ll use the best one. Of course this doesn’t mean that the rest completed tasks will not be accepted. If a task it’s completed, it will be accepted, and the student is of course welcome to use his/her own version of that specific piece of program.&lt;/p&gt;
+
+&lt;p&gt;Remember: It’s open source, so everybody is allowed to have their own copy and customize it.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-what-are-the-applications&quot;&gt;So what are the applications?&lt;/h3&gt;
+
+&lt;h4 id=&quot;bingo&quot;&gt;Bingo&lt;/h4&gt;
+
+&lt;p&gt;Important: This is &lt;em&gt;free&lt;/em&gt; bingo. We’re not building a betting game. That’s not interesting at all - but the pieces we’re going to learn, are. What are we going to learn here?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Menus\&lt;/li&gt;
+  &lt;li&gt;Drawing on the screen (for example, a grid)\&lt;/li&gt;
+  &lt;li&gt;Interactions with a server (we’re getting the tickets from a server, and getting the numbers from it)\&lt;/li&gt;
+  &lt;li&gt;Getting user feedback (where on the screen did the user press)\&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-food-locator&quot;&gt;The food locator&lt;/h4&gt;
+
+&lt;p&gt;Suppose we are at a place, for example at a conference venue, or a large university campus, in which food is delivered at different places during different times of the day (this is a real use case, believe it or not). When you are hungry, you have to go around the place to find something to eat. Sometimes it’s something you like, and sometimes it’s not. Or maybe you won’t find anything.&lt;/p&gt;
+
+&lt;p&gt;We’re going to write an app that shows a map and let users report when they’ve seen food where they are. That information will appear to other users of the app that are in the same place, for example attending the same conference. Users can also report that food is not there, and also food can be removed from the map automatically after a certain amount of time.&lt;/p&gt;
+
+&lt;p&gt;Here we’re going to be learning:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Maps\&lt;/li&gt;
+  &lt;li&gt;Location services\&lt;/li&gt;
+  &lt;li&gt;Timeouts\&lt;/li&gt;
+  &lt;li&gt;Interaction with servers\&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;smart-photo-app&quot;&gt;Smart photo app&lt;/h4&gt;
+
+&lt;p&gt;Build an app that lets you take pictures with the camera and flag them in a useful way. Also, do special things with them.\&lt;/p&gt;
+
+&lt;p&gt;We all know that camera pictures can be geolocated, which means that as part of the metadata they contain the physical location. We’re going to extend that by linking our pictures with things such as the calendar. For example, if your (Google) Calendar says that at 11:00-11:30 you were attending a book signing, would it be useful that the picture and the calendar event were automatically linked together?&lt;/p&gt;
+
+&lt;p&gt;Here we’re going to be learning:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Camera\&lt;/li&gt;
+  &lt;li&gt;Location services\&lt;/li&gt;
+  &lt;li&gt;Accessing the Google Calendar\&lt;/li&gt;
+  &lt;li&gt;Basic AI (details on this will be disclosed with the tasks)\&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">While the tasks themselves can’t be made public until the GCI starts officially, we think it’s OK to explain the kind of things we want to do for those of you that want to somehow get started - not with the tasks themselves, which is not possible, but getting prepared to start working immediately.</summary></entry><entry><title type="html">Mastermind #3: Write the backend (in any language you want) for a competition between student submissions</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html" rel="alternate" type="text/html" title="Mastermind #3: Write the backend (in any language you want) for a competition between student submissions" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2019:mastermind</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html">&lt;p&gt;We already had two tasks about this superfun yet easy to understand game (links below). Many students have worked on creating mastermind players, so it’s time to make them compete against each other! Let’s see who’s algorithm is better.&lt;/p&gt;
+
+&lt;p&gt;In order to do this, we need a servers for the players to connect to and play. Your job is to implement such a server.&lt;/p&gt;
+
+&lt;p&gt;We have come up with a simple protocol between player and server. Your job here is to implement the server side. The protocol is like this:&lt;/p&gt;
+
+&lt;p&gt;When the player wants to start a game, it will request (via HTTP GET)&lt;/p&gt;
+
+&lt;p&gt;/himastermind/newgame/$name_of_player&lt;/p&gt;
+
+&lt;p&gt;The “name_of_player” can be anything (alphanumeric only) but it shouldn’t change - so if a player plays 100 times, it should use the same name in all of 100, so the server can keep track of results for each player.&lt;/p&gt;
+
+&lt;p&gt;A player here is the AI, not the name of the developer. In fact, don’t use your own name (that goes against GCI rules).&lt;/p&gt;
+
+&lt;p&gt;When that URL is called, the server will generate a random number (for the player to guess) and a “game ID” which it will return. The “game ID” (equivalent to “session ID”, if you are used to that term when taking about websites) is a 8 characters random string (alphanumeric). The game ID is returned to the player so he can pass it to play.&lt;/p&gt;
+
+&lt;p&gt;Then the game actually starts. The player will make requests like this:&lt;/p&gt;
+
+&lt;p&gt;/himastermind/play/$game_id/$guess&lt;/p&gt;
+
+&lt;p&gt;And the server will return:&lt;/p&gt;
+
+&lt;p&gt;$digits_in_the_right_position $digits_in_the_wrong_position $number_of_guesses_in_this_game $time_since_the_game_started&lt;/p&gt;
+
+&lt;p&gt;A possible interaction would be like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**CLIENT REQUESTS**: /himastermind/newgame/MazingerZ/1235678  
+**SERVER REPLIES**: AHVEDJ34  
+**CLIENT REQUESTS**: /himastermind/play/AHVEDJ34/123456  
+**SERVERS REPLIES**: 2 1 3  
+**CLIENT REQUESTS**: /himastermind/play/AHVEDJ34/126544  
+**SERVERS REPLIES**: 4 0 4  
+**CLIENT REQUESTS**: /himastermind/play/AHVEDJ34/126588  
+**SERVERS REPLIES**: 6 0 6  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course the game ends when the player guesses the number correctly, so the reply is 6 0.&lt;/p&gt;
+
+&lt;p&gt;Things the server needs to do:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If the game ID doesn’t exist, return an error&lt;/li&gt;
+  &lt;li&gt;If the guess string is not correct (exactly 6 digits) return an error&lt;/li&gt;
+  &lt;li&gt;Be able to handle the same player playing more than one game simultaneously, which is why we have the “game ID”. Each time the player calls “newgame” a new game is created, but it doesn’t destroy the previous one the server might have.&lt;/li&gt;
+  &lt;li&gt;Keep track of everything in a database. That means for each player, the games its played, the guesses, elapsed time, and so on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can deploy your work in any cloud service that as a free tier (most do).&lt;/p&gt;
+
+&lt;p&gt;In a separate task we’ll create a new dashboard to see who’s the best player.&lt;/p&gt;
+
+&lt;p&gt;There will be rewards for the students that create the best players and the best server.&lt;/p&gt;
+
+&lt;p&gt;Useful links:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Previous mastermind tasks&lt;/strong&gt;:&lt;br /&gt;
+https://codein.withgoogle.com/dashboard/tasks/6684006435782656/&lt;br /&gt;
+https://codein.withgoogle.com/dashboard/tasks/6022435409756160/\&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mastermind rules&lt;/strong&gt;:&lt;br /&gt;
+https://www.wikihow.com/Play-Mastermind\&lt;/p&gt;</content><author><name></name></author><summary type="html">We already had two tasks about this superfun yet easy to understand game (links below). Many students have worked on creating mastermind players, so it’s time to make them compete against each other! Let’s see who’s algorithm is better.</summary></entry><entry><title type="html">Public:general:about_the_org</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-about_the_org.html" rel="alternate" type="text/html" title="Public:general:about_the_org" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:general:about_the_org</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-about_the_org.html">&lt;p&gt;~~META:
+title = About CCExtractor Development
+~~&lt;/p&gt;
+
+&lt;p&gt;CCExtractor Development is an informal (meaning we’re not incorporated anywhere) organization that exists to coordinate the development efforts of the volunteers that contribute to the software and to manage our participation in specific events such as Google Summer of Code and Code-In.&lt;/p&gt;
+
+&lt;p&gt;The following video is a contribution from Manveer Singh Basra, a Code-In 2016 student:&lt;/p&gt;</content><author><name></name></author><summary type="html">~~META: title = About CCExtractor Development ~~</summary></entry><entry><title type="html">Public:general:command_line_usage</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-command_line_usage.html" rel="alternate" type="text/html" title="Public:general:command_line_usage" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:general:command_line_usage</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-command_line_usage.html">&lt;p&gt;CCExtractor’s main program is console based. There’s a GUI for Windows, as well as provisions so other programs can easily interface with CCExtractor, but the heavy lefting is done by a command line program (that can be called by scripts so integration with larger processes is straightforward).&lt;/p&gt;
+
+&lt;p&gt;Running CCExtractor without any parameter will display a help screen with all the options. As of version 0.81 the help screen is as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CCExtractor 0.81, Carlos Fernandez Sanz, Volker Quetschke.
+Teletext portions taken from Petr Kutalek's telxcc
+--------------------------------------------------------------------------
+Originally based on McPoodle's tools. Check his page for lots of information
+on closed captions technical details.
+(http://www.theneitherworld.com/mcpoodle/SCC_TOOLS/DOCS/SCC_TOOLS.HTML)
+
+This tool home page:
+http://www.ccextractor.org
+  Extracts closed captions and teletext subtitles from video streams.
+    (DVB, .TS, ReplayTV 4000 and 5000, dvr-ms, bttv, Tivo, Dish Network,
+     .mp4, HDHomeRun are known to work).
+
+  Syntax:
+  ccextractor [options] inputfile1 [inputfile2...] [-o outputfilename]
+
+To see This Help Message: -h or --help
+
+File name related options:
+            inputfile: file(s) to process
+    -o outputfilename: Use -o parameters to define output filename if you don't
+                       like the default ones (same as infile plus _1 or _2 when
+                       needed and file extension, e.g. .srt).
+                           -o or -o1 -&amp;gt; Name of the first (maybe only) output
+                                        file.
+                           -o2       -&amp;gt; Name of the second output file, when
+                                        it applies.
+         -cf filename: Write 'clean' data to a file. Cleans means the ES
+                       without TS or PES headers.
+              -stdout: Write output to stdout (console) instead of file. If
+                       stdout is used, then -o, -o1 and -o2 can't be used. Also
+                       -stdout will redirect all messages to stderr (error).
+
+               -stdin: Reads input from stdin (console) instead of file.
+You can pass as many input files as you need. They will be processed in order.
+If a file name is suffixed by +, ccextractor will try to follow a numerical
+sequence. For example, DVD001.VOB+ means DVD001.VOB, DVD002.VOB and so on
+until there are no more files.
+Output will be one single file (either raw or srt). Use this if you made your
+recording in several cuts (to skip commercials for example) but you want one
+subtitle file with contiguous timing.
+
+Effect output files
+    -outinterval x output in interval of x seconds
+Network support:
+            -udp port: Read the input via UDP (listening in the specified port)
+                       instead of reading a file.
+
+            -udp [host:]port: Read the input via UDP (listening in the specified
+                              port) instead of reading a file. Host can be a
+                              hostname or IPv4 address. If host is not specified
+                              then listens on the local host.
+
+            -sendto host[:port]: Sends data in BIN format to the server according
+                                 to the CCExtractor's protocol over TCP. For IPv6
+                                 use [addres]:port
+            -tcp port: Reads the input data in BIN format according to CCExtractor's
+                       protocol, listening specified port on the local host
+            -tcppassword password: Sets server password for new connections to tcp server
+            -tcpdesc description: Sends to the server short description about captions e.g.
+                                  channel name or file name
+Options that affect what will be processed:
+          -1, -2, -12: Output Field 1 data, Field 2 data, or both
+                       (DEFAULT is -1)
+Use --append to prevent overwriting of existing files. The output will be appended instead.
+-cc2: When in srt/sami mode, process captions in channel 2
+                       instead of channel 1.
+-svc --service N1[cs1],N2[cs2]...:
+                       Enable CEA-708 (DTVCC) captions processing for the listed
+                       services. The parameter is a comma delimited list
+                       of services numbers, such as &quot;1,2&quot; to process the
+                       primary and secondary language services.
+                       Pass &quot;all&quot; to process all services found.
+
+                       If captions in a service are stored in 16-bit encoding, you can
+                       specify what charset or encoding was used. Pass its name after
+                       service number (e.g. &quot;1[EUC-KR],3&quot; or &quot;all[EUC-KR]&quot;) and it will
+                       encode specified charset to UTF-8 using iconv. See iconv documentation
+                       to check if required encoding/charset is supported.
+
+In general, if you want English subtitles you don't need to use these options
+as they are broadcast in field 1, channel 1. If you want the second language
+(usually Spanish) you may need to try -2, or -cc2, or both.
+
+Input formats:
+       With the exception of McPoodle's raw format, which is just the closed
+       caption data with no other info, CCExtractor can usually detect the
+       input format correctly. To force a specific format:
+
+                  -in=format
+
+       where format is one of these:
+                       ts   -&amp;gt; For Transport Streams.
+                       ps   -&amp;gt; For Program Streams.
+                       es   -&amp;gt; For Elementary Streams.
+                       asf  -&amp;gt; ASF container (such as DVR-MS).
+                       wtv  -&amp;gt; Windows Television (WTV)
+                       bin  -&amp;gt; CCExtractor's own binary format.
+                       raw  -&amp;gt; For McPoodle's raw files.
+                       mp4  -&amp;gt; MP4/MOV/M4V and similar.
+       -ts, -ps, -es, -mp4, -wtv and -asf (or --dvr-ms) can be used as shorts.
+
+Output formats:
+
+                 -out=format
+
+       where format is one of these:
+                      srt     -&amp;gt; SubRip (default, so not actually needed).
+                      ass/ssa -&amp;gt; SubStation Alpha.
+                      webvtt  -&amp;gt; WebVTT format
+                      sami    -&amp;gt; MS Synchronized Accesible Media Interface.
+                      bin     -&amp;gt; CC data in CCExtractor's own binary format.
+                      raw     -&amp;gt; CC data in McPoodle's Broadcast format.
+                      dvdraw  -&amp;gt; CC data in McPoodle's DVD format.
+                      txt     -&amp;gt; Transcript (no time codes, no roll-up
+                                 captions, just the plain transcription.
+                      ttxt    -&amp;gt; Timed Transcript (transcription with time
+                                 info)
+                      smptett -&amp;gt; SMPTE Timed Text (W3C TTML) format.
+                      spupng  -&amp;gt; Set of .xml and .png files for use with
+                                 dvdauthor's spumux.
+                                 See &quot;Notes on spupng output format&quot;
+                      null    -&amp;gt; Don't produce any file output
+                      report  -&amp;gt; Prints to stdout information about captions
+                                 in specified input. Don't produce any file
+                                 output
+
+Options that affect how input files will be processed.
+        -gt --goptime: Use GOP for timing instead of PTS. This only applies
+                       to Program or Transport Streams with MPEG2 data and
+                       overrides the default PTS timing.
+                       GOP timing is always used for Elementary Streams.
+    -nogt --nogoptime: Never use GOP timing (use PTS), even if ccextractor
+                       detects GOP timing is the reasonable choice.
+     -fp --fixpadding: Fix padding - some cards (or providers, or whatever)
+                       seem to send 0000 as CC padding instead of 8080. If you
+                       get bad timing, this might solve it.
+               -90090: Use 90090 (instead of 90000) as MPEG clock frequency.
+                       (reported to be needed at least by Panasonic DMR-ES15
+                       DVD Recorder)
+    -ve --videoedited: By default, ccextractor will process input files in
+                       sequence as if they were all one large file (i.e.
+                       split by a generic, non video-aware tool. If you
+                       are processing video hat was split with a editing
+                       tool, use -ve so ccextractor doesn't try to rebuild
+                       the original timing.
+   -s --stream [secs]: Consider the file as a continuous stream that is
+                       growing as ccextractor processes it, so don't try
+                       to figure out its size and don't terminate processing
+                       when reaching the current end (i.e. wait for more
+                       data to arrive). If the optional parameter secs is
+                       present, it means the number of seconds without any
+                       new data after which ccextractor should exit. Use
+                       this parameter if you want to process a live stream
+                       but not kill ccextractor externally.
+                       Note: If -s is used then only one input file is
+                       allowed.
+  -poc  --usepicorder: Use the pic_order_cnt_lsb in AVC/H.264 data streams
+                       to order the CC information.  The default way is to
+                       use the PTS information.  Use this switch only when
+                       needed.
+                -myth: Force MythTV code branch.
+              -nomyth: Disable MythTV code branch.
+                       The MythTV branch is needed for analog captures where
+                       the closed caption data is stored in the VBI, such as
+                       those with bttv cards (Hauppage 250 for example). This
+                       is detected automatically so you don't need to worry
+                       about this unless autodetection doesn't work for you.
+       -wtvconvertfix: This switch works around a bug in Windows 7's built in
+                       software to convert *.wtv to *.dvr-ms. For analog NTSC
+                       recordings the CC information is marked as digital
+                       captions. Use this switch only when needed.
+            -wtvmpeg2: Read the captions from the MPEG2 video stream rather
+                       than the captions stream in WTV files
+ -pn --program-number: In TS mode, specifically select a program to process.
+                       Not needed if the TS only has one. If this parameter
+                       is not specified and CCExtractor detects more than one
+                       program in the input, it will list the programs found
+                       and terminate without doing anything, unless
+                       -autoprogram (see below) is used.
+         -autoprogram: If there's more than one program in the stream, just use
+                       the first one we find that contains a suitable stream.
+             -datapid: Don't try to find out the stream for caption/teletext
+                       data, just use this one instead.
+      -datastreamtype: Instead of selecting the stream by its PID, select it
+                       by its type (pick the stream that has this type in
+                       the PMT)
+          -streamtype: Assume the data is of this type, don't autodetect. This
+                       parameter may be needed if -datapid or -datastreamtype
+                       is used and CCExtractor cannot determine how to process
+                       the stream. The value will usually be 2 (MPEG video) or
+                       6 (MPEG private data).
+    -haup --hauppauge: If the video was recorder using a Hauppauge card, it
+                       might need special processing. This parameter will
+                       force the special treatment.
+         -mp4vidtrack: In MP4 files the closed caption data can be embedded in
+                       the video track or in a dedicated CC track. If a
+                       dedicated track is detected it will be processed instead
+                       of the video track. If you need to force the video track
+                       to be processed instead use this option.
+       -noautotimeref: Some streams come with broadcast date information. When
+                       such data is available, CCExtractor will set its time
+                       reference to the received data. Use this parameter if
+                       you prefer your own reference. Note: Current this only
+                       affects Teletext in timed transcript with -datets.
+           --noscte20: Ignore SCTE-20 data if present.
+
+Options that affect what kind of output will be produced:
+                 -bom: Append a BOM (Byte Order Mark) to output files.
+                       Note that most text processing tools in linux will not
+                       like BOM.
+                       This is the default in Windows builds.
+               -nobom: Do not append a BOM (Byte Order Mark) to output files.
+                       Note that this may break files when using Windows.
+                       This is the default in non-Windows builds.
+             -unicode: Encode subtitles in Unicode instead of Latin-1.
+                -utf8: Encode subtitles in UTF-8 (no longer needed.
+                       because UTF-8 is now the default).
+              -latin1: Encode subtitles in Latin-1
+  -nofc --nofontcolor: For .srt/.sami/.vtt, don't add font color tags.
+  --nohtmlescape: For .srt/.sami/.vtt, don't covert html unsafe character
+-nots --notypesetting: For .srt/.sami/.vtt, don't add typesetting tags.
+                -trim: Trim lines.
+   -dc --defaultcolor: Select a different default color (instead of
+                       white). This causes all output in .srt/.smi/.vtt
+                       files to have a font tag, which makes the files
+                       larger. Add the color you want in RGB, such as
+                       -dc #FF0000 for red.
+    -sc --sentencecap: Sentence capitalization. Use if you hate
+                       ALL CAPS in subtitles.
+  --capfile -caf file: Add the contents of 'file' to the list of words
+                       that must be capitalized. For example, if file
+                       is a plain text file that contains
+
+                       Tony
+                       Alan
+
+                       Whenever those words are found they will be written
+                       exactly as they appear in the file.
+                       Use one line per word. Lines starting with # are
+                       considered comments and discarded.
+
+          -unixts REF: For timed transcripts that have an absolute date
+                       instead of a timestamp relative to the file start), use
+                       this time reference (UNIX timestamp). 0 =&amp;gt; Use current
+                       system time.
+                       ccextractor will automatically switch to transport
+                       stream UTC timestamps when available.
+              -datets: In transcripts, write time as YYYYMMDDHHMMss,ms.
+               -sects: In transcripts, write time as ss,ms
+                -UCLA: Transcripts are generated with a specific format
+                       that is convenient for a specific project, feel
+                       free to play with it but be aware that this format
+                       is really live - don't rely on its output format
+                       not changing between versions.
+                  -lf: Use LF (UNIX) instead of CRLF (DOS, Windows) as line
+                       terminator.
+            -autodash: Based on position on screen, attempt to determine
+                       the different speakers and a dash (-) when each
+                       of them talks (.srt/.vtt only, -trim required).
+          -xmltv mode: produce an XMLTV file containing the EPG data from
+                       the source TS file. Mode: 1 = full output
+                       2 = live output. 3 = both
+                 -sem: Create a .sem file for each output file that is open
+                       and delete it on file close.
+
+Options that affect how ccextractor reads and writes (buffering):
+    -bi --bufferinput: Forces input buffering.
+ -nobi -nobufferinput: Disables input buffering.
+ -bs --buffersize val: Specify a size for reading, in bytes (suffix with K or
+                       or M for kilobytes and megabytes). Default is 16M.
+                 -koc: keep-output-close. If used then CCExtractor will close
+                       the output file after writing each subtitle frame and
+                       attempt to create it again when needed.
+     -ff --forceflush: Flush the file buffer whenever content is written.
+
+Options that affect the built-in closed caption decoder:
+                 -dru: Direct Roll-Up. When in roll-up mode, write character by
+                       character instead of line by line. Note that this
+                       produces (much) larger files.
+     -noru --norollup: If you hate the repeated lines caused by the roll-up
+                       emulation, you can have ccextractor write only one
+                       line at a time, getting rid of these repeated lines.
+     -ru1 / ru2 / ru3: roll-up captions can consist of 2, 3 or 4 visible
+                       lines at any time (the number of lines is part of
+                       the transmission). If having 3 or 4 lines annoys
+                       you you can use -ru to force the decoder to always
+                       use 1, 2 or 3 lines. Note that 1 line is not
+                       a real mode rollup mode, so CCExtractor does what
+                       it can.
+                       In -ru1 the start timestamp is actually the timestamp
+                       of the first character received which is possibly more
+                       accurate.
+
+Options that affect timing:
+            -delay ms: For srt/sami/webvtt, add this number of milliseconds to
+                       all times. For example, -delay 400 makes subtitles
+                       appear 400ms late. You can also use negative numbers
+                       to make subs appear early.
+Notes on times: -startat and -endat times are used first, then -delay.
+So if you use -srt -startat 3:00 -endat 5:00 -delay 120000, ccextractor will
+generate a .srt file, with only data from 3:00 to 5:00 in the input file(s)
+and then add that (huge) delay, which would make the final file start at
+5:00 and end at 7:00.
+
+Options that affect what segment of the input file(s) to process:
+        -startat time: Only write caption information that starts after the
+                       given time.
+                       Time can be seconds, MM:SS or HH:MM:SS.
+                       For example, -startat 3:00 means 'start writing from
+                       minute 3.
+          -endat time: Stop processing after the given time (same format as
+                       -startat).
+                       The -startat and -endat options are honored in all
+                       output formats.  In all formats with timing information
+                       the times are unchanged.
+-scr --screenfuls num: Write 'num' screenfuls and terminate processing.
+
+Options that affect which codec is to be used have to be searched in input
+  If codec type is not selected then first elementary stream suitable for
+  subtitle is selected, please consider -teletext -noteletext override this
+  option.
+      -codec dvbsub    select the dvb subtitle from all elementary stream,
+                        if stream of dvb subtitle type is not found then
+                        nothing is selected and no subtitle is generated
+      -nocodec dvbsub   ignore dvb subtitle and follow default behaviour
+      -codec teletext   select the teletext subtitle from elementary stream
+      -nocodec teletext ignore teletext subtitle
+  NOTE: option given in form -foo=bar ,-foo = bar and --foo=bar are invalid
+        valid option are only in form -foo bar
+        nocodec and codec parameter must not be same if found to be same
+        then parameter of nocodec is ignored, this flag should be passed
+        once, more then one are not supported yet and last parameter would
+        taken in consideration
+Adding start and end credits:
+  CCExtractor can _try_ to add a custom message (for credits for example) at
+  the start and end of the file, looking for a window where there are no
+  captions. If there is no such window, then no text will be added.
+  The start window must be between the times given and must have enough time
+  to display the message for at least the specified time.
+        --startcreditstext txt: Write this text as start credits. If there are
+                                several lines, separate them with the
+                                characters \n, for example Line1\nLine 2.
+  --startcreditsnotbefore time: Don't display the start credits before this
+                                time (S, or MM:SS). Default: 0
+   --startcreditsnotafter time: Don't display the start credits after this
+                                time (S, or MM:SS). Default: 5:00
+ --startcreditsforatleast time: Start credits need to be displayed for at least
+                                this time (S, or MM:SS). Default: 2
+  --startcreditsforatmost time: Start credits should be displayed for at most
+                                this time (S, or MM:SS). Default: 5
+          --endcreditstext txt: Write this text as end credits. If there are
+                                several lines, separate them with the
+                                characters \n, for example Line1\nLine 2.
+   --endcreditsforatleast time: End credits need to be displayed for at least
+                                this time (S, or MM:SS). Default: 2
+    --endcreditsforatmost time: End credits should be displayed for at most
+                                this time (S, or MM:SS). Default: 5
+
+Options that affect debug data:
+               -debug: Show lots of debugging output.
+                 -608: Print debug traces from the EIA-608 decoder.
+                       If you need to submit a bug report, please send
+                       the output from this option.
+                 -708: Print debug information from the (currently
+                       in development) EIA-708 (DTV) decoder.
+              -goppts: Enable lots of time stamp output.
+            -xdsdebug: Enable XDS debug data (lots of it).
+               -vides: Print debug info about the analysed elementary
+                       video stream.
+               -cbraw: Print debug trace with the raw 608/708 data with
+                       time stamps.
+              -nosync: Disable the syncing code.  Only useful for debugging
+                       purposes.
+             -fullbin: Disable the removal of trailing padding blocks
+                       when exporting to bin format.  Only useful for
+                       for debugging purposes.
+          -parsedebug: Print debug info about the parsed container
+                       file. (Only for TS/ASF files at the moment.)
+            -parsePAT: Print Program Association Table dump.
+            -parsePMT: Print Program Map Table dump.
+              -dumpdef: Hex-dump defective TS packets.
+ -investigate_packets: If no CC packets are detected based on the PMT, try
+                       to find data in all packets by scanning.
+
+Teletext related options:
+          -tpage page: Use this page for subtitles (if this parameter
+                       is not used, try to autodetect). In Spain the
+                       page is always 888, may vary in other countries.
+            -tverbose: Enable verbose mode in the teletext decoder.
+
+            -teletext: Force teletext mode even if teletext is not detected.
+                       If used, you should also pass -datapid to specify
+                       the stream ID you want to process.
+          -noteletext: Disable teletext processing. This might be needed
+                       for video streams that have both teletext packets
+                       and CEA-608/708 packets (if teletext is processed
+                       then CEA-608/708 processing is disabled).
+
+Transcript customizing options:
+    -customtxt format: Use the passed format to customize the (Timed) Transcript
+                       output. The format must be like this: 1100100 (7 digits).
+                       These indicate whether the next things should be displayed
+                       or not in the (timed) transcript. They represent (in order):
+                           - Display start time
+                           - Display end time
+                           - Display caption mode
+                           - Display caption channel
+                           - Use a relative timestamp ( relative to the sample)
+                           - Display XDS info
+                           - Use colors
+                       Examples:
+                       0000101 is the default setting for transcripts
+                       1110101 is the default for timed transcripts
+                       1111001 is the default setting for -ucla
+                       Make sure you use this parameter after others that might
+                       affect these settings (-out, -ucla, -xds, -txt, -ttxt, ...)
+
+Communication with other programs and console output:
+   --gui_mode_reports: Report progress and interesting events to stderr
+                       in a easy to parse format. This is intended to be
+                       used by other programs. See docs directory for.
+                       details.
+    --no_progress_bar: Suppress the output of the progress bar
+               -quiet: Don't write any message.
+
+Notes on the CEA-708 decoder: While it is starting to be useful, it's
+a work in progress. A number of things don't work yet in the decoder
+itself, and many of the auxiliary tools (case conversion to name one)
+won't do anything yet. Feel free to submit samples that cause problems
+and feature requests.
+
+Notes on spupng output format:
+One .xml file is created per output field. A set of .png files are created in
+a directory with the same base name as the corresponding .xml file(s), but with
+a .d extension. Each .png file will contain an image representing one caption
+and named subNNNN.png, starting with sub0000.png.
+For example, the command:
+    ccextractor -out=spupng input.mpg
+will create the files:
+    input.xml
+    input.d/sub0000.png
+    input.d/sub0001.png
+    ...
+The command:
+    ccextractor -out=spupng -o /tmp/output -12 input.mpg
+will create the files:
+    /tmp/output_1.xml
+    /tmp/output_1.d/sub0000.png
+    /tmp/output_1.d/sub0001.png
+    ...
+    /tmp/output_2.xml
+    /tmp/output_2.d/sub0000.png
+    /tmp/output_2.d/sub0001.png
+    ...
+Error: (This help screen was shown because there were no input files)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">CCExtractor’s main program is console based. There’s a GUI for Windows, as well as provisions so other programs can easily interface with CCExtractor, but the heavy lefting is done by a command line program (that can be called by scripts so integration with larger processes is straightforward).</summary></entry></feed>

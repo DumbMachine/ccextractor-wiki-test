@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Project Nephos | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Project Nephos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="//Developed under Google Summer of Code, 2018 with CCExtractor Development By Aaditya M Nair//" />
+<meta property="og:description" content="//Developed under Google Summer of Code, 2018 with CCExtractor Development By Aaditya M Nair//" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2018-aaditya.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2018-aaditya.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"//Developed under Google Summer of Code, 2018 with CCExtractor Development By Aaditya M Nair//","@type":"BlogPosting","headline":"Project Nephos","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2018-aaditya.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2018-aaditya.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Project Nephos</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>//Developed under Google Summer of Code, 2018 with CCExtractor Development By <a href="https://github.com/AadityaNair">Aaditya M Nair</a>//</p>
+
+<hr />
+<h2 id="introduction">Introduction</h2>
+
+<p>One of the function of the RedHen Organisation is to record and archive Television streams they receive for future
+research. Project Nephos is an effort by CCExtractor to automate the entire process. Archiving is done by compressing
+and uploading to Google Drive. 
+In addition to downloading and archiving, Project Nephos provides the following functionalities:</p>
+
+<ol>
+  <li>Tagging of videos.</li>
+  <li>Searching archived videos.</li>
+  <li>Sharing videos with other entities</li>
+</ol>
+
+<h2 id="project-related-links">Project Related Links</h2>
+
+<ul>
+  <li>
+    <p>Project Repository on GitHub <a href="https://github.com/AadityaNair/ProjectNephos">Project Nephos</a></p>
+  </li>
+  <li>
+    <p>My blogs on the project <a href="https://aadityanair.ml/tags#GSoC">Blog Reports</a></p>
+  </li>
+  <li>
+    <p>Sample Recordings <a href="https://drive.google.com/open?id=1elg_2owspB3qSFkG8AEuiKcEbLdIUNAX">here</a></p>
+  </li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/AadityaNair/ProjectNephos.git
+pip install ./ProjectNephos
+</code></pre></div></div>
+
+<h2 id="usage-documentation">Usage Documentation</h2>
+
+<p>Below is how you would manually use Nephos to perform actions manually. This requires the config file to be present.
+More information on the config file in the <em>Configuration</em> section.</p>
+
+<h4 id="uploading-files">Uploading files</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos upload `&lt;filename&gt;`
+</code></pre></div></div>
+
+<h4 id="searching">Searching</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos search --name `&lt;name&gt;` --tags `&lt;tag1&gt;` `&lt;tag2&gt;` ... --do_and
+</code></pre></div></div>
+
+<p>Search for files with <code class="language-plaintext highlighter-rouge">&lt;name&gt;</code> and/or tags <code class="language-plaintext highlighter-rouge">&lt;tag1&gt;</code> <code class="language-plaintext highlighter-rouge">&lt;tag2&gt;</code> …’’.
+The and/or part will be decided by the ‘‘do_and’’ parameter. If specified, all parameters (name, tags) will be joined
+by an AND i.e it will search for <strong>”<code class="language-plaintext highlighter-rouge">&lt;name&gt;</code> AND <code class="language-plaintext highlighter-rouge">&lt;tag1&gt;</code> AND <code class="language-plaintext highlighter-rouge">&lt;tag2&gt;</code> …“</strong><br />
+If not, ANDs will be replaced by ORs.</p>
+
+<p>Atleast one of ‘’–name’’ and ‘’–tags’’ is required.</p>
+
+<h4 id="tagging">Tagging</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos tag --for_name `&lt;name&gt;` --add_tags `&lt;tag1&gt;` `&lt;tag2&gt;` ...
+</code></pre></div></div>
+
+<p>This searches for all instances that contain <code class="language-plaintext highlighter-rouge">&lt;name&gt;</code> and for each of them, add the provided tags.</p>
+
+<h4 id="processing">Processing</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos process `&lt;input_file&gt;` `&lt;output_file&gt;`
+</code></pre></div></div>
+
+<p>Converts the input file to output file. The formats are guessed by their extensions.</p>
+
+<h4 id="permissions">Permissions</h4>
+
+<p>Share uploaded videos with people based on the video tags.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos permission add --for_tags `&lt;tag1&gt;` `&lt;tag2&gt;` --share_with `&lt;email&gt;`
+</code></pre></div></div>
+
+<p>This command is persistent. This means that all future videos with the tag will also be shared.
+To avoid this action pass ‘’–not_persistent’’ to the command.</p>
+
+<p>Note, The tags provided follow the OR semantics. i.e. in the above example, every file with the tag <em>tag1</em></p>
+
+<p><strong>OR</strong> <em>tag2</em> will be shared.</p>
+
+<p>To view all permissions,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos permission list
+</code></pre></div></div>
+
+<p>More information can be found for each sub-command by using the ‘’–help’’ option after the sub-command</p>
+
+<h3 id="automation">Automation</h3>
+
+<p>For the most part you want to just specify what to record and when leave Nephos at it. For that:</p>
+
+<h4 id="add-channels">Add channels</h4>
+
+<p>Add channel to specify where to download stuff from</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos channel add --name 'CNN' --ip_string '1.2.3.4:5678'
+</code></pre></div></div>
+
+<p>Note that the ‘‘name’’ should be unique for each channel.</p>
+
+<h5 id="to-view-added-channels">To view added channels.</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos channel list
+</code></pre></div></div>
+
+<h4 id="add-job">Add job.</h4>
+
+<p>Specify when to download other post download options.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos job add --name `&lt;jobname&gt;` --channel `&lt;channel&gt;` --start `&lt;starttime&gt;` --duration `&lt;length&gt;` \
+             --upload --convert_to `&lt;format&gt;` --tag `&lt;tag1&gt;` `&lt;tag2&gt;`
+</code></pre></div></div>
+
+<p>Following are mandatory arguments:\ 
+‘’–name’’ is the name of the job. This should be unique for each job.\ 
+‘’–channel’’ is the name of the associated channel. This channel should have already been added by the ‘‘channel add’’ subcommand.\ 
+‘’–start’’ is the start time of the job written in the popular cron format. For more info on the format go <a href="http://www.nncron.ru/help/EN/working/cron-format.htm">here</a>. This was used as an reference.\ 
+‘’–duration’’ is how long you want to record. This is provided in minutes.\</p>
+
+<p>Rest are optional arguments:\ 
+‘’–upload’’ instructs nephos to upload the file to Google Drive. This will most likely be the default case in the future versions. In such a case, this option will be removed.\ 
+‘’–convert_to’’ makes so that the downloaded file is converted to the provided format before being uploaded.\ 
+‘’–tag’’ tags the uploaded file with the provided tags.\</p>
+
+<p>Note that ‘’–tag’’ is dependent providing the ‘’–upload’’ option. If it not provided ‘’–tag’’ is a NOOP.</p>
+
+<h4 id="tv-listings">TV Listings</h4>
+
+<p>Nephos also has a crude API that supports TV listings.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos schedule add --name `&lt;program_name&gt;` --channel `&lt;channel&gt;` --start `&lt;starttime&gt;` --duration `&lt;length&gt;` --tags `&lt;tag1&gt;` `&lt;tag2&gt;`
+</code></pre></div></div>
+
+<p>This syntax is pretty much exactly the same as for the ‘‘job add’’ above. The <code class="language-plaintext highlighter-rouge">tags</code> are associated with the program.
+This allows for a separate syntax to add a job:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos job add --name `&lt;jobname&gt;` --program_tags `&lt;tag1&gt;` `&lt;tag2&gt;` .. \
+           --upload --convert_to `&lt;format&gt;` --tag `&lt;tag1&gt;` `&lt;tag2&gt;`
+</code></pre></div></div>
+
+<p>This will find all programs with <strong>any</strong> of the provided tags and add them as jobs.</p>
+
+<h4 id="initialise-server">Initialise Server</h4>
+
+<p>This starts the orchestration server which is responsible for the record -&gt; process -&gt; upload pipeline.
+This will also create all the relevant directories and perform OAuth with google drive, if not done already.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nephos init
+</code></pre></div></div>
+
+<p>Currently, if a job is added after the server is started, it will not be picked up by the server. So, make sure you
+add all the jobs before starting the server. This will be fixed in a later version.</p>
+
+<h2 id="contributing-and-other-information">Contributing and other information</h2>
+
+<p>Currently the project lives on the above provided github link.</p>
+
+<p>The <a href="https://github.com/AadityaNair/ProjectNephos/wiki">wiki</a> contains more information about the internals of the project.</p>
+
+<p>There is still a lot of stuff that can be improved here. Have a look at the <a href="https://github.com/AadityaNair/ProjectNephos/issues">issues</a> to know what can be done and don’t hesitate to create a new one if you find something new.</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-2018-aaditya.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

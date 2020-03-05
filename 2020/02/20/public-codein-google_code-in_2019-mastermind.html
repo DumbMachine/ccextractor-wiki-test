@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Mastermind #3: Write the backend (in any language you want) for a competition between student submissions | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Mastermind #3: Write the backend (in any language you want) for a competition between student submissions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We already had two tasks about this superfun yet easy to understand game (links below). Many students have worked on creating mastermind players, so it’s time to make them compete against each other! Let’s see who’s algorithm is better." />
+<meta property="og:description" content="We already had two tasks about this superfun yet easy to understand game (links below). Many students have worked on creating mastermind players, so it’s time to make them compete against each other! Let’s see who’s algorithm is better." />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"We already had two tasks about this superfun yet easy to understand game (links below). Many students have worked on creating mastermind players, so it’s time to make them compete against each other! Let’s see who’s algorithm is better.","@type":"BlogPosting","headline":"Mastermind #3: Write the backend (in any language you want) for a competition between student submissions","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Mastermind #3: Write the backend (in any language you want) for a competition between student submissions</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>We already had two tasks about this superfun yet easy to understand game (links below). Many students have worked on creating mastermind players, so it’s time to make them compete against each other! Let’s see who’s algorithm is better.</p>
+
+<p>In order to do this, we need a servers for the players to connect to and play. Your job is to implement such a server.</p>
+
+<p>We have come up with a simple protocol between player and server. Your job here is to implement the server side. The protocol is like this:</p>
+
+<p>When the player wants to start a game, it will request (via HTTP GET)</p>
+
+<p>/himastermind/newgame/$name_of_player</p>
+
+<p>The “name_of_player” can be anything (alphanumeric only) but it shouldn’t change - so if a player plays 100 times, it should use the same name in all of 100, so the server can keep track of results for each player.</p>
+
+<p>A player here is the AI, not the name of the developer. In fact, don’t use your own name (that goes against GCI rules).</p>
+
+<p>When that URL is called, the server will generate a random number (for the player to guess) and a “game ID” which it will return. The “game ID” (equivalent to “session ID”, if you are used to that term when taking about websites) is a 8 characters random string (alphanumeric). The game ID is returned to the player so he can pass it to play.</p>
+
+<p>Then the game actually starts. The player will make requests like this:</p>
+
+<p>/himastermind/play/$game_id/$guess</p>
+
+<p>And the server will return:</p>
+
+<p>$digits_in_the_right_position $digits_in_the_wrong_position $number_of_guesses_in_this_game $time_since_the_game_started</p>
+
+<p>A possible interaction would be like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**CLIENT REQUESTS**: /himastermind/newgame/MazingerZ/1235678  
+**SERVER REPLIES**: AHVEDJ34  
+**CLIENT REQUESTS**: /himastermind/play/AHVEDJ34/123456  
+**SERVERS REPLIES**: 2 1 3  
+**CLIENT REQUESTS**: /himastermind/play/AHVEDJ34/126544  
+**SERVERS REPLIES**: 4 0 4  
+**CLIENT REQUESTS**: /himastermind/play/AHVEDJ34/126588  
+**SERVERS REPLIES**: 6 0 6  
+</code></pre></div></div>
+
+<p>Of course the game ends when the player guesses the number correctly, so the reply is 6 0.</p>
+
+<p>Things the server needs to do:</p>
+<ul>
+  <li>If the game ID doesn’t exist, return an error</li>
+  <li>If the guess string is not correct (exactly 6 digits) return an error</li>
+  <li>Be able to handle the same player playing more than one game simultaneously, which is why we have the “game ID”. Each time the player calls “newgame” a new game is created, but it doesn’t destroy the previous one the server might have.</li>
+  <li>Keep track of everything in a database. That means for each player, the games its played, the guesses, elapsed time, and so on.</li>
+</ul>
+
+<p>You can deploy your work in any cloud service that as a free tier (most do).</p>
+
+<p>In a separate task we’ll create a new dashboard to see who’s the best player.</p>
+
+<p>There will be rewards for the students that create the best players and the best server.</p>
+
+<p>Useful links:</p>
+
+<p><strong>Previous mastermind tasks</strong>:<br />
+https://codein.withgoogle.com/dashboard/tasks/6684006435782656/<br />
+https://codein.withgoogle.com/dashboard/tasks/6022435409756160/\</p>
+
+<p><strong>Mastermind rules</strong>:<br />
+https://www.wikihow.com/Play-Mastermind\</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2019-mastermind.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

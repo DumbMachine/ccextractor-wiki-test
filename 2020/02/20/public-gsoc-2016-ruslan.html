@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>GSoC 2016 Report. Ruslan Kuchumov | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="GSoC 2016 Report. Ruslan Kuchumov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The main goal of this year was to bring real-time repository to more stable, less resource demanding and usable version. A lot of decisions made in GSoC 2014 and 2015 turned out to be wrong. So this year I had to start everything almost from scratch. The things that were achieved to this date are: Completely changed architecture: - All captions extraction (BIN -&gt; CC) is done on “tuners side” instead of sending BIN to special servers for extracting - CCExtractor itself doesn’t connect to repository servers, instead a client program ccr should be used. ccr sends both extracted captions and BIN data - My own socket connection protocol between “tuners side” and servers was replaced by long running HTTP connection. It handles connection losses easily, as they happens quiet often and also allows to define an API. - Communication between web browser and servers is done now via WebSockets. Compared to previous implementations with polling, long polling and server-side events (yes, I tried all of them :( ) it doesn’t overload servers’s CPUs as much. - Repository servers are now handling HTTP and WebSockets requests only. All the received data is stored in Redis cache and backed up to persistent database every few minutes. (In previous versions there were no cache) Created client program ccr Changed web servers - My own implementation of MVC pattern and routing was replaced by FatFree framework, then it turned out that it doesn’t have required features and then was changed by Laravel - The same happened to JavaScript client. At the end it was done with Backbone framework. Also now it allows to view multiple channels at the same time - WebSocket servers were created using Node.js (check broadcasting/ in repo) Defined an RESTful API Deployed it in Kubernetes in Google Container Engine with working autoscaling" />
+<meta property="og:description" content="The main goal of this year was to bring real-time repository to more stable, less resource demanding and usable version. A lot of decisions made in GSoC 2014 and 2015 turned out to be wrong. So this year I had to start everything almost from scratch. The things that were achieved to this date are: Completely changed architecture: - All captions extraction (BIN -&gt; CC) is done on “tuners side” instead of sending BIN to special servers for extracting - CCExtractor itself doesn’t connect to repository servers, instead a client program ccr should be used. ccr sends both extracted captions and BIN data - My own socket connection protocol between “tuners side” and servers was replaced by long running HTTP connection. It handles connection losses easily, as they happens quiet often and also allows to define an API. - Communication between web browser and servers is done now via WebSockets. Compared to previous implementations with polling, long polling and server-side events (yes, I tried all of them :( ) it doesn’t overload servers’s CPUs as much. - Repository servers are now handling HTTP and WebSockets requests only. All the received data is stored in Redis cache and backed up to persistent database every few minutes. (In previous versions there were no cache) Created client program ccr Changed web servers - My own implementation of MVC pattern and routing was replaced by FatFree framework, then it turned out that it doesn’t have required features and then was changed by Laravel - The same happened to JavaScript client. At the end it was done with Backbone framework. Also now it allows to view multiple channels at the same time - WebSocket servers were created using Node.js (check broadcasting/ in repo) Defined an RESTful API Deployed it in Kubernetes in Google Container Engine with working autoscaling" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2016-ruslan.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2016-ruslan.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"The main goal of this year was to bring real-time repository to more stable, less resource demanding and usable version. A lot of decisions made in GSoC 2014 and 2015 turned out to be wrong. So this year I had to start everything almost from scratch. The things that were achieved to this date are: Completely changed architecture: - All captions extraction (BIN -&gt; CC) is done on “tuners side” instead of sending BIN to special servers for extracting - CCExtractor itself doesn’t connect to repository servers, instead a client program ccr should be used. ccr sends both extracted captions and BIN data - My own socket connection protocol between “tuners side” and servers was replaced by long running HTTP connection. It handles connection losses easily, as they happens quiet often and also allows to define an API. - Communication between web browser and servers is done now via WebSockets. Compared to previous implementations with polling, long polling and server-side events (yes, I tried all of them :( ) it doesn’t overload servers’s CPUs as much. - Repository servers are now handling HTTP and WebSockets requests only. All the received data is stored in Redis cache and backed up to persistent database every few minutes. (In previous versions there were no cache) Created client program ccr Changed web servers - My own implementation of MVC pattern and routing was replaced by FatFree framework, then it turned out that it doesn’t have required features and then was changed by Laravel - The same happened to JavaScript client. At the end it was done with Backbone framework. Also now it allows to view multiple channels at the same time - WebSocket servers were created using Node.js (check broadcasting/ in repo) Defined an RESTful API Deployed it in Kubernetes in Google Container Engine with working autoscaling","@type":"BlogPosting","headline":"GSoC 2016 Report. Ruslan Kuchumov","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2016-ruslan.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2016-ruslan.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GSoC 2016 Report. Ruslan Kuchumov</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The main goal of this year was to bring real-time repository to more stable, less resource demanding and usable version. A lot of decisions made in GSoC 2014 and 2015 turned out to be wrong. So this year I had to start everything almost from scratch. The things that were achieved to this date are:</p>
+<ol>
+  <li>Completely changed architecture:
+    - All captions extraction (BIN -&gt; CC) is done on “tuners side” instead of sending BIN to special servers for extracting 
+    - CCExtractor itself doesn’t connect to repository servers, instead a client program <a href="https://github.com/rkuchumov/ccr-client">ccr</a> should be used. ccr sends both extracted captions and BIN data
+    - My own socket connection protocol between “tuners side” and servers was replaced by long running HTTP connection. It handles connection losses easily, as they happens quiet often and also allows to define an API.
+    - Communication between web browser and servers is done now via WebSockets. Compared to previous implementations with polling, long polling and server-side events (yes, I tried all of them :( ) it doesn’t overload servers’s CPUs as much. 
+    - Repository servers are now handling HTTP and WebSockets requests only. All the received data is stored in Redis cache and backed up to persistent database every few minutes. (In previous versions there were no cache)</li>
+  <li><a href="https://github.com/rkuchumov/ccr-client"> Created client program ccr</a></li>
+  <li><a href="https://github.com/rkuchumov/ccr-server"> Changed web servers</a>
+    - My own implementation of MVC pattern and routing was replaced by FatFree framework, then it turned out that it doesn’t have required features and then was changed by Laravel
+    - The same happened to JavaScript client. At the end it was done with Backbone framework. Also now it allows to view multiple channels at the same time
+    - WebSocket servers were created using Node.js (check broadcasting/ in repo)</li>
+  <li><a href="https://github.com/rkuchumov/ccr-server"> Defined an RESTful API</a></li>
+  <li>Deployed it in Kubernetes in Google Container Engine with working autoscaling</li>
+</ol>
+
+<p>Besides that:</p>
+<ol>
+  <li>I fixed <a href="https://github.com/CCExtractor/ccextractor/issues/259">this issue</a> (which is not actually CCExtractor fault:) )</li>
+  <li>And figured out <a href="https://github.com/CCExtractor/ccextractor/issues/136">issue #136</a> (which is not CCExtractor fault as well)</li>
+</ol>
+
+<p>The first half of the summer went as planned but then some problems arouse. The first version used Google Datastore and App Engine. Turned out hosting it cost $300 per two week which was very expensive. So we decided to use Amazon AWS. I changed the code for their services and then I wasted a lot of time trying to deploy it, but I couldn’t and I still don’t know why (although I used it in the previous year). Then I switched to Google Container Engine, it worked, but my app used a lot of CPU %, so I had to redesign it again and reconsider a lot of decisions (in panic). Because of this the following features were not done:</p>
+<ol>
+  <li>E-mail notifications</li>
+  <li>Creating .deb and .rpm packets for CCExtractor</li>
+  <li>Searching and downloading feature (in API and web site) is not completed</li>
+</ol>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-2016-ruslan.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

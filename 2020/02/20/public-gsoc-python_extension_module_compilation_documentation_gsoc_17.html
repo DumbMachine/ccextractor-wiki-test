@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Compiling the Python Extension module for CCExtractor | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Compiling the Python Extension module for CCExtractor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Dependencies" />
+<meta property="og:description" content="Dependencies" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-python_extension_module_compilation_documentation_gsoc_17.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-python_extension_module_compilation_documentation_gsoc_17.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Dependencies","@type":"BlogPosting","headline":"Compiling the Python Extension module for CCExtractor","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-python_extension_module_compilation_documentation_gsoc_17.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-python_extension_module_compilation_documentation_gsoc_17.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Compiling the Python Extension module for CCExtractor</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3 id="dependencies">Dependencies</h3>
+
+<ul>
+  <li>
+    <p>The Python extension module for Python module has additional dependencies in comparison to the dependencies of CCExtractor. The documentation about the dependencies of CCExtractor can be accessed <a href="https://github.com/CCExtractor/ccextractor#compiling">here</a>.</p>
+  </li>
+  <li>
+    <p>However, for compiling of the Python extension module for CCExtractor, the user needs to compile the following two dependencies:</p>
+  </li>
+</ul>
+
+<h5 id="swig">SWIG</h5>
+
+<ul>
+  <li>
+    <p>SWIG is used for generating the wrappers for C code in CCExtractor as well as for generating the module. The user needs to install SWIG or else the compilation of Python extension module will fail. For, compiling the source, the user can find useful resources <a href="http://www.swig.org/download.html">here</a>.</p>
+  </li>
+  <li>
+    <p>For standard installation, for Ubuntu, the user can do 
+<code class="language-plaintext highlighter-rouge">sudo apt-get install swig</code> <em>(This has been tested on ubuntu-16.04 (xenial)).</em></p>
+  </li>
+</ul>
+
+<h5 id="python-dev-package">Python-dev package</h5>
+
+<ul>
+  <li>
+    <p>The Python-dev package is used by Python Extension module for accessing the functions and definitions made in C-API for accessing Python functions and other functionality.</p>
+  </li>
+  <li>
+    <p>The user needs to install this package in addition to SWIG. The installation procedure is highly OS dependent and hence left at the user-end for exploration.</p>
+  </li>
+</ul>
+
+<h2 id="installing-the-extension-module">Installing the extension module</h2>
+
+<p><em>(This section is for contributors who want to compile the extension module without installing)</em></p>
+
+<ul>
+  <li>
+    <p>After the user has successfully installed the dependencies as stated in the above section, then the user can proceed to install the extension module via PyPI with the command:
+<code class="language-plaintext highlighter-rouge">sudo pip install ccextractor or pip install ccextractor --user </code></p>
+  </li>
+  <li>
+    <p>For installation in virtual environment however, the user may use 
+<code class="language-plaintext highlighter-rouge">pip install ccextractor</code></p>
+  </li>
+</ul>
+
+<h2 id="compiling-the-extension-module">Compiling the extension module</h2>
+
+<p><em>(This section is for contributors who want to compile the extension module without installing)</em></p>
+
+<ul>
+  <li>
+    <p>For compiling the Python extension module, the user is needed to get a clone of the main repository for <a href="https://github.com/CCExtractor/ccextractor">CCExtractor</a>.</p>
+  </li>
+  <li>
+    <p>The following are the exact steps to be followed after the clone of the main repository has been obtained by the user.
+    * <em>cd api</em> (changing the current working directory to api directory)
+    * <em>./build_library</em> (running the build_library script)
+The entire compilation procedure is taken care of by the <a href="https://github.com/CCExtractor/ccextractor/blob/master/api/build_library">build_library</a> script.</p>
+  </li>
+  <li>
+    <p>After the compilation is successful, then the user would have ccextractor.py module along with _ccextractor.so in the api directory. Then the user can import this module.</p>
+  </li>
+  <li>
+    <p>However, the point to be noted here is that the extension module has not been installed on the user system. It has just been compiled. So the user needs to import this module only from the api directory.</p>
+  </li>
+</ul>
+
+<h2 id="pypi-module">PyPI module</h2>
+
+<p><em>(This section is for contributors who want to upload the package to PyPI)</em></p>
+
+<ul>
+  <li>
+    <p>The PyPI module that has been uploaded has many things added to the CCExtractor code tree and all of this can be found <a href="https://github.com/Diptanshu8/ccextractor/tree/manifest_file">here</a> (branch - manifest_file).</p>
+  </li>
+  <li>
+    <p>The contributor is advised to use the documentation at <a href="https://docs.python.org/2/distutils/introduction.html">//‘An Introduction to Distutils’//</a> and its subsequent parts to understand this section.</p>
+  </li>
+  <li>
+    <p>The overall strategy or steps that have been followed to generate the distribution for being uploaded to PyPI is as follows:</p>
+  </li>
+</ul>
+
+<h4 id="adding-files-to-distribution-and-generating-the-distribution">Adding files to distribution and generating the distribution</h4>
+
+<ul>
+  <li>
+    <p>All the files that are needed to be included in the package distribution are to be added the MANIFEST file as done <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/MANIFEST.in">here</a>. For understanding the syntax used in MANIFEST file the user can check this <a href="https://docs.python.org/2/distutils/sourcedist.html#specifying-the-files-to-distribute">documentation</a>.</p>
+  </li>
+  <li>
+    <p>After the MANIFEST file has been written properly, the user can generate the distribution package by the command
+<code class="language-plaintext highlighter-rouge">python setup.py sdist</code></p>
+  </li>
+  <li>
+    <p>This command would generate the distribution on the basis of MANIFEST file and place in the dist/ directory as a .tar.gz file until specified otherwise by the user.</p>
+  </li>
+  <li>
+    <p>One thing to mention about the MANIFEST file is that it can only include files/folders from the folder it is defined within. It cannot include directories/files from parent directory or any other child directory. However, in the MANIFEST file I used, I have added the symlink to <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/src">src</a> main <a href="https://github.com/Diptanshu8/ccextractor/tree/manifest_file/src">src directory</a> so that the source code can be added to the package distribution via the MANIFEST file.</p>
+  </li>
+</ul>
+
+<h4 id="an-analysis-of-the-setuppy-file-used">An analysis of the setup.py file used</h4>
+
+<ul>
+  <li>
+    <p>The <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/setup.py">setup.py</a> has been used to install the Python module on the user system. To understand what all the parameters mean in <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/setup.py#L22">setup</a> the user must refer to <a href="https://docs.python.org/2/distutils/setupscript.html">this documentation</a>.</p>
+  </li>
+  <li>
+    <p>The cmdclass defined at <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/setup.py#L33">line</a> is a very important part of the script as it internally makes call to the scripts included in <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/package_build_scripts">package_build_scripts</a>. A point to note is that this directory is used to include the scripts into the package distribution via the MANIFEST file.</p>
+  </li>
+  <li>
+    <p>The scripts in package_build_scripts are the scripts which do the actual compilation of the source code to required python module and shared object. The user is advised to refer to <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/package_build_scripts/build_library_package">build_library_package</a> and <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/package_build_scripts/build_api_package">build_api_package</a> to understand how to compilation process takes place. The user may also refer to this <a href="/ccextractor-wiki-test/2020/02/20/public-gsoc-python_extension_module_technical_documentation_gsoc_17">documentation</a> for understanding how the build scripts work.</p>
+  </li>
+  <li>
+    <p>For any modifications made to the build scripts, viz, <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/build_library">build_library</a> and <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/build_api">build_api</a> corresponding modifications are to be made to the scripts included in package_build_scripts so that the compilation does not fail while installing the Python extension module.</p>
+  </li>
+  <li>
+    <p>The <a href="https://github.com/Diptanshu8/ccextractor/blob/manifest_file/api/package_build_scripts/ccextractor.i">ccextractor.i</a> used in the package_build_scripts is an interface file used by SWIG to generate the wrapper codes. This is an essential part and should always be present with the distribution.</p>
+  </li>
+</ul>
+
+<h2 id="uploading-to-pypi">Uploading to PyPI</h2>
+
+<ul>
+  <li>
+    <p>For uploading the extension module to Python, I have followed the exact steps mentioned at <a href="http://peterdowns.com/posts/first-time-with-pypi.html">here</a>.</p>
+  </li>
+  <li>
+    <p>The GitHub repository which I used to host the tar as mentioned in the above link could be found <a href="https://github.com/Diptanshu8/CCExtractor-extension-module">here</a>.</p>
+  </li>
+  <li>
+    <p>However, there is no mandatory rule to continue hosting the source distribution from the same repository. If a user feels that a newer version for CCExtractor’s extension module is ready to be shipped, then he can follow the same steps from the link mentioned in first point of this section. In those steps, he can create a self-owned public repository and upload the module to PyPI.</p>
+  </li>
+</ul>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-python_extension_module_compilation_documentation_gsoc_17.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

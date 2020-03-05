@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Public:general:whatsccextractor | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Public:general:whatsccextractor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="~~META: title = What’s CCExtractor? ~~" />
+<meta property="og:description" content="~~META: title = What’s CCExtractor? ~~" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-whatsccextractor.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-whatsccextractor.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"~~META: title = What’s CCExtractor? ~~","@type":"BlogPosting","headline":"Public:general:whatsccextractor","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-whatsccextractor.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-whatsccextractor.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Public:general:whatsccextractor</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>~~META:
+title = What’s CCExtractor?
+~~</p>
+
+<p><strong>What’s CCExtractor?</strong></p>
+
+<p>A tool that analyzes video files and produces independent subtitle files from the closed captions data. CCExtractor is portable, small, and very fast. It works in Linux, Windows, and OSX.</p>
+
+<p><strong>What kind of closed captions does CCExtractor support?</strong></p>
+
+<p>Almost all of them:</p>
+
+<ul>
+  <li>American TV captions (CEA-608 is well supported, and CEA-708 is starting to look good)\</li>
+  <li>European Teletext\</li>
+  <li>European DVB\</li>
+  <li>Brazilian ISBD\</li>
+  <li>DVD\</li>
+  <li>MXF\</li>
+</ul>
+
+<p>Missing:\</p>
+<ul>
+  <li>DTMB (Chinese)</li>
+</ul>
+
+<p><strong>How easy is it to use CCExtractor?</strong></p>
+
+<p>Very. Just tell it what file to process and it does everything for you.</p>
+
+<p><strong>CCExtractor integration with other tools</strong></p>
+
+<p>It is possible to integrate CCExtractor in a larger process. A couple of tools already call CCExtractor as part their video process - this way they get subtitle support for free.
+Starting in 0.52, CCExtractor is very front-end friendly. Front-ends can easily get real-time status information. The GUI source code is provided and can be used for reference.
+Any tool, commercial or not, is specifically allowed to use CCExtractor for any use the authors seem fit. So if your favourite video tools still lacks captioning tool, feel free to send the authors here.</p>
+
+<p>You can also use CCExtractor as a library (as opposed to just running the binary), or take parts of the code. Keep in mind however that CCExtractor is GPLv2 so if you take parts or all of the source code your code must also be GPLv2.</p>
+
+<p><strong>What’s the point of generating separate files for subtitles, if they are already in the source file?</strong><br />
+There are several reasons to have subtitles separated from the video file, including:</p>
+
+<ul>
+  <li>Closed captions never survive MPEG processing. If you take a MPEG file and encode it to any format (such as divx), your result file will not have closed captions. This means that if you want to keep the subtitles, you need to keep the original file. This is hardly practical if you are archiving HDTV shows for example.\</li>
+  <li>Subtitles files are small - so small (around 250 Kb for a movie) that you can quickly download them, or email them, etc, in case you have a recording without subtitles.\</li>
+  <li>Subtitles files are indexable: You can have a database with all your subtitles if you want (there are many available), so you can search the dialogs.\</li>
+  <li>Subtitles files are a de-facto standard: Almost every player can use them. In fact, many setbox players accept subtitles files in .srt format - so you can have subtitles in your .mp4/.mkv/.avi./etc movies and not just in your original DVDs.\</li>
+  <li>Closed captions are stored in many different formats by capture cards. Upgrading to a new card, if it comes with a new player, may mean that you can’t use your previously recorded closed captions, even if the audio/video are fine.\</li>
+  <li>Closed captions require a closed caption decoder. All US TV have one (it’s a legal requirement), but no European TV does, since there are not closed captions in Europe (teletext and DVB subtitles are used instead). Basically this means that if you buy a DVD in the US which has closed captions but no DVD subtitles, you are out of luck. This is a problem with many (most) old TV shows DVDs, which only come with closed captions. DVD producers don’t bother doing DVD subs, since it’s another way to segment the market, same as with DVD regions.\</li>
+</ul>
+
+<p><strong>How I do use subtitles once they are in a separate file?</strong><br />
+CCExtractor generates files in the two most common formats: .srt (SubRip) and .smi (which is a Microsoft standard). Most players support at least .srt natively. You just need to name the .srt file as the file you want to play it with, for example sample.avi and sample.srt.</p>
+
+<p>Other formats just as .txt (transcripts) are supported as well.</p>
+
+<p><strong>What kind of files can I extract closed captions from?</strong><br />
+CCExtractor currently handles:</p>
+
+<ul>
+  <li>Most HDTV captures (where you save the Transport Stream).\</li>
+  <li>Captures where captions are recorded in bttv format. The number of cards that use this card is huge. My test samples came from a Hauppage PVR-250. You can check the complete list <a href="https://linuxtv.org/hg/v4l-dvb/file/tip/linux/Documentation/video4linux/CARDLIST.bttv">here</a>.\</li>
+  <li>DVR-MS (microsoft digital video recording).\</li>
+  <li>Tivo files\</li>
+  <li>ReplayTV files\</li>
+  <li>Dish Network files\</li>
+  <li>DVDs\</li>
+</ul>
+
+<p>Usually, if you record a TV show with your capture card and CCExtractor produces the expected result, it will work for your all recordings. If it doesn’t, which means that your card uses a format CCExtractor can’t handle, please contact me and we’ll try to make it work.</p>
+
+<p><strong>Can I edit the subtitles?</strong><br />
+.srt files are just text files, with time information (when subtitles are supposed to be shown and for how long) and some basic formatting (use italics, bold, etc). So you can edit them with any text editor. If you need to do serious editing (such as adjusting timing), you can use subtitle editing tools - there are many available.</p>
+
+<p><strong>Can CCExtractor generate other subtitles formats?</strong><br />
+At this time, CCExtractor can generate .srt, .smi and raw and bin files.</p>
+
+<p><strong>What’s a raw file?</strong><br />
+A raw file is a file that contains an exact dump of the closed captions bytes, without any processing. This lets you use any tool of your choice to process the data. For example, <a href="http://www.theneitherworld.com/mcpoodle/SCC_TOOLS/DOCS/SCC_TOOLS.HTML">McPoodle’s</a> excellent tools can generate subtitles files in several formats, adjust timing, etc.</p>
+
+<p><strong>What’s a bin file? How is it different from a raw file?</strong><br />
+A bin file contains a dump of the closed captions bytes (same as a raw file) but it also includes timing information. This is a format that we made up for CCExtractor, i.e. it’s not any kind of industry standard. However, it’s the most useful (to us) for debugging purposes, so if you need to send us a sample please use this format.
+Also, a bin format can hold several CC streams (several languages, even from both analog and digital). A raw file cannot.</p>
+
+<p><strong>How long does it take to process a MPEG file?</strong><br />
+Obviously, it depends on the computer and the length of the file. In my (really old) computer it took around 90 seconds for a 45 minutes show in HDTV, with CPU usage around 3% (I/O operations are what’s holding it back).
+Currently (2018) we’re processing as many as 20 TV channels in real time using a single computer with a i5 CPU.</p>
+
+<p><strong>What platforms does CCExtractor work on?</strong><br />
+CCExtractor is developed and tested in Windows and Linux. It is also known to compile and run fine in OSX (a build script is included in the source .zip).</p>
+
+<p><strong>Where can I download it?</strong><br />
+The source code is hosted on github. Check out our download page for links to everything.
+Old versions were hosted on sourceforge. We’re keeping those there for statistical purposes. This is the <a href="http://sourceforge.net/project/showfiles.php?group_id=190832">old download page</a> and this is the <a href="http://sourceforge.net/projects/ccextractor/">old project summary page</a>.</p>
+
+<p><strong>How I can contact the author?</strong><br />
+There’s no longer one author. Carlos is still the official maintainer but there’s a lot of people contributing to the project. Best thing is to check out our support page.</p>
+
+<p><strong>How do I use this tool (parameters, etc)?</strong>\</p>
+
+<p>Run it without parameters and you will get a help screen. Basically, you just give it the input file name, like this:</p>
+
+<p>ccextractor the.sopranos.ts</p>
+
+<p>As for the lack of documentation: There is no lack of documentation! It’s just included in the program itself. Just run it without parameters and you will get complete details.</p>
+
+<p><strong>How can I contribute to this project?</strong><br />
+There are several ways:\</p>
+<ul>
+  <li>If you are a developer, since the source code is available, you can fix things or add features yourself and submit a patch.\</li>
+  <li>If you are an user and find any bug, or have good suggestions, let me know.\</li>
+  <li>If you are doing your own recordings and have any particular one that CCExtractor can’t process correctly, I’d definitely like to take a look at it and try to fix it.\</li>
+  <li>If you really hate that there is not a lot of documentation, you can write it yourself. I’ll answer any question you might have.\</li>
+</ul>
+
+<p><strong>Does CCExtractor use code from other projects?</strong><br />
+Yes. Lots of code came originally from McPoodle’s tools (even though it was ported from Perl to C). We’ve also taken code from MythTV (which in turn took some from other places) and FFmpeg. The teletext code is 95% Petr Kutalek’s and was integrated with permission.</p>
+
+<p>A good thing about Open Source is that you don’t need to reinvent the wheel unless you want to (or unless you think you can come up with a ‘rounder’ wheel).</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-general-whatsccextractor.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Subtitle Downloader Technical Documentation | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Subtitle Downloader Technical Documentation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This page contains how the service modules were coded and also how to add support for a new service." />
+<meta property="og:description" content="This page contains how the service modules were coded and also how to add support for a new service." />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-subtitle_extractor_technical_docs.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-subtitle_extractor_technical_docs.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"This page contains how the service modules were coded and also how to add support for a new service.","@type":"BlogPosting","headline":"Subtitle Downloader Technical Documentation","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-subtitle_extractor_technical_docs.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-subtitle_extractor_technical_docs.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Subtitle Downloader Technical Documentation</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This page contains how the service modules were coded and also how to add support for a new service.</p>
+
+<h4 id="main-module">Main Module</h4>
+
+<p>This module is responsible for detecting the type of service module to be used and calls the appropriate service module.
+A simple string search for the service name is done on the input URL to find the type of service. Errors are handled accordingly.</p>
+
+<h4 id="hulu">Hulu</h4>
+
+<p>We first require the page source of the video. \ 
+The function createSoupObject() is responsible for this. For this purpose we use the requests module. We parse the HTML with the help of BeautifulSoup library. 
+The getTitle function returns the title of the video. This is also used for naming the file.
+The title is present in the Soup Object. Example -
+    <code class="language-plaintext highlighter-rouge">&lt;meta name="twitter:title" value="Interstellar"/&gt;</code>
+<br />
+We then require the contentID of the video. This is also available in the HTML Source. <br />
+This is one of the methodologies to get the content ID. If this fails the alternative method will be called.\	
+In the Beautiful soup text it can be found that every video has this parameter.
+    "content_id": "60535322"
+So we first use ‘”‘(quotes) as the delimiter and split the text. Then access the content ID from the returned list.<br />
+The function getSmiSubtitlesLink returns the SMI subtitle link based on the contentID.
+The XML Link for any subtitle video is : 
+    http://www.hulu.com/captions.xml?content_id=CONTENTID
+If multiple languages are present we give the user an option to enter their choice.<br />
+We then convert the SMI URL to a VTT URL as follows -
+http://assets.huluim.com/captions/380/60601380_US_en_en.smi  —&gt; http://assets.huluim.com/captions_webvtt/380/60601380_US_en_en.vtt
+<br />
+Then the subtitles are converted from VTT to SRT format in the standard way.
+\</p>
+<h4 id="youtube">YouTube</h4>
+
+<p>We first require the page source of the video. \ 
+The function createSoupObject() is responsible for this. For this purpose we use the requests module. We parse the HTML with the help of BeautifulSoup library. 
+The getTitle function returns the title of the video. This is also used for naming the file.
+    <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code>VIDEO NAME - YouTube<code class="language-plaintext highlighter-rouge">&lt;/title&gt;</code>
+The function getRawSubtitleLink returns the Raw Link which is in encoded format. This is still an incomplete URL. The variable UglyString contains the complete URL. The link is present in the BeautifulSoup.
+We now prompt the user to choose the desired language from the available choices. The available subtitle language choices are extracted from the UglyString.<br />
+Based on the chosen language, the corresponding language code is indexed from the language dictionary. This language code is appended to the decoded Link.
+<br />
+This final URL contains the subtitles as an XML file.
+Now, the XML file is converted to .srt file using BeautifulSoup function calls.
+\</p>
+
+<h4 id="amazon">Amazon</h4>
+
+<p>The subtitle URL for Amazon is present in this URL -</p>
+
+<p>“PreURL”:”https://atv-ps.amazon.com/cdp/catalog/GetPlaybackResources?”,
+			“asin”                              : “” ,
+			“consumptionType”                   : “Streaming” ,
+			“desiredResources”                  : “SubtitleUrls” ,
+			“deviceID”                          : “b63345bc3fccf7275dcad0cf7f683a8f” ,
+			“deviceTypeID”                      : “AOAGZA014O5RE” ,
+			“firmware”                          : “1” ,
+			“marketplaceID”                     : “ATVPDKIKX0DER” ,
+			“resourceUsage”                     : “ImmediateConsumption” ,
+			“videoMaterialType”                 : “Feature” ,
+			“operatingSystemName”               : “Linux” ,
+			“customerID”                        : “” ,
+			“token”                             : “” ,
+			“deviceDrmOverride”                 : “CENC” ,
+			“deviceStreamingTechnologyOverride” : “DASH” ,
+			“deviceProtocolOverride”            : “Https” ,
+			“deviceBitrateAdaptationsOverride”  : “CVBR,CBR” ,
+			“titleDecorationScheme”             : “primary-content”
+<br />
+The primary parameters we need to get are ASIN ID, customerID and TOKEN. These are obtained from the config file. <br />
+The config file is generated from the setup.py file. The setup.py file takes the users login and password and generates the config file.
+The ASINID is taken from the URL directly. 
+    https://www.amazon.com/dp/B019DSWVYC/?autoplay=1</p>
+
+<p>Now, add the parameters to the dictionary and generate the final URL. The final URL will look something like this -
+    https://atv-ps.amazon.com/cdp/catalog/GetPlaybackResources?&amp;consumptionType=Streaming&amp;titleDecorationScheme=primary-content&amp;firmware=1&amp;marketplaceID=ATVPDKIKX0DER&amp;resourceUsage=ImmediateConsumption&amp;deviceTypeID=AOAGZA014O5RE&amp;videoMaterialType=Feature&amp;token=6463643hhhdfhdhf7374747&amp;deviceBitrateAdaptationsOverride=CVBR,CBR&amp;operatingSystemName=Linux&amp;deviceProtocolOverride=Https&amp;deviceID=b63345bc3fccf7275dcad0cf7f683a8f&amp;deviceStreamingTechnologyOverride=DASH&amp;asin=B0141BACGU&amp;desiredResources=SubtitleUrls&amp;customerID=A1234GH2343&amp;deviceDrmOverride=CENC</p>
+
+<p>This is where the Subtitle URL is present. 
+We get a JSON response from this URL and it contains a subtitle URL with .dfxp format.
+We request that subtitle URL and download the subtitles.
+<br />
+With BeautifulSoup and Python regex we convert this dfxp to .srt format. (File - Amazon_XmlToSrt.py)
+\</p>
+
+<h4 id="bbc">BBC</h4>
+
+<p>We first need to extract the episode ID from the URL. Sample URL -
+    http://www.bbc.co.uk/iplayer/episode/p03rkqcv/shakespeare-lives-the-works</p>
+
+<p>The episode ID is p03rkqcv.<br />
+The episode PID and episode Title(for naming the file) are present in the URL -
+    http://www.bbc.co.uk/programmes/<code class="language-plaintext highlighter-rouge">&lt;episode_id&gt;</code>.xml
+<br />
+The subtitle URL is present in the following link -
+    http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/<code class="language-plaintext highlighter-rouge">&lt;pid&gt;</code>
+The PID is nothing but the episode PID obtained above. There are multiple PID’s present. So, we try all the URL’s until the page request is successful.
+<br />
+If the request is successful we get the subtitle link by parsing the XML page using Beautiful Soup. <br />
+The subtitles obtained are in XML format. They are converted to .srt by using BeautifulSoup function calls and regex. The conversion takes place in the file Bbc_XmlToSrt.py
+\</p>
+<h4 id="crunchyroll">CrunchyRoll</h4>
+
+<p>This is one of the methodologies to get the subtitles ID.		
+In the Beautiful soup text it can be found that every video has this parameter.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                  `&lt;div&gt;`Subtitles: 
+		  &lt;span class="showmedia-subtitle-text"&gt;
+		    &lt;img src="http://static.ak.crunchyroll.com/i/country_flags/us.gif"/&gt; 
+		    &lt;a href="/naruto-shippuden/episode-464-ninshu-the-ninja-creed-696237?ssid=206027" title="English (US)"&gt;English (US)&lt;/a&gt;,
+		    &lt;img src="http://static.ak.crunchyroll.com/i/country_flags/sa.gif"/&gt; 
+		    &lt;a href="/naruto-shippuden/episode-464-ninshu-the-ninja-creed-696237?ssid=206015" title="العربية"&gt;العربية&lt;/a&gt;,
+		    &lt;img src="http://static.ak.crunchyroll.com/i/country_flags/it.gif"/&gt; 
+		    &lt;a href="/naruto-shippuden/episode-464-ninshu-the-ninja-creed-696237?ssid=206733" title="Italiano"&gt;Italiano&lt;/a&gt;, 
+		    &lt;img src="http://static.ak.crunchyroll.com/i/country_flags/de.gif"/&gt;
+		    &lt;a href="/naruto-shippuden/episode-464-ninshu-the-ninja-creed-696237?ssid=206033" title="Deutsch"&gt;Deutsch&lt;/a&gt;
+		  &lt;/span&gt;
+		&lt;/div&gt;
+</code></pre></div></div>
+
+<p>We need to obtain all the SSID’s. We return all the id’s as a list along with the respective Language title attached. <br />
+For the above HTML we should have this -
+<code class="language-plaintext highlighter-rouge">&lt;nowiki&gt;</code>
+[‘206027’, ‘English (US)’], [‘206015’, ‘العربية’], [‘206733’, ‘Italiano’], <a href="'206027'," title="English (US)'], ['206015', 'العربية'], ['206733', 'Italiano'], ['206033', 'Deutsch">‘206033’, ‘Deutsch’</a>
+<code class="language-plaintext highlighter-rouge">&lt;/nowiki&gt;</code>
+<br />
+We prompt the user to choose the language and based on the choice, we append the ID from the list obtained above. 
+A sample subtitle URL, where a script_id(206027) has been appended to the base URL : 
+    http://www.crunchyroll.com/xml/?req=RpcApiSubtitle_GetXml&amp;subtitle_script_id=206027</p>
+
+<p>The encrypted subtitles are extracted from the above URL.
+The decryption of these subtitles has been taken from another Open Source software : youtube-dl.</p>
+
+<h4 id="netflix">Netflix</h4>
+
+<p>The user needs to input his username and password of Netflix in the userconfig.ini file. Netflix requires login to download the subtitles. \</p>
+
+<p>We use python-selenium browser to automate the process.
+The first step is to login to Netflix with the config file information. Chrome WebDriver is used as the driver for selenium. <br />
+After a successful login from selenium browser, we request for the video URL. <br />
+The chrome Network tab gives a list of resources fetched from the server. We use the command :
+    return window.performance.getEntries();
+This command returns all the fetched URL’s. It was observed that all the Netflix videos had this sub-string in common and it was unique. <strong>/?o</strong> <br />
+So we query for <strong>/?o</strong> and let the browser fetch the resources until we find such a URL. If we do not find the URL before the time out, we exit the application. If such a URL is found we save the URL and follow the standard procedure. <br />
+We request the URL using requests module and save the file. <br />
+The module <em>Netflix_XmlToSrt.py</em> is used to convert XML to .srt format.</p>
+
+<h4 id="fox">FOX</h4>
+
+<p>We first require the page source of the video. \ 
+The function createSoupObject() is responsible for this. For this purpose we use the requests module. We parse the HTML with the help of BeautifulSoup library.</p>
+
+<p>The video URL follows a specific standard throughout.		
+` http://www.fox.com/watch/684171331973/7684520448 `
+We need to split and return “684171331973”. This is the required contentID. \</p>
+
+<p>This is the alternative method to obtain the contentID. 
+In the soup text there is a meta tag which also contains the video URL. This is helpful in case the user inputs a shortened URL.</p>
+
+<p><code class="language-plaintext highlighter-rouge"> </code><meta content="http://www.fox.com/watch/684171331973/7684520448" property="og:url" /><code class="language-plaintext highlighter-rouge"> </code>
+As stated above we split the URL and return the require contentID, <em>684171331973</em>
+The other parameters required for obtaining the subtitle URL are also present in the HTML page source.</p>
+
+<p>The required script content  looks like this-</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		jQuery.extend(Drupal.settings, {"":...............}); 
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>We add everything to a new string after encountering the first “{“.</p>
+  </li>
+  <li>
+    <p>Remove the last parentheses and the semi-colon to create a valid JSON. —- ‘);’
+<br />
+The JSON has the standard format and the required parameters follow this naming. 
+The json content :</p>
+
+    <p>{“foxProfileContinueWatching”:{“showid”:”empire”,”showname”:”Empire”},…………..
+  “foxAdobePassProvider”: {……,”videoGUID”:”2AYB18”}}</p>
+  </li>
+</ul>
+
+<p>We use the json module to parse the json and extract the parameters namely <em>showid</em> , <em>showname</em> , <em>videoGUID</em>
+\</p>
+
+<p>Sample Subtitle Links -
+    http://static-media.fox.com/cc/sleepy-hollow/SleepyHollow_3AWL18_660599363942.srt
+    http://static-media.fox.com/cc/sleepy-hollow/SleepyHollow_3AWL18_660599363942.dfxp</p>
+
+<p>The standard followed is -
+    http://static-media.fox.com/cc/[showid]/showname_videoGUID_contentID.srt
+    http://static-media.fox.com/cc/[showid]/showname_videoGUID_contentID.dfxp</p>
+
+<p>Some Subtitle URL’s follow this standard -
+    http://static-media.fox.com/cc/[showid]/showname_videoGUID.dfxp
+    http://static-media.fox.com/cc/[showid]/showname_videoGUID.srt</p>
+
+<p>So we store both URL’s and check for both the varieties.
+We request both the varieties of URL and save the subtitles file when a successful request is returned.</p>
+
+<h4 id="general-rules">General rules</h4>
+
+<p>Each service has a unique way of fetching the subtitles from the server. We can get to know the methodology by following some steps -</p>
+
+<ul>
+  <li>
+    <p>The easiest way is to first open the Developer tools in Chrome/Firefox and check for XHR requests. Generally we find the subtitle URL’s here.</p>
+  </li>
+  <li>
+    <p>The next step is to find out a general pattern in the subtitle URL’s of that particular service.</p>
+  </li>
+  <li>
+    <p>If a pattern is found, it is most likely that we can request the subtitle page by forming the URL’s from the required parameters.</p>
+  </li>
+  <li>
+    <p>Generally, the parameters can be found in the HTML page source. We need to search for them and query the URL.</p>
+  </li>
+  <li>
+    <p>Sometimes the required parameters for the URL are found in some other links in JSON format. A quick check of the fetched JSON resources will reveal the availability of them.</p>
+  </li>
+  <li>
+    <p>For services such as Netflix, the parameters have some kind of hashing in them which is difficult to decrypt. In such cases we can use selenium browser and search for keywords like <strong>.srt</strong>, <strong>.dfxp</strong>, <strong>cc</strong>, <strong>sub</strong></p>
+  </li>
+  <li>
+    <p>By checking for multiple videos we can find out common sub-strings in the subtitle URLs. These common sub-strings(have to be unique) can be used for querying the resources from selenium browser.</p>
+  </li>
+  <li>
+    <p>In most cases, the subtitle URL is fetched only if the user is logged in. So we first need to setup login and then go to the video URL in the WebDriver.</p>
+  </li>
+  <li>
+    <p>The subtitles can then be downloaded from the URLs.</p>
+  </li>
+</ul>
+
+<h5 id="if-you-are-a-developer-and-want-to-add-support-for-new-services-or-fix-bugs-please-feel-free-to-send-a-pull-request-or-contact-me-for-further-assistance">If you are a developer and want to add support for new services or fix bugs please feel free to send a pull request or contact me for further assistance.</h5>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-subtitle_extractor_technical_docs.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

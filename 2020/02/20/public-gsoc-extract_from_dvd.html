@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Extracting closed captions from a DVD step by step tutorial | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Extracting closed captions from a DVD step by step tutorial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="// Note: This procedure may or may not be legal in your country, depending on whether they consider it fair use. I own the DVD used in the tutorial and I am not going to distribute anything from it, plus I live in a country where this sounds reasonable, so I believe I am in the safe side. But your mileage may vary.//" />
+<meta property="og:description" content="// Note: This procedure may or may not be legal in your country, depending on whether they consider it fair use. I own the DVD used in the tutorial and I am not going to distribute anything from it, plus I live in a country where this sounds reasonable, so I believe I am in the safe side. But your mileage may vary.//" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-extract_from_dvd.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-extract_from_dvd.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"// Note: This procedure may or may not be legal in your country, depending on whether they consider it fair use. I own the DVD used in the tutorial and I am not going to distribute anything from it, plus I live in a country where this sounds reasonable, so I believe I am in the safe side. But your mileage may vary.//","@type":"BlogPosting","headline":"Extracting closed captions from a DVD step by step tutorial","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-extract_from_dvd.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-extract_from_dvd.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Extracting closed captions from a DVD step by step tutorial</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>// Note: This procedure may or may not be legal in your country, depending on whether they consider it fair use. I own the DVD used in the tutorial and I am not going to distribute anything from it, plus I live in a country where this sounds reasonable, so I believe I am in the safe side. But your mileage may vary.//</p>
+
+<p><strong>This tutorial was written years ago. Probably better tools exist already to do the same thing.</strong></p>
+
+<p>This tutorial will teach you how to go from a DVD in your shelf to a transcript of its closed captions. Basically there are these steps:</p>
+
+<p>Install DVDDecrypter (a program to extract the DVD data from the physical DVD). You only need to do this once.
+Install CCExtractor (our beloved program; it gets the data from the previous step and extracts the closed caption track). You only need to do this once.
+Use DVDDecrypter to extract the DVD data into your hard disk.
+Use CCExtractor to extract the closed caption track from the DVD data.</p>
+
+<p>As an example, I will be using the movie Merlin. Remember that DVD subtitles and closed captions are two different things. Closed captions come from the NTSC (USA and Canada) TV world, and they are usually prevent in DVDs from TV shows, documentaries, old movies and so on. If you buy a brand new DVD with a film from last year it’s unlikely to have closed captions - it will have DVD subtitles, which require different tools to extract. Many tutorials exist on DVD subtitle extraction.</p>
+
+<h3 id="1---install-dvddecrypter">1 - Install DVDDecrypter</h3>
+
+<p>As explained before, DVDDecrypter is the tool we will use to copy the DVD data from the physical DVD into the hard disk. DVDDecrypter reads the DVD, decrypts it (so other tools can actually use the data) and writes it to the hard disk. There are other tools that do the same thing, so you can use whichever you prefer. DVDDecrypter is free, use to use, and does a good job, so it’s the one I use regularly.</p>
+
+<p>First, download DVDDecrypter, which is available from this page. You can get the file directly here.
+Depending on your browser, it may ask you whether you want to run the program, or save it, etc.</p>
+
+<p>Run it if possible directly, or save it somewhere and run it later if your browser insists.</p>
+
+<p>If you are using Internet Explorer it might warn you about the file not being signed, and ask you again if you want to run it:</p>
+
+<p>Say yes. If you are running Vista it will show you yet another window to reconfirm you haven’t changed your mind. I couldn’t get a snapshot but it you are a Vista user you have seen that windows a billion times anyway.
+The installation program starts. All defaults are correct, so the only thing you need to do is say Next at every chance. A screenshot of all screens follows:</p>
+
+<p>When asked about whether you want DVDDecrypter to check for new versions say no. The program is no longer being maintained so it will never find a new version anyway.</p>
+
+<p>The installation ends. In the last screen you have an option to start DVDDecrypter inmediately. Since we are going to install CCExtractor now, uncheck the box.</p>
+
+<h3 id="2---install-ccextractor">2 - Install CCExtractor</h3>
+
+<p>CCExtractor is the program that does the actual work of getting the closed caption text from the data. It supports DVDs as well as many other formats. This is its home page (you probably know that already). Follow the link “Download Windows installer” (I don’t link to the installer directly because it’s updated from time to time and the link would be out of date soon). As before, run the installer if possible or save and run later if needed.</p>
+
+<h3 id="3---extract-the-data-from-the-dvd-using-dvddecrypter">3 - Extract the data from the DVD using DVDDecrypter</h3>
+
+<p>Insert the DVD in the DVD player if you haven’t done it already. Most likely it will start making noise for a few seconds, until Windows is done analyzing it. Wait for the noise to stop (so it’s ready) and then start DVDDecrypter, either by clicking on its icon (on your desktop) our by selecting it in the program menu (Start -&gt; Programs -&gt; DVD Decrypter -&gt; DVD Decrypter).
+Initially the screen looks like this (assuming DVDDecrypter detects the DVD correctly - if not you may have to select the correct drive from the combo box):</p>
+
+<p>The first time, go to the settings area (Tools -&gt; Settings). There are a lot of things there but the default settings are fine, except for the file splitting. We don’t want the output video to be split in several files (the only exception would be if your hard drive couldn’t handle large files). Having all the output in one file makes things easier later.</p>
+
+<p>So go to the settings area as explained, and the select the “IFO mode” tab. In file splitting choose “None” from the combox box and then press OK. Done with the settings.</p>
+
+<p>Back to the main screen, you can see that there’s a “Destination” that DVD Decrypter automatically sets. You may need to choose a different folder. For me that directory is OK (F:\MERLIN\VIDEO_TS).
+Notice too that all the files in the DVD are selected. If were trying to get the data from say, one specific episode of a TV show (where usually there are 4 episodes or so in each DVD) we would have to guess which file is correct. Since this is a complete movie, we’re going to get all the files, so we leave the selection as is.</p>
+
+<p>OK, so we press the large ‘Decrypt’ button (see below) and DVD Decrypter does its magic.</p>
+
+<p><strong>File selection</strong></p>
+
+<p>Take a look at the destination directory:</p>
+
+<p>The VOB files are the actual video data. In DVDs, they usually have more stuff that just the movie. For example, the chapter selection video is there. In order to get a clean transcript, you need to tell CCExtractor which files to use. Usually the right files are easy to spot. In this example, you can see that the file VTS_01_0.VOB is 330 Mb long, while VTS_01_1.VOB is 1 Gb, VTS_02_2.VOB is one Gb too, etc. This is a clear indicator that it is not part of the same video stream. In order to verify it, we just play the file with any DVD capable player:</p>
+
+<p>This is indeed the chapter selection video, which we don’t want. Just to make sure, we start playing VTS_01_1.VOB, which should be the actual start of the movie:</p>
+
+<p>Indeed it is.</p>
+
+<h3 id="4---extract-the-transcript-with-ccextractor">4 - Extract the transcript with CCExtractor</h3>
+
+<p>Open CCExtractor, by click on its desktop icon or by selecting it from the program menu (Start -&gt; Programs -&gt; CCExtractor -&gt; CCExtractorGUI).</p>
+
+<p>Now, open Windows Explorer if you didn’t have it already, and choose the files VTS_01_1.VOB up to VTS_01_01_8.VOB (so all of them except the one we already know not to be part of the movie):</p>
+
+<p>Drag and drop the files from Windows Explorer to CCExtractor:</p>
+
+<p>Now you can see that CCExtractor has queued the files:</p>
+
+<p>You can notice that CCExtractor has a lot of tabs with lots of options. The good news is that the default settings are OK, so you don’t need to worry about them. The one thing you may want to change is the output format in the Output tab. By default it exports to .srt, which is the standard format that most players support. Suppose you want a plain transcript with no timing information. Just check the .txt option (transcript):</p>
+
+<p>Finally, go to the Execution tab and press Start: screen-shot You can see the progress:</p>
+
+<p>Once CCExtractor finishes, a file with the same name as the first file in the input is created in the same directory (this can all be changed in the settings). In this case, the file is called VTS_01_1.txt (note that it ends with .txt instead of .VOB). Here’s the contents (the first 10 lines):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ONCE UPON A TIME...
+NO, NO, THAT'S
+NOT THE WAY TO START.
+YOU'LL THINK THIS IS
+A FAIRY TALE, AND IT ISN'T.
+IT HAS ELEMENTS
+OF A FAIRY TALE--
+DRAGONS, ELVES
+GRIFFINS, FAIRIES AND SO ON--
+AND IT HAS MAGIC.
+NOW, IN MY DAY,
+</code></pre></div></div>
+
+<p>We’re done.</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-extract_from_dvd.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

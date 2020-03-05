@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CCExtractor regresssion testing / GitHub bot | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="CCExtractor regresssion testing / GitHub bot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In 2014 Willem wrote a nice tool that allows you to compare CCExtractor’s output between versions to make sure code changes didn’t break things. This tool has been expanded in t he past two years to cover more scenario’s, as well as offering better integration.\" />
+<meta property="og:description" content="In 2014 Willem wrote a nice tool that allows you to compare CCExtractor’s output between versions to make sure code changes didn’t break things. This tool has been expanded in t he past two years to cover more scenario’s, as well as offering better integration.\" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ccextractor_regression_testing.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ccextractor_regression_testing.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"In 2014 Willem wrote a nice tool that allows you to compare CCExtractor’s output between versions to make sure code changes didn’t break things. This tool has been expanded in t he past two years to cover more scenario’s, as well as offering better integration.\\","@type":"BlogPosting","headline":"CCExtractor regresssion testing / GitHub bot","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ccextractor_regression_testing.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-ccextractor_regression_testing.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">CCExtractor regresssion testing / GitHub bot</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In 2014 Willem wrote a nice <a href="https://github.com/canihavesomecoffee/ccx_testsuite">tool</a> that allows you to compare CCExtractor’s output between versions to make sure code changes didn’t break things. This tool has been expanded in t he past two years to cover more scenario’s, as well as offering better integration.\</p>
+
+<p>All changes must be validated using this tool. As of 2016, it is fully integrated (using a webhook) with GitHub, so if you make a Pull Request, you should be able to see if you broke anything or not.\</p>
+
+<p><strong>Pull Requests that break things severely won’t be accepted</strong> (due to the way the test suite compares the results, minor changes in timing are also indicated as failures, while they don’t necessarily have to be).\</p>
+
+<h2 id="github-integration">GitHub integration</h2>
+
+<p>As mentioned above, as part of GSoC 2016 a full integration was made with GitHub. This means that just as with other integrations, the regression test suite will now run automatically when you create a Pull Request or if you make a commit on the repository.\</p>
+
+<p>When creating a pull request (PR), the next steps happen:</p>
+
+<ul>
+  <li>
+    <p>Test get queued (another one might be running that needs to finish first)</p>
+  </li>
+  <li>
+    <p>The platform kicks off the test suite:</p>
+    <ul>
+      <li>Your code gets locally merged with the current master branch</li>
+      <li>The result is compiled</li>
+      <li>The test suite runs the tests on the compiled binary</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Several individual steps (preparation, building, compiling, …) are being reported back to the PR on GitHub, while the detailed overview is available by clicking on the “details” (as can be seen in the image below):\</p>
+
+<p>This link will take you to the detail page of the test, where you can check the status of the test in general, as well as the results for each category.</p>
+
+<h2 id="how-to-run-your-own-tests-on-fork">How to run your own tests on fork</h2>
+
+<p>If you want to run your own tests on your fork commit with selected regression tests and platforms, Follow these steps:</p>
+
+<ol>
+  <li>Ask for tester/contributor role from Willem. You can see your role <a href="https://sampleplatform.ccextractor.org/account/manage">here</a>.</li>
+  <li>After role access, link your github profile in <a href="https://sampleplatform.ccextractor.org/account/manage">Manage account</a> page.</li>
+  <li>You can run your own tests <a href="https://sampleplatform.ccextractor.org/custom/"> here</a>. You have to enter commit hash of the fork repository.After that you need to select platforms and regression tests. Test Status is displayed on same page.</li>
+</ol>
+
+<h2 id="obtaining-individual-regression-samples">Obtaining individual regression samples</h2>
+
+<p>If you are aware your coding changes are going to break a specific sample, you can always download the sample from the <a href="https://sampleplatform.ccextractor.org/">platform</a> to test your code changes locally. This has the advantage that you can test faster, as the complete test suite takes about 30-60 minutes to complete.\</p>
+
+<p>Media-info for the samples is also available (both partially visible on the sample detail page, as fully visible after downloading).\</p>
+
+<h2 id="how-to-use-the-testing-tool-manually">How to use the testing tool manually</h2>
+
+<p>If you have access to the dev server at gsocdev3.ccextractor.org, or have downloaded all the samples, you can run the test tool manually. This has the benefit that you can test just single categories, or specific samples only, whereas the GitHub integration does all the available tests.\</p>
+
+<p>The easiest way to test all the current samples against your own version of CCExtractor is using a shell script that does most of the work for you:<br />
+‘’ /repository/newRepository/TestSuite/runAllTests CCExtractorLocation ReportLocation’’\</p>
+
+<p>The CCExtractorLocation is the location of your CCExtractor build that you want to test (/ccextractor-wiki-test/2020/02/20/against the latest official CCX version). The ReportLocation is optional (/ccextractor-wiki-test/2020/02/20/if omitted, the reports will be stored under your name in <a href="http:--gsocdev3.ccextractor.org-~willem-users-">a subfolder of Willem’s public_html folder</a>).\</p>
+
+<p>If you want to have more configuration options, you can create your own config or test files (there is a sample config at ‘‘/repository/newRepository/TestSuite/sampleconfig.xml’’ and for a sample test file you can look in the folders), and then call the ccextractortester bash script (located at ‘‘/repository/newRepository/TestSuite/ccextractortester’’) with the appropriate parameters.\</p>
+
+<p>If you want to know the available parameters that can be passed to the test suite, use the ‘’–help’’ (double -) argument.\</p>
+
+<p>Bugs, requests, etc. are welcome on the GitHub page of the test suite: https://github.com/canihavesomecoffee/ccx_testsuite\</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-ccextractor_regression_testing.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

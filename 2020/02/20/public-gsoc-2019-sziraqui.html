@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/ccextractor-wiki-test/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Poor Man’s Rekognition | CCExtractor</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Poor Man’s Rekognition" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Developed under Google Summer of Code 2019 by Sarfaraz Iraqui" />
+<meta property="og:description" content="Developed under Google Summer of Code 2019 by Sarfaraz Iraqui" />
+<link rel="canonical" href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-sziraqui.html" />
+<meta property="og:url" content="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-sziraqui.html" />
+<meta property="og:site_name" content="CCExtractor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Developed under Google Summer of Code 2019 by Sarfaraz Iraqui","@type":"BlogPosting","headline":"Poor Man’s Rekognition","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","url":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-sziraqui.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-sziraqui.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/ccextractor-wiki-test/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" title="CCExtractor" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ccextractor-wiki-test/">CCExtractor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ccextractor-wiki-test/about/">About Me</a><a class="page-link" href="/ccextractor-wiki-test/search/">Search</a><a class="page-link" href="/ccextractor-wiki-test/categories/">Tags</a><a class="page-link" href="/ccextractor-wiki-test/_pages/Gsoc%20start%20here.html">Google Summer of Code 2020</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Poor Man’s Rekognition</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Developed under Google Summer of Code 2019 by <a href="https://www.linkedin.com/in/sziraqui">Sarfaraz Iraqui</a></p>
+
+<p>Mentor: Johannes Von Lochter</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Poor Man’s Rekognition (PMR) aims to provide a free and open source alternative to Amazon Rekognition.</p>
+
+<p>Amazon Rekognition is a fairly complex system.</p>
+
+<p>During GSoC, the project focused on face detection and recognition only.</p>
+
+<p>There are many libraries especially in Python that provide these functionality but they require a lot of expensive hardware for practical use.</p>
+
+<p>This project is aimed to make everything run on CPU but still provide reasonable performance for a REST API.</p>
+
+<h2 id="project-structure">Project Structure</h2>
+
+<p>The project is divided into three sub-projects:</p>
+
+<ul>
+  <li>
+    <p><strong>Nodoface</strong>: A Nodejs C++ addon (binding) to C++ libraries that helped attain high performance on CPU for ML algorithms.</p>
+  </li>
+  <li>
+    <p><strong>PMR-Core</strong>: Nodejs library (with TypeScript support) that combines Nodoface and ML libraries that are not available in C++.
+ For eg. there is no ArcFace model on C++ or Nodejs. This provides completely everything that is needed to build Amazon Rekognition like API.</p>
+  </li>
+  <li>
+    <p><strong>PMR-Server</strong>: The REST API for PMR-Core. This provides endpoints similar to Amazon Rekognition. Any API call generates response which is more or less identical to Rekognition.</p>
+  </li>
+</ul>
+
+<h2 id="project-links">Project links</h2>
+
+<ol>
+  <li>
+    <p>Proposal - https://github.com/sziraqui/pmr-gsoc-tracker/blob/master/Proposal-PMR-CCExtractor.pdf</p>
+  </li>
+  <li>
+    <p>Nodoface repository - https://github.com/sziraqui/nodoface</p>
+  </li>
+  <li>
+    <p>PMR-Core repository - https://github.com/sziraqui/pmr-core</p>
+  </li>
+  <li>
+    <p>PMR-Server repository - https://github.com/sziraqui/pmr-server</p>
+  </li>
+</ol>
+
+<h2 id="installation">Installation</h2>
+
+<p>Only Nodoface requires a tough installation because it depends on some C++ libraries.</p>
+
+<p>PMR-Core and Server require just one command for setup.</p>
+
+<h5 id="part-1-install-dependencies">Part 1: Install dependencies</h5>
+
+<p>Nodoface depends on-</p>
+
+<ul>
+  <li>
+    <p>OpenFace &gt;= 2.1.0</p>
+  </li>
+  <li>
+    <p>OpenCV &gt;= 3.4.0</p>
+  </li>
+  <li>
+    <p>dlib &gt;= 19.13</p>
+
+    <p>All above libs must be compiled as a <strong>shared library</strong></p>
+  </li>
+  <li>
+    <p>node-addon-api &gt;= 1.6.3</p>
+  </li>
+</ul>
+
+<p>Step 1: <a href="https://docs.opencv.org/3.4.0/d7/d9f/tutorial_linux_install.html">Install</a> OpenCV 3.4.x.</p>
+
+<p>If opencv is already installed, ensure it is recognised by pkg-config by executing:</p>
+
+<p>’’’$ pkg-config –modversion opencv’’’</p>
+
+<p>Step 2: <a href="http://dlib.net/compile.html">Install</a> dlib 19.13 or greater as a shared library (default is static).</p>
+
+<p>Check <a href="https://stackoverflow.com/a/33997825/6699069">this</a> answer by DavisKing for compiling it as shared library.</p>
+
+<p>Ensure it is recognised by pkg-config:</p>
+
+<p>’’’$ pkg-config –modversion dlib’’’</p>
+
+<p>Step 3: Install OpenFace. The original repo can only compile as static library.</p>
+
+<p>So use my OpenFace fork instead. I have modified CMakelists.txt to compile OpenFace as shared lib.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/sziraqui/OpenFace.git &amp;&amp; cd OpenFace
+
+$ git checkout dynamic-compile
+
+$ ./download_models.sh
+
+$ mkdir build &amp;&amp; cd build
+
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE CMAKE_CXX_FLAGS="-std=c++11" -D CMAKE_EXE_LINKER_FLAGS="-std=c++11" 
+
+$ make -j2
+
+$ sudo make install
+</code></pre></div></div>
+
+<p>After this, Nodoface can be installed in any Node project with <code class="language-plaintext highlighter-rouge">npm install nodoface</code></p>
+
+<h5 id="part-2-setup-server">Part 2: Setup server</h5>
+
+<p>The server depends on PMR-Core and knn-classifier.</p>
+
+<p>Step 1: Create a project folder. Let’s name it “pmr”.</p>
+
+<p>’'’mkdir pmr’’’</p>
+
+<p>Step 2: Clone dependent repositories in project folder.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd pmr
+git clone https://github.com/sziraqui/nodoface
+git clone https://github.com/sziraqui/pmr-core
+git clone https://github.com/sziraqui/pmr-server
+git clone https://github.com/tensorflow/tfjs-models/tree/master/knn-classifier
+</code></pre></div></div>
+
+<p>Step 3: Install packages in PMR-Core</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd pmr-core
+npm install
+cd ../
+</code></pre></div></div>
+
+<p>Step 4: Setup KNN-classifier</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp -r tfjs-models/knn-classifier knn-classifier
+cd knn-classifier
+npm install
+cd ../
+</code></pre></div></div>
+
+<p>Step 5: Setup server</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd pmr-server
+ npm install
+ cd ../
+</code></pre></div></div>
+
+<h5 id="part-3-setup-database">Part 3: Setup database</h5>
+
+<p>The project uses PostgreSQL database. Face embeddings and PMR-Server data is stored in a database. Follow below instructions to setup a local database for the PMR-Server.</p>
+
+<p>Step 1: Create DB schema</p>
+
+<p>Install PostgreSQL and create a schema as per this <a href="https://cdn-images-1.medium.com/max/800/1*n9cL9QNsDTspoFLWJlNHhw.png">ER diagram</a></p>
+
+<p>Step 2:</p>
+
+<p>Download LFW dataset from http://vis-www.cs.umass.edu/lfw/lfw-deepfunneled.tgz</p>
+
+<p>Extract it somewhere (say pmr/lfw-deepfunneled)</p>
+
+<p>Step 3: Populate face embedding data in DB</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd pmr-server
+./bin/add_faces_to_db.ts pmr/lfw-deepfunneled LFW DEEPFUNNELED
+</code></pre></div></div>
+
+<p>For more info on script usage, pass it ‘’’–help’’’ flag with no arguments.</p>
+
+<p>Any other dataset can be used as long as the directory structure is same as that if LFW.</p>
+
+<h5 id="start-server">Start server</h5>
+
+<p>Run start-server script to start the server on localhost</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bin/start-server
+</code></pre></div></div>
+
+<h2 id="usage-docs">Usage docs</h2>
+
+<h5 id="nodoface">Nodoface:</h5>
+
+<p>Nodoface can be used without PMR-Core and Server. See nodoface/examples directory and nodoface/tests directory to learn the usage.</p>
+
+<h5 id="pmr-core">PMR-Core:</h5>
+
+<p>PMR-Core can be used without the Server but depends on Nodoface. Look for files ending with *test.ts in pmr-core/src to learn usage. Scripts provided in pmr-server/bin directory are also good place to explore.</p>
+
+<h5 id="pmr-server">PMR-Server:</h5>
+
+<p>See the endpoints in pmr-server/src/api/vX/*.ts.</p>
+
+<p>Request/Response syntax can be understood by going through pmr-server/src/amzn-dtypes and pmr-server/src/pmr-dtypes.</p>
+
+<p>At the time of writing, there is no UI for this server. I use Postman to test the endpoints.</p>
+
+<h4 id="making-requests-to-server">Making requests to server</h4>
+
+<ol>
+  <li>
+    <p>POST ‘‘/api/v0/detect-faces’’<br />
+Request body:</p>
+
+    <p>{
+     “Image”: {
+         “Bytes”: “base64-string-of-image”
+     }
+ }</p>
+  </li>
+</ol>
+
+<p>“Bytes” is the base64 string representation of input image. This is same as DataURL after removing the first intial characters “data:image/jpeg;base64,” (for jpeg image). I use https://www.base64-image.de to get base64 string while testing.</p>
+
+<ol>
+  <li>
+    <p>POST ‘‘/api/v0/recognize-celebrities’’ <br />
+ Request body:
+ Same as that for <code class="language-plaintext highlighter-rouge">detect-faces</code> endpoint above.</p>
+  </li>
+  <li>
+    <p>POST ‘‘/api/v0/celebrity-in-video’’
+Request body:</p>
+
+    <p>{
+     “Video”: {
+         “Url”: “direct-downloadable-video-url”
+     }
+ }</p>
+  </li>
+</ol>
+
+<h4 id="handling-response-from-server">Handling response from server</h4>
+
+<p>The server follows a “Dispatch and Poll” method. Everytime a request is received, the server dispatches a “Job” and sends response immediately with the Job status.
+Sample response:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
+    "JobId": "string",
+    "JobStatus": "PENDING",
+    "ResultUrl": "url"
+  }
+</code></pre></div></div>
+
+<p>One can poll on the ResultUrl until JobStatus becomes “COMPLETED”. When that happens, the response will include output such as BoundingBox, Celebrity name, etc depending on the request. Also the RequestUrl of a COMPLETED job will point to output file with visualisations drawn (bonding boxes, labels, etc on image/video). Read this <a href="https://link.medium.com/qlbGEnFdyZ">blog</a>to learn more.</p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ol>
+  <li>
+    <p>My GSoC notes - https://github.com/sziraqui/pmr-gsoc-tracker/tree/master/notes</p>
+  </li>
+  <li>
+    <p>Blog (GSoC final evaluation) - https://link.medium.com/qlbGEnFdyZ</p>
+  </li>
+</ol>
+
+<h2 id="contact-details">Contact details</h2>
+
+<p>Slack - @sziraqui</p>
+
+<p>Email/Hangouts - sarfarazghlm[at]gmail[dot]com</p>
+
+<p>LinkedIn - https://www.linkedin.com/in/sziraqui</p>
+
+  </div><a class="u-url" href="/ccextractor-wiki-test/2020/02/20/public-gsoc-2019-sziraqui.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ccextractor-wiki-test/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CCExtractor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">CCExtractor</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/DumbMachine"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DumbMachine</span></a></li><li><a href="https://www.twitter.com/nothing"><svg class="social svg-icon"><use xlink:href="/ccextractor-wiki-test/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">nothing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
