@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dumbmachine.github.io/ccextractor-wiki-test/" rel="alternate" type="text/html" /><updated>2020-03-05T17:07:35-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml</id><title type="html">CCExtractor</title><subtitle>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</subtitle><entry><title type="html">Blog Posts from our Students</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-blog_posts_our_students.html" rel="alternate" type="text/html" title="Blog Posts from our Students" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:blog_posts_our_students</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-blog_posts_our_students.html">&lt;p&gt;Our Google Summer of Code Students are hard at work, but they are also creative writers who document their journey and adventure while developing their projects. Here you can find many blog posts linking to their blog posts where they describe the process on how it is to work for CCExtractor and Google Summer Of Code&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dumbmachine.github.io/ccextractor-wiki-test/" rel="alternate" type="text/html" /><updated>2020-03-05T18:25:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/feed.xml</id><title type="html">CCExtractor</title><subtitle>Test to try and use fastpages to host GSOC 2020 related data of dokuwiki based CCExtractor blog on fastpages</subtitle><entry><title type="html">Blog Posts from our Students</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-blog_posts_our_students.html" rel="alternate" type="text/html" title="Blog Posts from our Students" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:blog_posts_our_students</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-blog_posts_our_students.html">&lt;p&gt;Our Google Summer of Code Students are hard at work, but they are also creative writers who document their journey and adventure while developing their projects. Here you can find many blog posts linking to their blog posts where they describe the process on how it is to work for CCExtractor and Google Summer Of Code&lt;/p&gt;
 
 &lt;h4 id=&quot;google-summer-of-code-2019&quot;&gt;Google Summer of Code 2019&lt;/h4&gt;
 
@@ -380,7 +380,7 @@ For tasks that require some resources in general we will provide them for you, i
 2) Mentors love it when a student comes up with a better idea than their own, really. Do not just do as told. If something doesn’t feel right either argue against it or work on a different area.&lt;br /&gt;
 3) If you want to do something that is 90% or so implemented in any other open source project just take it, complete it, send the maintainers of that project whatever changes you did so they can use them if they want, and integrate with our code. Always remember to leave all license and credits intact (you can add your own name).&lt;br /&gt;
 4) Mentors are there to help but they’re people too, not bots. So they sleep from time to time, may also have other things going on, can get sick, etc. They will reciprocate when they think of students.&lt;br /&gt;
-5) Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that your future you will be proud of.\&lt;/p&gt;
+5) Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20–ccextractor-wiki-test-2020-02-20–ccextractor-wiki-test-2020-02-20-code tends to follow you). Try to leave it in a condition that your future you will be proud of.\&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Slack&lt;/strong&gt;&lt;/p&gt;
 
@@ -396,20 +396,18 @@ For tasks that require some resources in general we will provide them for you, i
 
 &lt;p&gt;Remember though that hard means hard. Don’t expect us to approve the first design you come up with. We will give you feedback and work with you until you produce something that you can be proud of for years and that we can use.&lt;/p&gt;
 
-&lt;p&gt;Also, as a bonus, if the design is for something physical (T-Shirt, sticker, etc) we will ship you one totally free to any part of the world.&lt;/p&gt;</content><author><name></name></author><summary type="html">Code-In 2017 for designers</summary></entry><entry><title type="html">Welcome to Google Code-In 2018 and CCExtractor!</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html" rel="alternate" type="text/html" title="Welcome to Google Code-In 2018 and CCExtractor!" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2018</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html">&lt;p&gt;**Questions? You can email us at code-in@ccextractor.org or join our &lt;a href=&quot;/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018#slack&quot;&gt;Slack&lt;/a&gt; group! But please make sure you read the whole page first.
+&lt;p&gt;Also, as a bonus, if the design is for something physical (T-Shirt, sticker, etc) we will ship you one totally free to any part of the world.&lt;/p&gt;</content><author><name></name></author><summary type="html">Code-In 2017 for designers</summary></entry><entry><title type="html">Welcome to Google Code-In 2018 and CCExtractor!</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html" rel="alternate" type="text/html" title="Welcome to Google Code-In 2018 and CCExtractor!" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:codein:google_code-in_2018</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018.html">&lt;p&gt;**Questions? You can email us at code-in@ccextractor.org or join our &lt;a href=&quot;/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-public-codein-google_code-in_2018#slack&quot;&gt;Slack&lt;/a&gt; group! But please make sure you read the whole page first.
 **&lt;/p&gt;
 
-&lt;p&gt;\&lt;/p&gt;
-
-&lt;p&gt;\&lt;/p&gt;
+&lt;p&gt;\ 
+&lt;img src=&quot;https://ccextractor.org/_media/https://github.com/CCExtractor/ccextractor-org-media/raw/master/ext/google-code-In-2018.gif | CCExtractor is participating in Google Code In 2018!&quot; alt=&quot;&quot; /&gt;\&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
 This is going to be another absolutely amazing GCI year! We have a long and proud history of taking part in the Google Summer of Code with university students, and are excited to participate in GCI again for 3rd year with pre-university students! We have tasks that are: fun, useful, educational… and for all levels and interests - coding, design, documentation, UI, research and much more!
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;\&lt;/p&gt;
-
-&lt;p&gt;\&lt;/p&gt;
+&lt;p&gt;\ 
+&lt;img src=&quot;https://ccextractor.org/_media/https://raw.githubusercontent.com/CCExtractor/ccextractor-org-media/master/ext/gci-task-categories.png | Google Code-IN task categories!&quot; alt=&quot;&quot; /&gt;\&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -453,7 +451,7 @@ Can’t join the Slack group? It’s no problem! We try to be super fast to resp
 \&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that the future you will be proud of.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20–ccextractor-wiki-test-2020-02-20–ccextractor-wiki-test-2020-02-20-code tends to follow you). Try to leave it in a condition that the future you will be proud of.&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;
 \&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -483,7 +481,8 @@ In short - don’t think that the reward for participating this year may be limi
 If you’re passionate about becoming a great designer and willing to do some serious work, look for the tasks labelled &lt;strong&gt;[Harddesign]&lt;/strong&gt;. Hard means that they are going to take time and talent to produce the quality results we want and to bring up design tasks at par with coding. At least one of the students that does a great job on those will be a finalist, and maybe a winner.
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
+&lt;p&gt;&lt;img src=&quot;https://ccextractor.org/_media/https://raw.githubusercontent.com/CCExtractor/ccextractor-org-media/master/static/ccx_logo_transparent_800x600.png?200 |The Media Manager popup&quot; alt=&quot;&quot; /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
 We are doing this to prevent the design tasks being treated just as an easy way to complete beginner tasks. For example, you can create a T-Shirt design in 10 minutes, but that’s very unlikely to be good and usable to well, actually make T-Shirts with it. 
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
@@ -538,16 +537,31 @@ We do have auxiliary tools written in different languages, for example the Windo
 We think that the best way to let you know how cool Code-In is is to show you a video of previous winners. This was at Google’s office in San Francisco in 2016, where Evgeny and Alexandru (which are of course now core developers at CCExtractor) presented what they did during GCI 2016!
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
+&lt;div class=&quot;video&quot;&gt;
+&lt;figure&gt;
+    &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/6Ti1X1peqMA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
 &lt;p&gt;\&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text size=&quot;18px&quot; align=&quot;justify&quot;&amp;gt;&lt;/code&gt;
 And Aadi and Shiyuan (also core team members now as well as GCI mentors) in 2017:
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/text&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
+&lt;div class=&quot;video&quot;&gt;
+&lt;figure&gt;
+    &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/nKY0s0av5r0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
 &lt;p&gt;\&lt;/p&gt;
 
 &lt;p&gt;Matej and Ivan, 2018:&lt;/p&gt;
 
+&lt;div class=&quot;video&quot;&gt;
+&lt;figure&gt;
+    &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/rS7RK-GKYuk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
 &lt;p&gt;\&lt;/p&gt;
 
 &lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
@@ -672,7 +686,13 @@ title = About CCExtractor Development
 
 &lt;p&gt;CCExtractor Development is an informal (meaning we’re not incorporated anywhere) organization that exists to coordinate the development efforts of the volunteers that contribute to the software and to manage our participation in specific events such as Google Summer of Code and Code-In.&lt;/p&gt;
 
-&lt;p&gt;The following video is a contribution from Manveer Singh Basra, a Code-In 2016 student:&lt;/p&gt;</content><author><name></name></author><summary type="html">~~META: title = About CCExtractor Development ~~</summary></entry><entry><title type="html">Public:general:command_line_usage</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-command_line_usage.html" rel="alternate" type="text/html" title="Public:general:command_line_usage" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:general:command_line_usage</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-command_line_usage.html">&lt;p&gt;CCExtractor’s main program is console based. There’s a GUI for Windows, as well as provisions so other programs can easily interface with CCExtractor, but the heavy lefting is done by a command line program (that can be called by scripts so integration with larger processes is straightforward).&lt;/p&gt;
+&lt;p&gt;The following video is a contribution from Manveer Singh Basra, a Code-In 2016 student:&lt;/p&gt;
+
+&lt;div class=&quot;video&quot;&gt;
+&lt;figure&gt;
+    &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/UXYIoo-2NZE &quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">~~META: title = About CCExtractor Development ~~</summary></entry><entry><title type="html">Public:general:command_line_usage</title><link href="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-command_line_usage.html" rel="alternate" type="text/html" title="Public:general:command_line_usage" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public:general:command_line_usage</id><content type="html" xml:base="https://dumbmachine.github.io/ccextractor-wiki-test/2020/02/20/public-general-command_line_usage.html">&lt;p&gt;CCExtractor’s main program is console based. There’s a GUI for Windows, as well as provisions so other programs can easily interface with CCExtractor, but the heavy lefting is done by a command line program (that can be called by scripts so integration with larger processes is straightforward).&lt;/p&gt;
 
 &lt;p&gt;Running CCExtractor without any parameter will display a help screen with all the options. As of version 0.81 the help screen is as follows:&lt;/p&gt;
 

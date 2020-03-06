@@ -148,21 +148,23 @@ end
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh
 </code></pre></div></div>
 
-<p>If you want to return to your computer terminal, run</p>
+<p><img src="https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139087/b44152d2-c14a-11e6-8b3c-36ee60fe97a4.png" alt="" />
+If you want to return to your computer terminal, run</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>logout
 </code></pre></div></div>
 
-<p>By default, the project folder is synchronized with environment (that is available in your computer, and in a virtual machine). The project folder is located in /vagrant.</p>
-
-<p>Lets build the project</p>
+<p>By default, the project folder is synchronized with environment (that is available in your computer, and in a virtual machine). The project folder is located in /vagrant.
+<img src="https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139153/fb5608f2-c14a-11e6-91bd-1413812d62b8.png" alt="" />
+Lets build the project</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant
 cd linux
 ./build
 </code></pre></div></div>
 
-<p>Now virtual environment and computer both have built CCExtractor in folder linux. Even if your computer does not have curl, tesseract, leptonica, gcc. Run in environment’s linux folder ‘’%%./ccextractor%%’’ and you will see a description of the program. Run ‘’%%./ccextractor [arguments]%%’’ to get subtitles.</p>
+<p><img src="https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139235/4b6c0c9c-c14b-11e6-9fed-d58ea569b854.png" alt="" />
+Now virtual environment and computer both have built CCExtractor in folder linux. Even if your computer does not have curl, tesseract, leptonica, gcc. Run in environment’s linux folder ‘’%%./ccextractor%%’’ and you will see a description of the program. Run ‘’%%./ccextractor [arguments]%%’’ to get subtitles.</p>
 
 <h2 id="synced-folders">Synced folders</h2>
 
@@ -193,7 +195,7 @@ end
 
 <p>Now, after changing Vagrantfile, if you have environment is launched, you have to perform in the host computer terminal ‘’%%vagrant reload –provision %%’’, or if stopped, run ‘’%%vagrant up%%’’</p>
 
-<p>Example - subtitles will be created in synced folder /video</p>
+<p><img src="https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139417/3b22dfcc-c14c-11e6-9006-7bff3b60fbcf.png" alt="" />Example - subtitles will be created in synced folder /video</p>
 
 <p>You can edit the code from both the host computer and the virtual machine, and build it in virtual machine.</p>
 

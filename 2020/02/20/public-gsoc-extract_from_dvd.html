@@ -109,60 +109,102 @@ Use CCExtractor to extract the closed caption track from the DVD data.</p>
 <p>First, download DVDDecrypter, which is available from this page. You can get the file directly here.
 Depending on your browser, it may ask you whether you want to run the program, or save it, etc.</p>
 
-<p>Run it if possible directly, or save it somewhere and run it later if your browser insists.</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_download_1.jpg?nolink |" alt="" />
+Run it if possible directly, or save it somewhere and run it later if your browser insists.</p>
 
 <p>If you are using Internet Explorer it might warn you about the file not being signed, and ask you again if you want to run it:</p>
 
-<p>Say yes. If you are running Vista it will show you yet another window to reconfirm you haven’t changed your mind. I couldn’t get a snapshot but it you are a Vista user you have seen that windows a billion times anyway.
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvddecrypter_security_warning_1.jpg?nolink |" alt="" />
+Say yes. If you are running Vista it will show you yet another window to reconfirm you haven’t changed your mind. I couldn’t get a snapshot but it you are a Vista user you have seen that windows a billion times anyway.
 The installation program starts. All defaults are correct, so the only thing you need to do is say Next at every chance. A screenshot of all screens follows:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_setup1_1.jpg?nolink</td>
+      <td>)</td>
+    </tr>
+    <tr>
+      <td>![](https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_setup2_1.jpg?nolink</td>
+      <td>)</td>
+    </tr>
+    <tr>
+      <td>![](https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_setup3_1.jpg?nolink</td>
+      <td>)</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>When asked about whether you want DVDDecrypter to check for new versions say no. The program is no longer being maintained so it will never find a new version anyway.</p>
 
-<p>The installation ends. In the last screen you have an option to start DVDDecrypter inmediately. Since we are going to install CCExtractor now, uncheck the box.</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_setup4_1.jpg?nolink |" alt="" />
+The installation ends. In the last screen you have an option to start DVDDecrypter inmediately. Since we are going to install CCExtractor now, uncheck the box.</p>
 
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_setup5_1.jpg?nolink |" alt="" /></p>
 <h3 id="2---install-ccextractor">2 - Install CCExtractor</h3>
 
 <p>CCExtractor is the program that does the actual work of getting the closed caption text from the data. It supports DVDs as well as many other formats. This is its home page (you probably know that already). Follow the link “Download Windows installer” (I don’t link to the installer directly because it’s updated from time to time and the link would be out of date soon). As before, run the installer if possible or save and run later if needed.</p>
 
+<p><img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_1_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_2_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_3_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_4_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_5_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_6_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:ccextractor_setup_7_1.jpg?nolink |" alt="" /></p>
 <h3 id="3---extract-the-data-from-the-dvd-using-dvddecrypter">3 - Extract the data from the DVD using DVDDecrypter</h3>
 
 <p>Insert the DVD in the DVD player if you haven’t done it already. Most likely it will start making noise for a few seconds, until Windows is done analyzing it. Wait for the noise to stop (so it’s ready) and then start DVDDecrypter, either by clicking on its icon (on your desktop) our by selecting it in the program menu (Start -&gt; Programs -&gt; DVD Decrypter -&gt; DVD Decrypter).
 Initially the screen looks like this (assuming DVDDecrypter detects the DVD correctly - if not you may have to select the correct drive from the combo box):</p>
 
-<p>The first time, go to the settings area (Tools -&gt; Settings). There are a lot of things there but the default settings are fine, except for the file splitting. We don’t want the output video to be split in several files (the only exception would be if your hard drive couldn’t handle large files). Having all the output in one file makes things easier later.</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_1_1.jpg?nolink |" alt="" />
+The first time, go to the settings area (Tools -&gt; Settings). There are a lot of things there but the default settings are fine, except for the file splitting. We don’t want the output video to be split in several files (the only exception would be if your hard drive couldn’t handle large files). Having all the output in one file makes things easier later.</p>
 
 <p>So go to the settings area as explained, and the select the “IFO mode” tab. In file splitting choose “None” from the combox box and then press OK. Done with the settings.</p>
 
-<p>Back to the main screen, you can see that there’s a “Destination” that DVD Decrypter automatically sets. You may need to choose a different folder. For me that directory is OK (F:\MERLIN\VIDEO_TS).
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_2_1.jpg?nolink |" alt="" />
+Back to the main screen, you can see that there’s a “Destination” that DVD Decrypter automatically sets. You may need to choose a different folder. For me that directory is OK (F:\MERLIN\VIDEO_TS).
 Notice too that all the files in the DVD are selected. If were trying to get the data from say, one specific episode of a TV show (where usually there are 4 episodes or so in each DVD) we would have to guess which file is correct. Since this is a complete movie, we’re going to get all the files, so we leave the selection as is.</p>
 
 <p>OK, so we press the large ‘Decrypt’ button (see below) and DVD Decrypter does its magic.</p>
 
-<p><strong>File selection</strong></p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_3_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_4_1.jpg?nolink |" alt="" />
+<img src="https://ccextractor.org/_media/:public:gsoc:dvd_decrypter_5_1.jpg?nolink |" alt="" />
+<strong>File selection</strong></p>
 
 <p>Take a look at the destination directory:</p>
 
-<p>The VOB files are the actual video data. In DVDs, they usually have more stuff that just the movie. For example, the chapter selection video is there. In order to get a clean transcript, you need to tell CCExtractor which files to use. Usually the right files are easy to spot. In this example, you can see that the file VTS_01_0.VOB is 330 Mb long, while VTS_01_1.VOB is 1 Gb, VTS_02_2.VOB is one Gb too, etc. This is a clear indicator that it is not part of the same video stream. In order to verify it, we just play the file with any DVD capable player:</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:explorer-1_1.jpg?nolink |" alt="" />
+The VOB files are the actual video data. In DVDs, they usually have more stuff that just the movie. For example, the chapter selection video is there. In order to get a clean transcript, you need to tell CCExtractor which files to use. Usually the right files are easy to spot. In this example, you can see that the file VTS_01_0.VOB is 330 Mb long, while VTS_01_1.VOB is 1 Gb, VTS_02_2.VOB is one Gb too, etc. This is a clear indicator that it is not part of the same video stream. In order to verify it, we just play the file with any DVD capable player:</p>
 
-<p>This is indeed the chapter selection video, which we don’t want. Just to make sure, we start playing VTS_01_1.VOB, which should be the actual start of the movie:</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:bscap0001_1.jpg?nolink |" alt="" />
+This is indeed the chapter selection video, which we don’t want. Just to make sure, we start playing VTS_01_1.VOB, which should be the actual start of the movie:</p>
 
-<p>Indeed it is.</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:merlin-1_1.jpg?nolink |" alt="" />
+Indeed it is.</p>
 
 <h3 id="4---extract-the-transcript-with-ccextractor">4 - Extract the transcript with CCExtractor</h3>
 
 <p>Open CCExtractor, by click on its desktop icon or by selecting it from the program menu (Start -&gt; Programs -&gt; CCExtractor -&gt; CCExtractorGUI).</p>
 
-<p>Now, open Windows Explorer if you didn’t have it already, and choose the files VTS_01_1.VOB up to VTS_01_01_8.VOB (so all of them except the one we already know not to be part of the movie):</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:ccextractor-1_1.jpg?nolink" alt="" />
+Now, open Windows Explorer if you didn’t have it already, and choose the files VTS_01_1.VOB up to VTS_01_01_8.VOB (so all of them except the one we already know not to be part of the movie):</p>
 
-<p>Drag and drop the files from Windows Explorer to CCExtractor:</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:explorer-2_1.jpg?nolink |" alt="" />
+Drag and drop the files from Windows Explorer to CCExtractor:</p>
 
-<p>Now you can see that CCExtractor has queued the files:</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:drag_drop_1.jpg?nolink |" alt="" />
+Now you can see that CCExtractor has queued the files:</p>
 
-<p>You can notice that CCExtractor has a lot of tabs with lots of options. The good news is that the default settings are OK, so you don’t need to worry about them. The one thing you may want to change is the output format in the Output tab. By default it exports to .srt, which is the standard format that most players support. Suppose you want a plain transcript with no timing information. Just check the .txt option (transcript):</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:ccextractor-2_1.jpg?nolink |" alt="" />
+You can notice that CCExtractor has a lot of tabs with lots of options. The good news is that the default settings are OK, so you don’t need to worry about them. The one thing you may want to change is the output format in the Output tab. By default it exports to .srt, which is the standard format that most players support. Suppose you want a plain transcript with no timing information. Just check the .txt option (transcript):</p>
 
-<p>Finally, go to the Execution tab and press Start: screen-shot You can see the progress:</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:ccextractor-3_1.jpg?nolink |" alt="" />
+Finally, go to the Execution tab and press Start: screen-shot You can see the progress:</p>
 
-<p>Once CCExtractor finishes, a file with the same name as the first file in the input is created in the same directory (this can all be changed in the settings). In this case, the file is called VTS_01_1.txt (note that it ends with .txt instead of .VOB). Here’s the contents (the first 10 lines):</p>
+<p><img src="https://ccextractor.org/_media/:public:gsoc:ccextractor-4_1.jpg?nolink |" alt="" />
+Once CCExtractor finishes, a file with the same name as the first file in the input is created in the same directory (this can all be changed in the settings). In this case, the file is called VTS_01_1.txt (note that it ends with .txt instead of .VOB). Here’s the contents (the first 10 lines):</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ONCE UPON A TIME...
 NO, NO, THAT'S
