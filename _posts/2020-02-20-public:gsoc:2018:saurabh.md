@@ -9,8 +9,7 @@
 ----
 
 
-{{ https://github.com/saurabhshri/ccextractor-web/raw/development/docs/images/usage.gif?900 | Using CCExtractor Web}}
-\\ 
+![](https://ccextractor.org/_media/https://github.com/saurabhshri/ccextractor-web/raw/development/docs/images/usage.gif?900 | Using CCExtractor Web)\\ 
 
 
 ## Introduction

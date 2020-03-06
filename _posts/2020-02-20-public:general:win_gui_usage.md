@@ -7,19 +7,16 @@ There are several tabs. These are two that you will definitely need to use: The 
 
 **This is the 'input files' tab**:
 
-{{ :public:general:gui_input_files_1_1_1.jpg?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:gui_input_files_1_1_1.jpg?nolink |)
 **This is the 'execution' tab**:
 
-{{ :public:general:gui_execution_1_1_1.jpg?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:gui_execution_1_1_1.jpg?nolink |)
 As you can see, when a extraction is in progress you can see a preview of the subtitles (as they are being produced), the actual output Windows from the extraction process, progress, and more.
 
 By default, CCExtractor produces .srt (SubRip) subtitles, as they are universally supported by all players, and they are easy to edit. There are however other formats that CCExtractor can generate.
 
 **This is the 'output' tab**:
-{{ :public:general:gui_output_1_1_1.jpg?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:gui_output_1_1_1.jpg?nolink |)
 **Modifying how subtitles look like**
 
 By default, CCExtractor does it best to produce subtitles that look as they do on the TV. Depending on personal tastes, this is a good thing or it can be extremely annoying. In particular, there are two things that you may want to change: Position: Real closed captions are displayed on 32 columns by 15 rows grid. The person producing the captions can position them anywhere in the screen. For deaf people this is useful to know who's talking or where the sound is coming from. In the produces files, it might look like this: 
@@ -33,8 +30,7 @@ If this is annoying for you, you can select the 'center text' option in the deco
 
 **This is the 'decoder' tab from where you can change these and other things**:
 
-{{ :public:general:gui_decoder_1_1_1.jpg?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:gui_decoder_1_1_1.jpg?nolink |)
 **Installation details (i.e. what are you installing on my computer?)**
 
 Starting with version 0.64, the installer registers a DLL in your computer. This is a DirectShow filter that allows extraction of CC data from wtv files. If you don't want or can't (because you don't have administrator privileges) register this DLL, everything will still work except wtv support. Other than this the installer just copies the same files included in the .zip file with the windows binaries. No other changes are made.

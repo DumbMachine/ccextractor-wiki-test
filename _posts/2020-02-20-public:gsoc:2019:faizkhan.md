@@ -119,7 +119,7 @@ Citation - www.algorithmia.com I have coded to implement my part so as to perfor
 
 2.Go to your profile page, click the Credentials tab, and find your API key.
 
-3.Find a test video. You can use a public URL (/ccextractor-wiki-test/2020/02/20/prefer Vimeo over youtube), or upload one to their hosted data storage.
+3.Find a test video. You can use a public URL (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-prefer Vimeo over youtube), or upload one to their hosted data storage.
 
 4.Install the Python Algorithmia client using the command “pip install algorithmia“.
 

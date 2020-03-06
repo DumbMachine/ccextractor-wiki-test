@@ -21,7 +21,7 @@ General things to keep in mind while working:
 2) Mentors love it when a student comes up with a better idea than their own, really. Do not just do as told. If something doesn't feel right either argue against it or work on a different area.\\
 3) If you want to do something that is 90% or so implemented in any other open source project just take it, complete it, send the maintainers of that project whatever changes you did so they can use them if they want, and integrate with our code. Always remember to leave all license and credits intact (you can add your own name).\\
 4) Mentors are there to help but they're people too, not bots. So they sleep from time to time, may also have other things going on, can get sick, etc. They will reciprocate when they think of students.\\
-5) Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that your future you will be proud of.\\
+5) Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-code tends to follow you). Try to leave it in a condition that your future you will be proud of.\\
 
 **Slack**
 

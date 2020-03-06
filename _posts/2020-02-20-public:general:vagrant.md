@@ -60,8 +60,7 @@ To connect to the environment (environment must be launched), run in project fol
 	vagrant ssh
 
 
-{{ https://cloud.githubusercontent.com/assets/5406399/21139087/b44152d2-c14a-11e6-8b3c-36ee60fe97a4.png }}
-
+![](https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139087/b44152d2-c14a-11e6-8b3c-36ee60fe97a4.png)
 If you want to return to your computer terminal, run
 
 	
@@ -69,8 +68,7 @@ If you want to return to your computer terminal, run
 
 
 By default, the project folder is synchronized with environment (that is available in your computer, and in a virtual machine). The project folder is located in /vagrant.
-{{ https://cloud.githubusercontent.com/assets/5406399/21139153/fb5608f2-c14a-11e6-91bd-1413812d62b8.png }}
-
+![](https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139153/fb5608f2-c14a-11e6-91bd-1413812d62b8.png)
 Lets build the project
 
 	
@@ -79,8 +77,7 @@ Lets build the project
 	./build
 
 
-{{ https://cloud.githubusercontent.com/assets/5406399/21139235/4b6c0c9c-c14b-11e6-9fed-d58ea569b854.png }}
-
+![](https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139235/4b6c0c9c-c14b-11e6-9fed-d58ea569b854.png)
 Now virtual environment and computer both have built CCExtractor in folder linux. Even if your computer does not have curl, tesseract, leptonica, gcc. Run in environment's linux folder ''%%./ccextractor%%'' and you will see a description of the program. Run ''%%./ccextractor [arguments]%%'' to get subtitles.
 
 ## Synced folders
@@ -113,7 +110,6 @@ This means that the folder with the path to "/home/user/video" will be available
 
 Now, after changing Vagrantfile, if you have environment is launched, you have to perform in the host computer terminal ''%%vagrant reload --provision %%'', or if stopped, run ''%%vagrant up%%''
 
-{{ https://cloud.githubusercontent.com/assets/5406399/21139417/3b22dfcc-c14c-11e6-9006-7bff3b60fbcf.png }}
-Example - subtitles will be created in synced folder /video
+![](https://ccextractor.org/_media/https://cloud.githubusercontent.com/assets/5406399/21139417/3b22dfcc-c14c-11e6-9006-7bff3b60fbcf.png)Example - subtitles will be created in synced folder /video
 
 You can edit the code from both the host computer and the virtual machine, and build it in virtual machine.

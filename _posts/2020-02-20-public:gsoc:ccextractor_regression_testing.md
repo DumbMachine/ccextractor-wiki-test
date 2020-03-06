@@ -11,8 +11,7 @@ All changes must be validated using this tool. As of 2016, it is fully integrate
 
 As mentioned above, as part of GSoC 2016 a full integration was made with GitHub. This means that just as with other integrations, the regression test suite will now run automatically when you create a Pull Request or if you make a commit on the repository.\\
 
-{{ :public:gsoc:firefox_2016-08-08_18-24-34-1.png?nolink&600 |}}
-
+![](https://ccextractor.org/_media/:public:gsoc:firefox_2016-08-08_18-24-34-1.png?nolink&600 |)
 When creating a pull request (PR), the next steps happen:
 
 *  Test get queued (another one might be running that needs to finish first)
@@ -24,8 +23,7 @@ When creating a pull request (PR), the next steps happen:
 
 Several individual steps (preparation, building, compiling, ...) are being reported back to the PR on GitHub, while the detailed overview is available by clicking on the "details" (as can be seen in the image below):\\
 
-{{ :public:gsoc:firefox_2016-08-08_18-24-34.png?nolink&600 |}}
-
+![](https://ccextractor.org/_media/:public:gsoc:firefox_2016-08-08_18-24-34.png?nolink&600 |)
 This link will take you to the detail page of the test, where you can check the status of the test in general, as well as the results for each category.
 
 ## How to run your own tests on fork
@@ -50,7 +48,7 @@ If you have access to the dev server at gsocdev3.ccextractor.org, or have downlo
 The easiest way to test all the current samples against your own version of CCExtractor is using a shell script that does most of the work for you:\\
 '' /repository/newRepository/TestSuite/runAllTests CCExtractorLocation ReportLocation''\\
 
-The CCExtractorLocation is the location of your CCExtractor build that you want to test (/ccextractor-wiki-test/2020/02/20/against the latest official CCX version). The ReportLocation is optional (/ccextractor-wiki-test/2020/02/20/if omitted, the reports will be stored under your name in [a subfolder of Willem's public_html folder](http:--gsocdev3.ccextractor.org-~willem-users-)).\\
+The CCExtractorLocation is the location of your CCExtractor build that you want to test (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-against the latest official CCX version). The ReportLocation is optional (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-if omitted, the reports will be stored under your name in [a subfolder of Willem's public_html folder](http:--gsocdev3.ccextractor.org-~willem-users-)).\\
 
 If you want to have more configuration options, you can create your own config or test files (there is a sample config at ''/repository/newRepository/TestSuite/sampleconfig.xml'' and for a sample test file you can look in the folders), and then call the ccextractortester bash script (located at ''/repository/newRepository/TestSuite/ccextractortester'') with the appropriate parameters.\\
 

@@ -7,7 +7,7 @@ Last year we had a number of students working on this in parallel, which in itse
 
 This year we are only going to select one. The first task is to get the best from last year (so you have to do some analysis of the existing implementations) and come up with ways to merge (or rewrite) and improve. Therefore the chosen student must do some homework in order to come up with a good proposal. Also check the current status of Rekognition. What new features would be great to have? Which features is Rekognition actually missing and we could add ourselves to make something better than Rekognition?
 
-[This](/ccextractor-wiki-test/2020/02/20/public-gsoc-poormanrekognition) is the description to last year's project.
+[This](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-public-gsoc-poormanrekognition) is the description to last year's project.
 
 And here's the links to all the projects (yes we know one of them is offline at this time):
 

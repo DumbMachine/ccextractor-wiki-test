@@ -15,11 +15,11 @@ The repositories are located here:
 
 ### Test Suite
 
-No changes from last year, still as described in the first section of [CCExtractor regresssion testing / GitHub bot](/ccextractor-wiki-test/2020/02/20/gsocpublic-ccextractor_regression_testing).\\
+No changes from last year, still as described in the first section of [CCExtractor regresssion testing / GitHub bot](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-gsocpublic-ccextractor_regression_testing).\\
 
 ### GitHub bot
 
-Refer to the bot section in the [CCExtractor regresssion testing / GitHub bot](/ccextractor-wiki-test/2020/02/20/gsocpublic-ccextractor_regression_testing) page.\\
+Refer to the bot section in the [CCExtractor regresssion testing / GitHub bot](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-gsocpublic-ccextractor_regression_testing) page.\\
 
 ### Submission platform
 
@@ -27,7 +27,7 @@ To view samples, test results and download samples there is no need for an accou
 
 ## How to evaluate?
 
-The bot can be evaluated (/ccextractor-wiki-test/2020/02/20/user-side) by issuing commands to it on GitHub (/ccextractor-wiki-test/2020/02/20/see [CCExtractor regresssion testing - GitHub bot](gsocpublic-ccextractor_regression_testing) for instructions). It's been used already by Anshul, Kisselef and Ruslan for the last PR they made.\\
+The bot can be evaluated (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-user-side) by issuing commands to it on GitHub (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-see [CCExtractor regresssion testing - GitHub bot](gsocpublic-ccextractor_regression_testing) for instructions). It's been used already by Anshul, Kisselef and Ruslan for the last PR they made.\\
 
 The sample submission platform can be tested (user-side) by either browsing around on the site and/or creating an account (the latter is required to upload samples). At this moment, a limited section of regression samples was already added, and this will be expanded very soon.\\
 

@@ -19,11 +19,11 @@ I am the only contributor to this repository. Started it from scratch.
 
 ## How to use?
 
-The usage is listed in the README file of the GitHub repository and also in the [ USER DOCUMENTATION WIKI PAGE](/ccextractor-wiki-test/2020/02/20/public-gsoc-2016-abishek-subtitle_downloader)
+The usage is listed in the README file of the GitHub repository and also in the [ USER DOCUMENTATION WIKI PAGE](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-public-gsoc-2016-abishek-subtitle_downloader)
 
 ## Technical Documentation
 
-The technical documentation about the code architecture and how to add support for new services has been written in the [ Technical Documentation Wiki](/ccextractor-wiki-test/2020/02/20/http:--www.ccextractor.org-doku.php?id=public:gsoc:subtitle_extractor_technical_docs)
+The technical documentation about the code architecture and how to add support for new services has been written in the [ Technical Documentation Wiki](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-http:--www.ccextractor.org-doku.php?id=public:gsoc:subtitle_extractor_technical_docs)
 
 ## About the Project
 

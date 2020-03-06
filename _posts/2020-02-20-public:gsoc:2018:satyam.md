@@ -32,8 +32,7 @@ It will include adding some new features and some fixes which will increase the 
 ## Original​ ​ Vs​ ​ Achieved​ ​ Goals
 
 *  **Comment on the opened PR if a test fails**: Now users can easily see the textual overview of what is failing. It is always better to comment the all failing tests on the Pull Request. It will save the time of user by summarizing the error on the same pr and easily check the status of pull request. Template shown below:
-{{:public:gsoc:2018:b6525e89-13b5-40f0-90de-c5a4c0e30925.png?400|}}
-
+![](https://ccextractor.org/_media/:public:gsoc:2018:b6525e89-13b5-40f0-90de-c5a4c0e30925.png?400|)
 *  **Add support for running the bot in forks**: It has been added and working properly. Now Users can enter commit or select the commit from their fork repository that are not more than 30 days old. They can select the platforms (linux, platform) they want to run their tests. List of tests started by user are displayed on same page.
 
 *  **Add support for single test runs or smaller sample sets**: Now Users can customize tests based on selected regression tests and platforms. They can run their test on subset of regression tests. Test Progress will be displayed according to selected regression tests. Active Status has been added to Regression tests. Regression test status will tell whether it will run on test of main repository or not. Combined with previous feature, Customized Test would give the contributors full freedom to experiment with fixes on their forks.
@@ -44,7 +43,7 @@ It will include adding some new features and some fixes which will increase the 
 
 *  **Adding Restart / Stop for admin and user**: A button has been added in the admin test panel to make it easy for admin to stop or restart the test. After adding single test, corresponding user can stop the test or restart if he thinks somewhere he went wrong before test completes to decrease the load in the platform.
 
-*  **Documentation**: All changed set has been properly documented. I have added pydocs from methods and inline comments. I have followed pep8 while adding pull request. [User documentation](/ccextractor-wiki-test/2020/02/20/http:--ccextractor.com-public:gsoc:ccextractor_regression_testing) has been updated.
+*  **Documentation**: All changed set has been properly documented. I have added pydocs from methods and inline comments. I have followed pep8 while adding pull request. [User documentation](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-http:--ccextractor.com-public:gsoc:ccextractor_regression_testing) has been updated.
 
 *  **Unittesting**: I have increase the test coverage to around 60%. It is still in progress.
 

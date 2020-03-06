@@ -1,5 +1,5 @@
 
-We often get requests for samples from other developers and users. Our full collection is available to developers that need it (/ccextractor-wiki-test/2020/02/20/some of the samples were submitted by people who explicitly told us not to make them public, which we honor) However we're starting to build a small public repository for everyone who wants to test.
+We often get requests for samples from other developers and users. Our full collection is available to developers that need it (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-some of the samples were submitted by people who explicitly told us not to make them public, which we honor) However we're starting to build a small public repository for everyone who wants to test.
 
 The following link contains 10 minutes recorded of over 30 US TV channels. They were made with a HDHomeRun on Dec 14, 2016. The provider is Comcast. Nothing really interesting in content - 10 minutes per channel, recording in the West Coast morning, so just daytime TV, whatever was on.
 

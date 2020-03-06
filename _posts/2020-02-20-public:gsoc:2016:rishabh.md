@@ -9,7 +9,7 @@ All my work done during GSoC commited to the mainstream master branch can be fou
 
 ## Technical Documentation
 
-The technical documentation on how the code is structured as well as installation is available [ here](/ccextractor-wiki-test/2020/02/20/http:--www.ccextractor.org-doku.php?id=public:gsoc:dvd_subtitles_technical_documentation_gsoc_16).
+The technical documentation on how the code is structured as well as installation is available [ here](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-http:--www.ccextractor.org-doku.php?id=public:gsoc:dvd_subtitles_technical_documentation_gsoc_16).
 
 ## About the Project
 

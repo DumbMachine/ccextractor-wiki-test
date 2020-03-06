@@ -36,11 +36,11 @@ About the Windows installer, we used to generate .msi installers but that seems 
 
 **Additional software written by the team**
 
-[ User Documentation for  Subtitle Downloader ](/ccextractor-wiki-test/2020/02/20/http:--www.ccextractor.org-doku.php?id=public:gsoc:repository_documentation )
+[ User Documentation for  Subtitle Downloader ](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-http:--www.ccextractor.org-doku.php?id=public:gsoc:repository_documentation )
 
-[ User Documentation for Activity Extractor ](/ccextractor-wiki-test/2020/02/20/http:--www.ccextractor.org-doku.php?id=public:codein:activity_extractor_user_docs )
+[ User Documentation for Activity Extractor ](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-http:--www.ccextractor.org-doku.php?id=public:codein:activity_extractor_user_docs )
 
-[CCAligner - Word by Word Audio Subtitle Synchronisation Tool and API](/ccextractor-wiki-test/2020/02/20/public-gsoc-2017-saurabh)
+[CCAligner - Word by Word Audio Subtitle Synchronisation Tool and API](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-public-gsoc-2017-saurabh)
 
 **Dependencies**
 

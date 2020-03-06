@@ -28,7 +28,7 @@ The cc_capture script always reads contents of /channels/ and picks the oldest f
 
 Done:
 
-*  Create system user (/ccextractor-wiki-test/2020/02/20/captions), copy public key
+*  Create system user (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-captions), copy public key
 
 *  Edit sudoers
 

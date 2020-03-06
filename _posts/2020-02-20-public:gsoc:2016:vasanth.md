@@ -137,13 +137,11 @@ The web interface appears as follows, the interface is made as similar to the cu
 
 The figure below, shows the first screen when the interface is opened.
 
-{{public:gsoc:commercial_detection_normal_run.png?200|}}
-
+![](https://ccextractor.org/_media/public:gsoc:commercial_detection_normal_run.png?200|)
 We can go to each of the labels and edit in place, changes will be made immediately through AJAX.
 '+' button is used to split a label into two parts. When we click on that button, we get an image, that looks similar to this.
 
-{{public:gsoc:commercial_detection_splitting.png?200|}}
-
+![](https://ccextractor.org/_media/public:gsoc:commercial_detection_splitting.png?200|)
 # Deploying the system on your local machine
 
 #### Installing dependencies

@@ -7,4 +7,8 @@ CCExtractor Development is an informal (meaning we're not incorporated anywhere)
 
 The following video is a contribution from Manveer Singh Basra, a Code-In 2016 student:
 
-{{ youtube>UXYIoo-2NZE }}
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/UXYIoo-2NZE " frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>

@@ -1,20 +1,18 @@
 
 # Welcome to Google Code-In 2018 and CCExtractor!
 
-**Questions? You can email us at code-in@ccextractor.org or join our [Slack](/ccextractor-wiki-test/2020/02/20/public-codein-google_code-in_2018#slack) group! But please make sure you read the whole page first.
+**Questions? You can email us at code-in@ccextractor.org or join our [Slack](/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-public-codein-google_code-in_2018#slack) group! But please make sure you read the whole page first.
 **
 
 \\ 
-{{ https://github.com/CCExtractor/ccextractor-org-media/raw/master/ext/google-code-In-2018.gif | CCExtractor is participating in Google Code In 2018!}}
-\\ 
+![](https://ccextractor.org/_media/https://github.com/CCExtractor/ccextractor-org-media/raw/master/ext/google-code-In-2018.gif | CCExtractor is participating in Google Code In 2018!)\\ 
 
 `<text size="18px" align="justify">`
 This is going to be another absolutely amazing GCI year! We have a long and proud history of taking part in the Google Summer of Code with university students, and are excited to participate in GCI again for 3rd year with pre-university students! We have tasks that are: fun, useful, educational... and for all levels and interests - coding, design, documentation, UI, research and much more!
 `</text>`
 
 \\ 
-{{ https://raw.githubusercontent.com/CCExtractor/ccextractor-org-media/master/ext/gci-task-categories.png | Google Code-IN task categories!}}
-\\ 
+![](https://ccextractor.org/_media/https://raw.githubusercontent.com/CCExtractor/ccextractor-org-media/master/ext/gci-task-categories.png | Google Code-IN task categories!)\\ 
 
 ----
 
@@ -51,7 +49,7 @@ Can't join the Slack group? It's no problem! We try to be super fast to respond 
 *  `<text size="18px" align="justify">`Mentors are there to help but they're people too, not bots. So they sleep from time to time, may also have other things going on, can get sick, etc. They will reciprocate when they think of students.`</text>`
 \\
 
-*  `<text size="18px" align="justify">`Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/code tends to follow you). Try to leave it in a condition that the future you will be proud of.`</text>`
+*  `<text size="18px" align="justify">`Whatever you do, we want to integrate. This means that your work will be public and will be around for a long time. In a few years you will find your own code again (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-code tends to follow you). Try to leave it in a condition that the future you will be proud of.`</text>`
 \\
 
 *  `<text size="18px" align="justify">`Be mindful of your own privacy. Yes, we're a friendly bunch and you'll get to know us and we'll get to know you in our community. That's different from posting your real name publicly everywhere. `</text>`
@@ -78,8 +76,7 @@ In short - don't think that the reward for participating this year may be limite
 If you're passionate about becoming a great designer and willing to do some serious work, look for the tasks labelled **[Harddesign]**. Hard means that they are going to take time and talent to produce the quality results we want and to bring up design tasks at par with coding. At least one of the students that does a great job on those will be a finalist, and maybe a winner.
 `</text>` 
 
-{{https://raw.githubusercontent.com/CCExtractor/ccextractor-org-media/master/static/ccx_logo_transparent_800x600.png?200 |The Media Manager popup}}
-
+![](https://ccextractor.org/_media/https://raw.githubusercontent.com/CCExtractor/ccextractor-org-media/master/static/ccx_logo_transparent_800x600.png?200 |The Media Manager popup)
 `<text size="18px" align="justify">`
 We are doing this to prevent the design tasks being treated just as an easy way to complete beginner tasks. For example, you can create a T-Shirt design in 10 minutes, but that's very unlikely to be good and usable to well, actually make T-Shirts with it. 
 `</text>`
@@ -130,20 +127,29 @@ We think that the best way to let you know how cool Code-In is is to show you a 
 `</text>`
 
 
-{{ youtube>6Ti1X1peqMA?large }}
-\\ 
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/6Ti1X1peqMA" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>\\ 
 
 `<text size="18px" align="justify">`
 And Aadi and Shiyuan (also core team members now as well as GCI mentors) in 2017:
 `</text>`
 
-{{ youtube>nKY0s0av5r0?large }}
-\\ 
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/nKY0s0av5r0" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>\\ 
 
 Matej and Ivan, 2018:
 
-{{ youtube>rS7RK-GKYuk?large }}
-\\ 
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/rS7RK-GKYuk" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>\\ 
 
 
 ### Slack

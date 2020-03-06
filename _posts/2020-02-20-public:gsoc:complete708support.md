@@ -41,7 +41,7 @@ Carlos Fernandez Sanz (@carlos.fernandez on slack). Carlos wrote the original CE
 Evgeny Shulgin (@izaron on slack). Evgeny is a 2016 Code-In Winner with CCExtractor, and worked a lot on CEA-708.\\
 
 __**How to get started**__\\
-Best thing you can do is download a few samples (/ccextractor-wiki-test/2020/02/20/[check our TV samples page](public-general-tvsamples)) and try to solve some of the CEA-708 issues we have listed on GitHub.
+Best thing you can do is download a few samples (/ccextractor-wiki-test/2020/02/20/-ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20--ccextractor-wiki-test-2020-02-20-[check our TV samples page](public-general-tvsamples)) and try to solve some of the CEA-708 issues we have listed on GitHub.
 
 This is also the best way to get accepted into GSoC.
 

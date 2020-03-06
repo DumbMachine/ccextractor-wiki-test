@@ -33,8 +33,11 @@ E.g.
 
 In the above example each word from subtitle is tagged with beginning and ending timestamps based on audio.
 
-{{ youtube>38_27E1PxXA?large }}
-\\ 
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/38_27E1PxXA" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>\\ 
 
 CCAligner makes use of automatic speech recognition to analyse audio and recognise words to perform alignment. The project comprises of both user friendly tool and developer friendly API.
 
@@ -101,26 +104,38 @@ In addition to my main project, I also worked on creating a single header SubRip
 
 ## Some Demostrations
 
-{{youtube>6VnhC8u_d40?small}} 
-
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/6VnhC8u_d40" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>
 *  Karaoke Demo 2 [Ted Talk]  
 
 \\  
 
-{{youtube>j_zeixo-zJY?small}} 
-
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/j_zeixo-zJY" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>
 *  Karaoke Demo 3 [Cartoon Show]  
 
 \\  
 
-{{youtube>8tTDX6NZGsU?small}} 
-
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/8tTDX6NZGsU" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>
 *  Karaoke Demo 4 [Discussion Video]  
 
 \\  
 
-{{youtube>tFrf0TVnqIQ?small}} 
-
+<div class="video">
+<figure>
+    <iframe width="640" height="480" src="//www.youtube.com/embed/tFrf0TVnqIQ" frameborder="0" allowfullscreen></iframe>
+</figure>
+</div>
 *  Transcription Demo [Reality Show]  
 
 

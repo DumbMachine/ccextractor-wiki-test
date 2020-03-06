@@ -3,12 +3,12 @@
 
 SPUPNG is two acronyms:
 
-**SPU**\\ 
-Sub-Picture Unit. According to wikibooks.org: "Subpictures are used to display subtitles as well as menu buttons, overlaid on the video. These are stored in an MPEG stream (private stream 1) as a sequence of Sub-Picture Units (SPUs)." 
-    
+**SPU**\\
+Sub-Picture Unit. According to wikibooks.org: "Subpictures are used to display subtitles as well as menu buttons, overlaid on the video. These are stored in an MPEG stream (private stream 1) as a sequence of Sub-Picture Units (SPUs)."
 
-**PNG**\\ 
-Portable Network Graphics. According to libpng.org: "An Open, Extensible Image Format with Lossless Compression." 
+
+**PNG**\\
+Portable Network Graphics. According to libpng.org: "An Open, Extensible Image Format with Lossless Compression."
 
 **Why SPUPNG?**
 
@@ -28,11 +28,10 @@ The SPUPNG format is intended for use with authoring DVDs. The SPUPNG format doe
 
 A picture is worth a thousand words. So here are some screenshots that show how the same caption in the same scene is displayed depending on the ccextractor output format, how an application displays the caption, and how the user configures the application to display the caption. The scene in question has two people engaged in conversation, the caption captures what both people are saying, and it is near the beginning of the show, so credits are displayed near the bottom of the scene.
 
-{{ :public:general:srt-file.png?nolink |}}
+![](https://ccextractor.org/_media/:public:general:srt-file.png?nolink)
+The asdasd asd above screenshot shows how a SRT formatted caption is displayed by VLC using VLC’s default configuration where captions are displayed using the Arial font. Both people are talking, but can you tell who is saying what? Can you read the credit? Here is how the caption is encoded in the .srt file:
 
-The above screenshot shows how a SRT formatted caption is displayed by VLC using VLC’s default configuration where captions are displayed using the Arial font. Both people are talking, but can you tell who is saying what? Can you read the credit? Here is how the caption is encoded in the .srt file:
 
-	
 	20
 	00:02:15,636 --> 00:02:18,770
 	                   Wow. How long
@@ -40,15 +39,13 @@ The above screenshot shows how a SRT formatted caption is displayed by VLC using
 	About a month.
 
 
-{{ :public:general:spusrt.png?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:spusrt.png?nolink)
 The above screenshot shows how the dvdauthor tool, spumux, renders the same SRT formatted caption. I’ll explain spumux in a later section. Now you can tell who is saying what, but it is still hard to read the credit.
 
-{{ :public:general:smi-file.png?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:smi-file.png?nolink |)
 The above screenshot shows how a SAMI formatted caption is displayed by VLC after VLC’s Subtitles/OSD preferences have been configured to use a fixed width font, Lucida Console, and the “Add a background” option has been checked. Here is how the caption is encoded in the .smi file:
 
-	
+
 	`<SYNC start=135636>``<P class="UNKNOWNCC">`
 	                   Wow. How long`<br>`
 	                  did that take?`<br>`
@@ -58,12 +55,10 @@ The above screenshot shows how a SAMI formatted caption is displayed by VLC afte
 
 Who is speaking is clear in the .smi file, but not when VLC displays the caption. And the credit is even harder to read with the “Add a background” option enabled.
 
-{{ :public:general:spusmi.png?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:spusmi.png?nolink |)
 The above screenshot shows how spumux renders the same SAMI formatted caption. In this case, spumux centers the text, so who is speaking is lost.
 
-{{ :public:general:spupng.png?nolink |}}
-
+![](https://ccextractor.org/_media/:public:general:spupng.png?nolink |)
 The above screenshot shows how spumux renders the SPUPNG formatted caption. It is clear who is saying what, and the credit is not obscured by the caption.
 
 **How to use the SPUPNG output format**
@@ -75,7 +70,7 @@ This section describes how to use the SPUPNG format to create a very simple DVD-
 
 *  Extract closed captions in SPUPNG format
 
-	
+
 	ccextractor -out=spupng -o spumux.xml source-video-file
 
 
@@ -107,21 +102,21 @@ Different Linux distributions will support either the ffmpeg package or the liba
 
 Here is the do-ffmpeg script for ffmpeg version 0.6:
 
-	
+
 	#!/bin/bash
-	
+
 	# Transcode video to DVD-Video compatible format.
-	
+
 	# Usage: do-ffmpeg infile outfile
-	
+
 	if [ $# != 2 ]
 	then
 	echo "Usage: do-ffmpeg infile outfile"
 	exit 1
 	fi
-	
+
 	# options of interest (applicable to ffmpeg version 0.6):
-	
+
 	# Cropping:
 	# If a widescreen video is letterboxed in a 4:3 aspect ratio,
 	# you might want to crop the letterboxed format, using the following:
@@ -129,19 +124,19 @@ Here is the do-ffmpeg script for ffmpeg version 0.6:
 	# Sometimes you get a 4:3 video that's been letterboxed on the sides, too:
 	crop="-croptop 60 -cropbottom 60 -cropleft 90 -cropright 90"
 	# The numbers need to be adjusted for the source video resolution
-	
+
 	# Bitrate determines the size and quality of the video:
 	# 4670k = approx 2 hours of video on a 4.7GB single layer DVD
 	# 3200k = approx 3 hours of video on a 4.7GB single layer DVD
 	# 2400k = approx 4 hours of video on a 4.7GB single layer DVD
 	bitrate=2400k
-	
+
 	# Video resolution:
 	# Valid values for NTSC DVD-Video are: 720x480 704x480 352x480 352x240
 	# Valid values for PAL DVD-Video are: 720x576 704x576 352x576 352x288
 	# I usually use 720x480, unless the input is 704 wide, then I use 704x480
 	size=720x480
-	
+
 	# Audio codec
 	# If input file's audio is AC-3 or MPEG layer-2, you can usually let
 	# ffmpeg copy it, using the following value for $acodec
@@ -149,15 +144,15 @@ Here is the do-ffmpeg script for ffmpeg version 0.6:
 	# If the input audio isn't one of the above, or if there is noise in the audio
 	# stream that throws audio-video out of sync, the following usually fixes it.
 	acodec="-acodec ac3 -ab 192k -ac 2 -async 1200"
-	
+
 	# Whether to deinterlace video:
 	deint="-deinterlace"
-	
+
 	# Aspect ratio:
 	# 16:6 = widescreen
 	# 4:3 = fullscreen
 	aspect="4:3"
-	
+
 	ffmpeg -threads 4 -v 1 -i $1 $deint $crop \
 	-r ntsc -target ntsc-dvd -b $bitrate -s $size \
 	$acodec -copyts -aspect $aspect \
@@ -166,21 +161,21 @@ Here is the do-ffmpeg script for ffmpeg version 0.6:
 
 If you are using a Linux distribution that supports libav-tools you will need a somewhat different script do-avconv:
 
-	
+
 	#!/bin/bash
-	
+
 	# Transcode video to DVD-Video compatible format.
-	
+
 	# Usage: do-avconv infile outfile
-	
+
 	if [ $# != 2 ]
 	then
 	echo "Usage: do-avconv infile outfile"
 	exit 1
 	fi
-	
+
 	# options of interest (applicable to avconv version 0.8.9):
-	
+
 	# Cropping:
 	# If a widescreen video is letterboxed in a 4:3 aspect ratio,
 	# you might want to crop the letterboxed format, using the following:
@@ -189,19 +184,19 @@ If you are using a Linux distribution that supports libav-tools you will need a 
 	crop="-vf crop=in_w*3/4:in_h*3/4,scale=720:480"
 	# The scale should match the target video resolution
 	# i.e. same as size below
-	
+
 	# Bitrate determines the size and quality of the video:
 	# 4670k = approx 2 hours of video on a 4.7GB single layer DVD
 	# 3200k = approx 3 hours of video on a 4.7GB single layer DVD
 	# 2400k = approx 4 hours of video on a 4.7GB single layer DVD
 	bitrate=2400k
-	
+
 	# Video resolution:
 	# Valid values for NTSC DVD-Video are: 720x480 704x480 352x480 352x240
 	# Valid values for PAL DVD-Video are: 720x576 704x576 352x576 352x288
 	# I usually use 720x480, unless the input is 704 wide, then I use 704x480
 	size=720x480
-	
+
 	# Audio codec
 	# If input file's audio is AC-3 or MPEG layer-2, you can usually let
 	# avconv copy it, using the following value for $acodec
@@ -209,15 +204,15 @@ If you are using a Linux distribution that supports libav-tools you will need a 
 	# If the input audio isn't one of the above, or if there is noise in the audio
 	# stream that throws audio-video out of sync, the following usually fixes it.
 	acodec="-c:a ac3 -b:a 192k -ac 2 -async 1200"
-	
+
 	# Whether to deinterlace video:
 	deint="-vf yadif"
-	
+
 	# Aspect ratio:
 	# 16:6 = widescreen
 	# 4:3 = fullscreen
 	aspect="4:3"
-	
+
 	avconv -threads 4 -v debug -i $1 $deint $crop \
 	-r ntsc -target ntsc-dvd -b:v $bitrate -s $size \
 	$acodec -copyts -aspect $aspect \
@@ -226,19 +221,19 @@ If you are using a Linux distribution that supports libav-tools you will need a 
 
 After editing the script, transcode the source video with the command:
 
-	
+
 	do-ffmpeg source-video-file transcoded.mpg
 
 or
 
-	
+
 	do-avconv source-video-file transcoded.mpg
 
 
 
 **Multiplex SPUPNG captions into subtitle stream**
 
-	
+
 	spumux spumux.xml `< transcoded.mpg >` subtitles.mpg
 
 
@@ -246,7 +241,7 @@ or
 
 Dvdauthor requires an XML file as input. Following is an extremely simple example that should start playing the subtitles.mpg as soon as the DVD is loaded in your DVD player. Paste it into a file called dvdauthor.xml.
 
-	
+
 	    `<?xml version="1.0" encoding="UTF-8"?>`
 	    `<dvdauthor>`
 	        `<vmgm />`
@@ -269,7 +264,7 @@ Dvdauthor requires an XML file as input. Following is an extremely simple exampl
 
 If you change the name of the output file, subtitles.mpg, in step 3, be sure to change it in the `<vob>` element. Create the DVD-Video directory structure in a sub-directory called dvd with the command:
 
-	
+
 	dvdauthor -o dvd -x dvdauthor.xml
 
 
@@ -279,7 +274,7 @@ If you repeat the command, be sure to first delete the dvd sub-directory.
 
 Load a blank DVD into your DVD burner. Then burn with this command:
 
-	
+
 	growisofs -dvd-video -V 'MyLabel' –Z /dev/dvd dvd
 
 
@@ -288,6 +283,5 @@ Load a blank DVD into your DVD burner. Then burn with this command:
 The video should start playing as soon as the DVD is read by your player. You will need to turn on subtitles using whatever mechanism your player supports, perhaps by pressing a subtitle key on the remote. Enjoy!
 
 **Contact**
-If you have questions or comments about the SPUPNG output format, please direct them to: 
-{{ :public:general:hbuus.png?nolink |}}
-
+If you have questions or comments about the SPUPNG output format, please direct them to:
+![](https://ccextractor.org/_media/:public:general:hbuus.png?nolink |)
